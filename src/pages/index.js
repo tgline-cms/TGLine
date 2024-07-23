@@ -1,13 +1,25 @@
 import * as React from "react"
-// import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import { Container } from "react-bootstrap"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
-hello
+    <Container>
+      <ul>
+      {data.fileInformation.edges.map(({node}) =>
+          (<li key={node.id}>{node.base}</li>))}
+      </ul>
+      {data.pavilionsParameters.edges.map(({node}) => 
+        (<>
+          <p>{node.frontmatter.Decoration}</p>
+          <GatsbyImage image={getImage(node.frontmatter.Image.childImageSharp)} alt={`${node.frontmatter.Exterior_color} ${node.frontmatter.Size} ${node.frontmatter.Decoration} pavilion`}/>
+        </>
+        ))}
+    </Container>
   </Layout>
 )
 
@@ -19,3 +31,39 @@ hello
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    fileInformation: allFile {
+      edges {
+        node {
+          id
+          base
+          prettySize
+        }
+      }
+    }
+    pavilionsParameters: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            Decoration
+            Delivery
+            Dimension_tolerance
+            Exterior_color
+            External_dimensions
+            Internal_dimensions
+            Internal_height
+            Price
+            Size
+            Image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
