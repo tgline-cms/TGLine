@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -14,10 +15,12 @@ const IndexPage = ({data}) => (
           (<li key={node.id}>{node.base}</li>))}
       </ul>
       {data.pavilionsParameters.edges.map(({node}) => 
-        (<>
-          <p>{node.frontmatter.Decoration}</p>
-          <GatsbyImage image={getImage(node.frontmatter.Image.childImageSharp)} alt={`${node.frontmatter.Exterior_color} ${node.frontmatter.Size} ${node.frontmatter.Decoration} pavilion`}/>
-        </>
+        (<Row>
+          <Col>
+            <p>{node.frontmatter.Decoration}</p>
+            <GatsbyImage image={getImage(node.frontmatter.product_image)} alt={`${node.frontmatter.Exterior_color} ${node.frontmatter.Size} ${node.frontmatter.Decoration} pavilion`}/>
+          </Col>
+        </Row>
         ))}
     </Container>
   </Layout>
@@ -47,18 +50,18 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            Decoration
-            Delivery
-            Dimension_tolerance
-            Exterior_color
-            External_dimensions
-            Internal_dimensions
-            Internal_height
-            Price
-            Size
-            Image {
+            decoration
+            delivery
+            dimension_tolerance
+            exterior_color
+            external_dimensions
+            internal_dimensions
+            internal_height
+            price
+            size
+            product_image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData 
               }
             }
           }
