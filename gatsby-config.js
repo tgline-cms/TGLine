@@ -15,7 +15,6 @@ module.exports = {
     siteUrl: `https://www.myextraspace.uk`,
   },
   plugins: [
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,6 +36,8 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
