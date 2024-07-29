@@ -10,15 +10,16 @@ import Seo from "../components/seo"
 const IndexPage = ({data}) => (
   <Layout>
     <Container>
-      <ul>
+      <Row>
       {data.fileInformation.edges.map(({node}) =>
-          (<li key={node.id}>{node.base}</li>))}
-      </ul>
+          (<Col sm="3" md="6" lg="12" key={node.id}>{node.base}</Col>))}
+      </Row>
       {data.pavilionsParameters.edges.map(({node}) => 
         (<Row>
-          <Col>
-            <p>{node.frontmatter.Decoration}</p>
-            <GatsbyImage image={getImage(node.frontmatter.product_image)} alt={`${node.frontmatter.Exterior_color} ${node.frontmatter.Size} ${node.frontmatter.Decoration} pavilion`}/>
+          <Col md="6">
+            <h3>Pavilion {node.frontmatter.size}</h3>
+            <p>{node.frontmatter.decoration}</p>
+            <GatsbyImage image={getImage(node.frontmatter.product_image)} alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}/>
           </Col>
         </Row>
         ))}
