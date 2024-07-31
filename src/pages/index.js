@@ -81,4 +81,4 @@ export const query = graphql`
   }
 `
 CMS.init();
-CMS.registerPreviewTemplate("my-template", IndexPage);
+// CMS.registerPreviewTemplate("my-template", IndexPage);
