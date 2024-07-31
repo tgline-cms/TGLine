@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `md`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/`,
       },
     },
     {
@@ -36,6 +36,7 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    `gatsby-plugin-decap-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,

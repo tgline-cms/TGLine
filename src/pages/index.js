@@ -1,8 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Container } from "react-bootstrap"
+import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
+// import CMS from "decap-cms-app";
+
+// import MyTemplate from "../../static/admin/index.html"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -12,17 +15,23 @@ const IndexPage = ({data}) => (
     <Container>
       <Row>
       {data.fileInformation.edges.map(({node}) =>
-          (<Col sm="3" md="6" lg="12" key={node.id}>{node.base}</Col>))}
+          (<Col key={node.id}>{node.base}</Col>))}
       </Row>
-      {data.pavilionsParameters.edges.map(({node}) => 
-        (<Row>
-          <Col md="6">
-            <h3>Pavilion {node.frontmatter.size}</h3>
-            <p>{node.frontmatter.decoration}</p>
-            <GatsbyImage image={getImage(node.frontmatter.product_image)} alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}/>
+      <Row>
+        {data.pavilionsParameters.edges.map(({node}) => 
+          <Col lg={4} xs={6}>
+            <Card>
+              <GatsbyImage image={getImage(node.frontmatter.product_image)} 
+              alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`} 
+              className="card-img-top"/>
+              <Card.Body>
+                <Card.Title>Pavilion {node.frontmatter.size}</Card.Title>
+                <Card.Text>{node.frontmatter.decoration}</Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
-        </Row>
-        ))}
+        )}
+      </Row>
     </Container>
   </Layout>
 )
@@ -62,7 +71,7 @@ export const query = graphql`
             size
             product_image {
               childImageSharp {
-                gatsbyImageData 
+                gatsbyImageData(aspectRatio: 1.5, width: 600)
               }
             }
           }
@@ -71,3 +80,5 @@ export const query = graphql`
     }
   }
 `
+// CMS.init();
+// CMS.registerPreviewTemplate("my-template", IndexPage);
