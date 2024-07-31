@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
-import CMS from "decap-cms-app";
+// import CMS from "decap-cms-app";
 
 // import MyTemplate from "../../static/admin/index.html"
 
@@ -80,5 +80,5 @@ export const query = graphql`
     }
   }
 `
-CMS.init();
+// CMS.init();
 // CMS.registerPreviewTemplate("my-template", IndexPage);
