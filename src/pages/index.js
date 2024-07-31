@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
       </Row>
       <Row>
         {data.pavilionsParameters.edges.map(({node}) => 
-          <Col lg={4} xs={6}>
+          <Col key={node.id} lg={4} xs={6}>
             <Card>
               <GatsbyImage image={getImage(node.frontmatter.product_image)} 
               alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`} 
@@ -59,6 +59,7 @@ export const query = graphql`
     pavilionsParameters: allMarkdownRemark {
       edges {
         node {
+          id
           frontmatter {
             decoration
             delivery
