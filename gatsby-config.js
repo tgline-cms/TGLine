@@ -36,8 +36,6 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
-    `gatsby-plugin-decap-cms`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
@@ -64,5 +62,6 @@ module.exports = {
         icon: `${__dirname}/static/icons/tgline_icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sass`,
   ],
 }

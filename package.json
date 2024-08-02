@@ -8,10 +8,8 @@
     "bootstrap": "^5.3.3",
     "decap-cms-app": "^3.1.11",
     "gatsby": "^5.13.5",
-    "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-netlify-cms": "^7.12.1",
     "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-svgr-loader": "^0.1.0",
@@ -19,9 +17,9 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "node-sass": "^9.0.0",
-    "react": "^18.3.1",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
@@ -29,6 +27,9 @@
   "keywords": [
     "gatsby"
   ],
+  "resolutions": {
+    "graphql": "16.0.0"
+  },
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
