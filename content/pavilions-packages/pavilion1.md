@@ -8,7 +8,7 @@ dimension_tolerance: 1.5%
 decoration: panels
 delivery: 8-10 weeks
 price: £14.250
-product_image: ../../static/images/pavilion4.webp
+product_image: ../../static/images/pavilion1.webp
 id: M01
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
