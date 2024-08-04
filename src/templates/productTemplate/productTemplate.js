@@ -1,9 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from '../../components/layout'
+import Layout from "../../components/layout"
 
 const ProductTemplate = ({ data }) => {
-  const product = data.markdownRemark
+  const product = data?.markdownRemark
+
+  if (!product) {
+    return <p>Product not found.</p>
+  }
 
   return (
     <Layout>
@@ -14,7 +18,7 @@ const ProductTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(frontmatter: { id: { eq: $id } }) {
       frontmatter {
         id
