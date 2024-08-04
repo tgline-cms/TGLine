@@ -22,4 +22,4 @@ Air Conditioner – Dual function heat/cool SINCLAIR 3,4 kW - £950
 
 Kitchenette including upper and lower cabinets, worktop, sink, water tap - £450
 
-Toilet : sink, toilet bowl, under sink cabinet, small window, water heater - £400
+Toilet : sink, toilet bowl, under sink cabinet, small window, water heater - £400.
