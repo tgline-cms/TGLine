@@ -12,16 +12,14 @@ id: M07
 ---
 OPTIONAL EXTRAS
 
+Polyurethane PIR sandwich panels on walls and roof (instead of polystyrene) – £600
 
+Tilt & turn PVC window 100x100 - £400
 
-\    Polyurethane PIR sandwich panels on walls and roof (instead of polystyrene) – £600
+Tilt & turn PVC window 90x190 - £600
 
-\    Tilt & turn PVC window 100x100 - £400
+Air Conditioner – Dual function heat/cool SINCLAIR 3,4 kW - £950
 
-\    Tilt & turn PVC window 90x190 - £600
+Kitchenette including upper and lower cabinets, worktop, sink, water tap - £450
 
-\    Air Conditioner – Dual function heat/cool SINCLAIR 3,4 kW - £950
-
-\    Kitchenette including upper and lower cabinets, worktop, sink, water tap - £450
-
-\    Toilet : sink, toilet bowl, under sink cabinet, small window, water heater - £400
+Toilet : sink, toilet bowl, under sink cabinet, small window, water heater - £400
