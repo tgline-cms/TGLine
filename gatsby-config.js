@@ -14,49 +14,7 @@ module.exports = {
     author: `Beata Maro`,
     siteUrl: `https://www.myextraspace.uk`,
   },
-  // menuLinks: [
-  //   {
-  //     name: `Offer`,
-  //     link: `/offer`,
-  //     submenu: [
-  //       {
-  //         name: `Zadaszenia z poliweglanu`,
-  //         link: `/pavilionM01`,
-  //       },
-  //       {
-  //         name: `Carporty`,
-  //         link: `/pavilionM02`,
-  //       },
-  //       {
-  //         name: `Dachy rzymskie`,
-  //         link: `/pavilionM03`,
-  //       },
-  //       {
-  //         name: `Lamele`,
-  //         link: `/pavilionM04`,
-  //       },
-  //       {
-  //         name: `Ogrody zimowe`,
-  //         link: `/pavilionM05`,
-  //       },
-  //       {
-  //         name: `Zabudowa`,
-  //         link: `/pavilionM06`,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: `O nas`,
-  //     link: `/about`,
-  //     submenu: [],
-  //   },
-
-  //   {
-  //     name: `Kontakt`,
-  //     link: `/contact`,
-  //     submenu: [],
-  //   },
-  // ],
+  
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
