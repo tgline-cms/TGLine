@@ -39,16 +39,30 @@ const Navigation = () => {
               <NavDropdown.Item as={Link} to="/offer">
                 All products
               </NavDropdown.Item>
-              {data.allFile.edges.sort((a,b) => a - b).map(({ node }) => (
-                <NavDropdown.Item key={node.name}>
-                  <Nav.Link
-                    as={Link}
-                    to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
-                  >
-                    {node.name}
-                  </Nav.Link>
-                </NavDropdown.Item>
-              ))}
+              {data.allFile.edges
+                .sort((a, b) => {
+                  const aNumber = parseInt(
+                    a.node.name.replace("pavilion-m", ""),
+                    10
+                  )
+                  const bNumber = parseInt(
+                    b.node.name.replace("pavilion-m", ""),
+                    10
+                  )
+
+                  // Compare the numeric parts
+                  return aNumber - bNumber
+                })
+                .map(({ node }) => (
+                  <NavDropdown.Item key={node.name}>
+                    <Nav.Link
+                      as={Link}
+                      to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
+                    >
+                      {node.name}
+                    </Nav.Link>
+                  </NavDropdown.Item>
+                ))}
             </NavDropdown>
             <Nav.Link as={Link} to="/about">
               About us
