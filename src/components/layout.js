@@ -27,11 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <footer
-        style={{
-          marginTop: `var(--space-5)`,
-          fontSize: `var(--font-sm)`,
-        }}
+      <footer className='fixed-bottom'
       >
         © {new Date().getFullYear()} &middot; Built with
         {` `}

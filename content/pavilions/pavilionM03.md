@@ -9,7 +9,7 @@ decoration: "panels"
 delivery: "8-10 weeks"
 price:  "£14.250"
 product_image: ../../static/images/pavilion3.webp
-id: "M04"
+id: "M03"
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
 lorem ipsum dolor sit amet consectetuer adipiscing elit

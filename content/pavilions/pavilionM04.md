@@ -8,7 +8,7 @@ decoration: Panels
 delivery: 8-10 weeks
 price: £17,900
 product_image: ../../static/images/pavilion4.webp
-id: M06
+id: M04
 ---
 OPTIONAL EXTRAS
 
