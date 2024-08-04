@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
@@ -24,6 +24,7 @@ const OfferPage = () => {
           node {
             id
             frontmatter {
+              id
               decoration
               delivery
               dimension_tolerance
@@ -57,8 +58,14 @@ const OfferPage = () => {
         <Row>
           {data.pavilionsParameters.edges.map(({ node }) => (
             <Col key={node.id} lg={4} xs={6}>
-              <Card className="shadow rounded">
-                <Card.Img variant="top" as={GatsbyImage}
+              <Card
+                as={Link}
+                to={`/pavilion-${node.frontmatter.id}`}
+                className="shadow rounded"
+              >
+                <Card.Img
+                  variant="top"
+                  as={GatsbyImage}
                   image={getImage(node.frontmatter.product_image)}
                   alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}
                 />
