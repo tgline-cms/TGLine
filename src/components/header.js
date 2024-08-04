@@ -2,7 +2,7 @@ import * as React from "react"
 import Navigation from "./navbar"
 
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <Navigation />
   </header>

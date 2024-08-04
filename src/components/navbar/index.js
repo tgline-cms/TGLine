@@ -39,7 +39,7 @@ const Navigation = () => {
               <NavDropdown.Item as={Link} to="/offer">
                 All products
               </NavDropdown.Item>
-              {data.allFile.edges.map(({ node }) => (
+              {data.allFile.edges.sort((a,b) => a - b).map(({ node }) => (
                 <NavDropdown.Item key={node.name}>
                   <Nav.Link
                     as={Link}
@@ -50,7 +50,9 @@ const Navigation = () => {
                 </NavDropdown.Item>
               ))}
             </NavDropdown>
-            <Nav.Link as={Link} to="/about">About us</Nav.Link>
+            <Nav.Link as={Link} to="/about">
+              About us
+            </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link as={Link} to="/contact">

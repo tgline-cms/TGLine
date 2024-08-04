@@ -6,7 +6,7 @@ import Breadcrumbs from '../../components/breadcrumbs'
 
 const AboutPage = () => (
   <Layout>
-    <Breadcrumbs />
+    <Breadcrumbs activeSite="about us" />
     <h1>About us</h1>
   </Layout>
 )

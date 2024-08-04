@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/layout"
+import Breadcrumbs from '../../components/breadcrumbs'
 
 const ProductTemplate = ({ data }) => {
   const product = data?.markdownRemark
@@ -11,6 +12,7 @@ const ProductTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Breadcrumbs activeSite={`pavilion-${product.frontmatter.id}`} />
       <p>{product.frontmatter.id}</p>
       <div dangerouslySetInnerHTML={{ __html: product.html }} />
     </Layout>
