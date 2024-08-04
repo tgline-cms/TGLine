@@ -11,7 +11,7 @@ collections:
     label: "Pavilions"
     folder: "content/pavilions"
     create: true
-    slug: "pavilion{{id}}"
+    slug: "pavilion-{{id}}"
     fields:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "External dimensions", name: "external_dimensions", widget: "string"}
