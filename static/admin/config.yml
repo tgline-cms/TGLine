@@ -6,10 +6,10 @@ media_folder: static/images/
 public_folder: ../../static/images/
 
 collections:
-  - name: "pavilions-packages"
+  - name: "pavilions"
     preview: false
-    label: "Pavilions packages"
-    folder: "content/pavilions-packages"
+    label: "Pavilions"
+    folder: "content/pavilions"
     create: true
     slug: "{{slug}}"
     fields:

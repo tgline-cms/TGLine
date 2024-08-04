@@ -14,6 +14,7 @@ module.exports = {
     author: `Beata Maro`,
     siteUrl: `https://www.myextraspace.uk`,
   },
+  
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,9 +46,9 @@ module.exports = {
       resolve: `gatsby-plugin-svgr-loader`,
       options: {
         rule: {
-          include: `${__dirname}/static/icons`
-        }
-      }
+          include: `${__dirname}/static/icons`,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

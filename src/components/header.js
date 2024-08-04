@@ -1,15 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import Logo from "../../static/icons/TGLine_logo.svg"
+import Navigation from "./navbar"
 
 
 const Header = ({ siteTitle }) => (
   <header>
-    <Link
-      to="/"
-    >
-      <Logo />
-    </Link>
+    <Navigation />
   </header>
 )
 
