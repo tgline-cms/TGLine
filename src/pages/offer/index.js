@@ -1,11 +1,11 @@
 import * as React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import Breadcrumbs from '../../components/breadcrumbs'
+import Breadcrumbs from "../../components/breadcrumbs"
 
 const OfferPage = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,12 @@ const OfferPage = () => {
               size
               product_image {
                 childImageSharp {
-                  gatsbyImageData(aspectRatio: 1.5, width: 600)
+                  gatsbyImageData(
+                    aspectRatio: 1.5
+                    backgroundColor: "grey"
+                    width: 1200
+                    transformOptions: { fit: COVER, cropFocus: SOUTH }
+                  )
                 }
               }
             }
@@ -48,17 +53,14 @@ const OfferPage = () => {
   return (
     <Layout>
       <Breadcrumbs activeSite="offer" />
-      <h1>Hi offer page</h1>
-      <Link to="/">Go back to the homepage</Link>
       <Container>
         <Row>
           {data.pavilionsParameters.edges.map(({ node }) => (
             <Col key={node.id} lg={4} xs={6}>
-              <Card>
-                <GatsbyImage
+              <Card className="shadow rounded">
+                <Card.Img variant="top" as={GatsbyImage}
                   image={getImage(node.frontmatter.product_image)}
                   alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}
-                  className="card-img-top"
                 />
                 <Card.Body>
                   <Card.Title>Pavilion {node.frontmatter.size}</Card.Title>

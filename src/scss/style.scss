@@ -1,9 +1,20 @@
-$main: rgb(83, 83, 79);
+$main: #848480;
+$brandColor: #efc840;
 
 body {
-    background-color: $main;
+  .card {
+    border: none;
+    cursor: pointer;
 
-    .card {
-        border: none;
+    &:hover img {
+      transform: scale(1.1);
     }
+    .card-img-top {
+      overflow: hidden;
+
+      img {
+        transition: transform 0.35s ease-in;
+      }
+    }
+  }
 }
