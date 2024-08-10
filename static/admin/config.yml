@@ -25,10 +25,10 @@ collections:
       - label: "Product gallery"
         name: "product_gallery"
         widget: "list" 
-        allow_add: true,
+        allow_add: true
         field:
-          - label: "Zdjęcie produktu"
-            name: "product_gallery_image"
-            widget: "image"
+          - { label: "Zdjęcie produktu",
+            name: "product_gallery_image",
+            widget: "image" }
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
