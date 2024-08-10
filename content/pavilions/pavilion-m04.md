@@ -1,15 +1,15 @@
 ---
-size: 9.0 x 2.5m
-external_dimensions: 900cm x 250cm
-internal_dimensions: 880cm x 230cm
-internal_height: 250 cm lowered to 240 cm
-dimension_tolerance: 1.5%
-decoration: Panels
-delivery: 8-10 weeks
-price: £17,900
+size: "9.0 x 2.5m"
+external_dimensions: "900cm x 250cm"
+internal_dimensions: "880cm x 230cm"
+internal_height: "250 cm lowered to 240 cm"
+dimension_tolerance: "1.5%"
+decoration: "Panels"
+delivery: "8-10 weeks"
+price: "£17,900"
 product_image: ../../static/images/pavilion4.webp
 product_gallery: ../../static/images/pavilion4
-id: M04
+id: "M04"
 ---
 OPTIONAL EXTRAS
 
