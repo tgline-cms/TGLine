@@ -39,8 +39,10 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-            label: "Zdjęcie produktu"
-            name: "product_gallery_image"
-            widget: "image"
+          - { 
+              label: "Zdjęcie produktu",
+              name: "product_gallery_image",
+              widget: "image"
+            }
       - { label: "Id", name: "id", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
