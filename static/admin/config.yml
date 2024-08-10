@@ -39,6 +39,6 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-          - { label: "Galeria", name: "image", widget: "image" }
+        - { label: "Galeria", name: "image", widget: "image" }
       - { label: "Id", name: "id", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
