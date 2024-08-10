@@ -13,22 +13,34 @@ collections:
     create: true
     slug: "pavilion-{{id}}"
     fields:
-      - {label: "Size", name: "size", widget: "string"}
-      - {label: "External dimensions", name: "external_dimensions", widget: "string"}
-      - {label: "Internal dimensions", name: "internal_dimensions", widget: "string"}
-      - {label: "Internal height", name: "internal_height", widget: "string"}
-      - {label: "Dimension tolerance", name: "dimension_tolerance", widget: "string"}
-      - {label: "Decoration", name: "decoration", widget: "string"}
-      - {label: "Delivery", name: "delivery", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
-      - {label: "Product image", name: "product_image", widget: "image"}
+      - { label: "Size", name: "size", widget: "string" }
+      - {
+          label: "External dimensions",
+          name: "external_dimensions",
+          widget: "string",
+        }
+      - {
+          label: "Internal dimensions",
+          name: "internal_dimensions",
+          widget: "string",
+        }
+      - { label: "Internal height", name: "internal_height", widget: "string" }
+      - {
+          label: "Dimension tolerance",
+          name: "dimension_tolerance",
+          widget: "string",
+        }
+      - { label: "Decoration", name: "decoration", widget: "string" }
+      - { label: "Delivery", name: "delivery", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Product image", name: "product_image", widget: "image" }
       - label: "Product gallery"
         name: "product_gallery"
-        widget: "list" 
+        widget: "list"
         allow_add: true
         field:
-          - { label: "Zdjęcie produktu",
-            name: "product_gallery_image",
-            widget: "image" }
-      - {label: "Id", name: "id", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+            label: "Zdjęcie produktu"
+            name: "product_gallery_image"
+            widget: "image"
+      - { label: "Id", name: "id", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
