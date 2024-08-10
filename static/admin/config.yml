@@ -38,7 +38,7 @@ collections:
         name: "product_gallery"
         widget: "list"
         allow_add: true
-        field:
+        fields:
             label: "Zdjęcie produktu"
             name: "product_gallery_image"
             widget: "image"
