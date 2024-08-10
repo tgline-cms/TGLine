@@ -5,14 +5,8 @@ import { Breadcrumb } from "react-bootstrap"
 const Breadcrumbs = ({ activeSite }) => {
   return (
     <Breadcrumb>
-      <Breadcrumb.Item>
-        <Link to="/">home</Link>
-      </Breadcrumb.Item>
-      {activeSite.includes("pavilion") && (
-        <Breadcrumb.Item>
-          <Link to="/offer">offer</Link>
-        </Breadcrumb.Item>
-      )}
+      <Link to="/" className="me-2">home /</Link>
+      {activeSite.includes("pavilion") && <Link to="/offer" className="me-2">offer /</Link>}
       <Breadcrumb.Item active>{activeSite}</Breadcrumb.Item>
     </Breadcrumb>
   )

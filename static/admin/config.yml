@@ -22,5 +22,13 @@ collections:
       - {label: "Delivery", name: "delivery", widget: "string"}
       - {label: "Price", name: "price", widget: "string"}
       - {label: "Product image", name: "product_image", widget: "image"}
+      - label: "Product gallery"
+        name: "product_gallery"
+        widget: "list" 
+        allow_add: true,
+        field:
+          - label: "Zdjęcie produktu"
+            name: "product_gallery_image"
+            widget: "image"
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap"
 import Logo from "../../../static/icons/TGLine_logo.svg"
 import "./navbar.scss"
@@ -29,7 +29,7 @@ const Navigation = () => {
   return (
     <Navbar defaultExpanded expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand href="/">
           <Logo />
         </Navbar.Brand>
         <Navbar.Toggle fixed="top" aria-controls="responsive-navbar-nav" />
@@ -54,24 +54,16 @@ const Navigation = () => {
                   return aNumber - bNumber
                 })
                 .map(({ node }) => (
-                  <NavDropdown.Item key={node.name}>
-                    <Nav.Link
-                      as={Link}
-                      to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
-                    >
-                      {node.name}
-                    </Nav.Link>
+                  <NavDropdown.Item as={Link}
+                    key={node.name}
+                    to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
+                  >
+                    {node.name}
                   </NavDropdown.Item>
                 ))}
             </NavDropdown>
-            <Nav.Link as={Link} to="/about">
-              About us
-            </Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link as={Link} to="/contact">
-              Contact
-            </Nav.Link>
+            <Nav.Link  as={Link} to="/about">About us</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

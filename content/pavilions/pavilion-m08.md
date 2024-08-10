@@ -8,6 +8,7 @@ decoration: Natural wood
 delivery: 8-10 weeks
 price: £11,900
 product_image: ../../static/images/pavilion8.webp
+product_gallery: ../../static/images/pavilion8
 id: M08
 ---
 OPTIONAL EXTRAS

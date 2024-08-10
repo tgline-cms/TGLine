@@ -9,6 +9,7 @@ decoration: panels
 delivery: 8-10 weeks
 price: £14.250
 product_image: ../../static/images/pavilion7.webp
+product_gallery: ../../static/images/pavilion7
 id: M07
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit

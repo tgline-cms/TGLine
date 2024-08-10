@@ -14,7 +14,7 @@ module.exports = {
     author: `Beata Maro`,
     siteUrl: `https://www.myextraspace.uk`,
   },
-  
+
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static`,
+        path: `${__dirname}/static/images`,
       },
     },
     `gatsby-plugin-image`,
