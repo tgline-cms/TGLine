@@ -23,17 +23,6 @@ const ProductTemplate = ({ data }) => {
 
 export const query = graphql`
   query ($id: String!) {
-    allFile {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
     markdownRemark(frontmatter: { id: { eq: $id } }) {
       frontmatter {
         id
@@ -42,16 +31,5 @@ export const query = graphql`
     }
   }
 `
-
-// export const query = graphql`
-//   query ($id: String!) {
-//     markdownRemark(frontmatter: { id: { eq: $id } }) {
-//       frontmatter {
-//         id
-//       }
-//       html
-//     }
-//   }
-// `
 
 export default ProductTemplate

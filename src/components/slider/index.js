@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Carousel } from "react-bootstrap"
-import "./slider.scss"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import "./slider.scss"
 
 const Slider = ({ product }) => {
   // Query all files and product galleries
@@ -51,7 +51,7 @@ const Slider = ({ product }) => {
   return (
     <Carousel>
       {images.map(({ node }) => {
-        const image = getImage(node.childImageSharp)
+        const image = getImage(node.childImageSharp.gatsbyImageData)
         return (
           <Carousel.Item interval={2000} key={node.id}>
             <GatsbyImage image={image} alt={`${node.base}`} />
