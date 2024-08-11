@@ -36,3 +36,6 @@ collections:
       - { label: "Product image", name: "product_image", widget: "image" }
       - { label: "Id", name: "id", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Galeria", name: "gallery", widget: "list", field:
+      - { label: "Zdjęcie", name: "image", widget: "image", allow_multiple: true, media_folder: "static/images/{{fields.slug}}", public_folder: "/images/{{fields.slug}}"}
+        }
