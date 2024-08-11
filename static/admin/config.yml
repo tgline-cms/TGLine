@@ -42,6 +42,10 @@ collections:
       - label: Id
         name: id
         widget: string
+      - label: Slug
+        name: slug
+        widget: hidden
+        default: pavilion-{{id}}
       - label: Body
         name: body
         widget: markdown
@@ -53,5 +57,5 @@ collections:
           name: image
           widget: image
           allow_multiple: true
-          media_folder: ../../static/images/{{fields.slug}}/
-          public_folder: ../../static/images/{{fields.slug}}/
+          media_folder: ../../static/images/pavilion-{{slug}}/
+          public_folder: ../../static/images/pavilion-{{slug}}/
