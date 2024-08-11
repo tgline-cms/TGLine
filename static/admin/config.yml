@@ -57,5 +57,5 @@ collections:
           name: image
           widget: image
           allow_multiple: true
-          media_folder: src/images/pavilion-{{id}}
+          media_folder: ../../src/images/pavilion-{{id}}
           public_folder: /images/pavilion-{{id}}
