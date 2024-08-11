@@ -14,9 +14,8 @@ price: £14.250
 product_image: ../../src/images/pavilion2.webp
 id: M02
 gallery:
-  - ../../src/images/pavilion-m02/surok-stepnoy-baybak-gryzun.jpg
-  - ../../src/images/pavilion-m02/polka.webp
-  - /images/pavilion-m02/img_20211026_120346.jpg
+  - /images/pavilion-m02/surok-stepnoy-baybak-gryzun.jpg
+  - /images/pavilion-m02/img_20211027_133109.jpg
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
 lorem ipsum dolor sit amet consectetuer adipiscing elit
