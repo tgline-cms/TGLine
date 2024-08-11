@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Carousel } from "react-bootstrap"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "./slider.scss"
 
@@ -25,7 +25,7 @@ const Slider = ({ product }) => {
             frontmatter {
               id
               product_gallery {
-                  image
+                image
               }
             }
           }
@@ -47,26 +47,25 @@ const Slider = ({ product }) => {
   const galleryPath = pavilion.node.frontmatter.product_gallery
   const pavilionName = galleryPath[0].image.split("/")[2]
 
-  const images = data.allFile.edges.filter((edge) => edge.node.base.startsWith(pavilionName))
-
-  // Filter images based on the gallery path
   // const images = data.allFile.edges.filter(edge =>
-  //   edge.node.base.startsWith(galleryPath.split("/").pop())
+  //   edge.node.base.startsWith(pavilionName)
   // )
+  const images = data.allFile.edges
+  console.log(images)
   return (
     <Carousel>
-      {images.map(({ node }) => {
+      {/* {images.map(({ node }) => {
         const image = getImage(node.childImageSharp.gatsbyImageData)
         return (
           <Carousel.Item interval={2000} key={node.id}>
-            <GatsbyImage image={image} alt={`${node.base}`} />
+           { image && (<GatsbyImage image={image} alt={`${node.base}`} />)}
             <Carousel.Caption>
               <h3>Label for this slide</h3>
               <p>Sample Text for this Image</p>
             </Carousel.Caption>
           </Carousel.Item>
         )
-      })}
+      })} */}
     </Carousel>
   )
 }
