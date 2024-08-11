@@ -1,41 +1,57 @@
+---
 backend:
   name: git-gateway
   branch: main
-
 media_folder: static/images/
 public_folder: ../../static/images/
-
 collections:
-  - name: "pavilions"
+  - name: pavilions
     preview: false
-    label: "Pavilions"
-    folder: "content/pavilions"
+    label: Pavilions
+    folder: content/pavilions
     create: true
-    slug: "pavilion-{{id}}"
+    slug: pavilion-{{id}}
     fields:
-      - { label: "Size", name: "size", widget: "string" }
-      - {
-          label: "External dimensions",
-          name: "external_dimensions",
-          widget: "string",
-        }
-      - {
-          label: "Internal dimensions",
-          name: "internal_dimensions",
-          widget: "string",
-        }
-      - { label: "Internal height", name: "internal_height", widget: "string" }
-      - {
-          label: "Dimension tolerance",
-          name: "dimension_tolerance",
-          widget: "string",
-        }
-      - { label: "Decoration", name: "decoration", widget: "string" }
-      - { label: "Delivery", name: "delivery", widget: "string" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Product image", name: "product_image", widget: "image" }
-      - { label: "Id", name: "id", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Galeria", name: "gallery", widget: "list", field:
-      - { label: "Zdjęcie", name: "image", widget: "image", allow_multiple: true, media_folder: "static/images/{{fields.slug}}", public_folder: "/images/{{fields.slug}}"}
-        }
+      - label: Size
+        name: size
+        widget: string
+      - label: External dimensions
+        name: external_dimensions
+        widget: string
+      - label: Internal dimensions
+        name: internal_dimensions
+        widget: string
+      - label: Internal height
+        name: internal_height
+        widget: string
+      - label: Dimension tolerance
+        name: dimension_tolerance
+        widget: string
+      - label: Decoration
+        name: decoration
+        widget: string
+      - label: Delivery
+        name: delivery
+        widget: string
+      - label: Price
+        name: price
+        widget: string
+      - label: Product image
+        name: product_image
+        widget: image
+      - label: Id
+        name: id
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Galeria
+        name: gallery
+        widget: list
+        field:
+          label: Zdjęcie
+          name: image
+          widget: image
+          allow_multiple: true
+          media_folder: static/images/{{fields.slug}}
+          public_folder: /images/{{fields.slug}}
