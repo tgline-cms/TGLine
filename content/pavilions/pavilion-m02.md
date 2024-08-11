@@ -13,7 +13,10 @@ delivery: 8-10 weeks
 price: £14.250
 product_image: ../../static/images/pavilion2.webp
 id: M02
-gallery: []
+gallery:
+  - ../../static/images/polka.webp
+  - ../../static/images/surok-stepnoy-baybak-gryzun.jpg
+  - ../../static/images/photo_2022-07-03_22-58-04-2-.jpg
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
 lorem ipsum dolor sit amet consectetuer adipiscing elit
