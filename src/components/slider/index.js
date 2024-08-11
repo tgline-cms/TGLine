@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Carousel } from "react-bootstrap"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { v4 as uuidv4 } from 'uuid';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "./slider.scss"
 
@@ -24,6 +25,7 @@ const Slider = ({ product }) => {
           node {
             frontmatter {
               id
+              exterior_color
               product_gallery {
                 image
               }
@@ -39,33 +41,36 @@ const Slider = ({ product }) => {
     edge => edge.node.frontmatter.id === product
   )
 
+
   if (!pavilion) {
     return <p>No gallery found for this product.</p>
   }
 
   // Extract the product gallery path
-  const galleryPath = pavilion.node.frontmatter.product_gallery
-  const pavilionName = galleryPath[0].image.split("/")[2]
+  const gallery = pavilion.node.frontmatter.product_gallery
+  gallery.map((img) => console.log(img.image))
+  // const pavilionName = galleryPath[0].image.split("/")[2]
 
   // const images = data.allFile.edges.filter(edge =>
   //   edge.node.base.startsWith(pavilionName)
   // )
-  const images = data.allFile.edges
-  console.log(images)
+ 
   return (
     <Carousel>
-      {/* {images.map(({ node }) => {
-        const image = getImage(node.childImageSharp.gatsbyImageData)
+      {gallery.map(({ image }) => {
+        // const img = getImage(image)
         return (
-          <Carousel.Item interval={2000} key={node.id}>
-           { image && (<GatsbyImage image={image} alt={`${node.base}`} />)}
+          <Carousel.Item interval={2000} key={uuidv4()}>
+           {/* { image && (<GatsbyImage image={img} alt={`${pavilion.node.frontmatter.exterior_color}} pavilion`} />)} */}
+           <img src="/images/pavilion-m02/polka.webp" alt={`${pavilion.node.frontmatter.exterior_color} pavilion`} />
+
             <Carousel.Caption>
               <h3>Label for this slide</h3>
               <p>Sample Text for this Image</p>
             </Carousel.Caption>
           </Carousel.Item>
         )
-      })} */}
+      })}
     </Carousel>
   )
 }

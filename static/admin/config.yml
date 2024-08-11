@@ -2,8 +2,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: static/images/
-public_folder: ../../static/images/
+media_folder: src/images
+public_folder: /images
 collections:
   - name: pavilions
     preview: false
@@ -57,5 +57,5 @@ collections:
           name: image
           widget: image
           allow_multiple: true
-          media_folder: ../../static/images/pavilion-{{id}}/
-          public_folder: ../../static/images/pavilion-{{id}}/
+          media_folder: src/images/pavilion-{{id}}
+          public_folder: /images/pavilion-{{id}}
