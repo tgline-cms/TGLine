@@ -16,6 +16,7 @@ id: M02
 gallery:
   - ../../src/images/pavilion-m02/surok-stepnoy-baybak-gryzun.jpg
   - ../../src/images/pavilion-m02/polka.webp
+  - /images/pavilion-m02/img_20211026_120346.jpg
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
 lorem ipsum dolor sit amet consectetuer adipiscing elit
