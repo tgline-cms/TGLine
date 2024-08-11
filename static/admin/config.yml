@@ -54,4 +54,4 @@ collections:
           widget: image
           allow_multiple: true
           media_folder: static/images/{{fields.slug}}
-          public_folder: /images/{{fields.slug}}
+          public_folder: ../../static/images/{{fields.slug}}
