@@ -9,8 +9,8 @@ delivery: "8-10 weeks"
 price: "£17,900"
 product_image: "../../static/images/pavilion4.webp"
 product_gallery: 
-    - image: "/images/pavilion4/pavilion4_1.jpg"
-    - image: "/images/pavilion4/pavilion4_2.jpg"
+    - image: "/images/pavilion-m04/pavilion4_1.jpg"
+    - image: "/images/pavilion-m04/pavilion4_2.jpg"
 id: "M04"
 ---
 OPTIONAL EXTRAS
