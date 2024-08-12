@@ -5,7 +5,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pavilions/" } }) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/pavilions/" } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -20,10 +22,21 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `/pavilion-${node.frontmatter.id}`,
-      component: path.resolve(`./src/templates/productTemplate/productTemplate.js`),
+      component: path.resolve(
+        `./src/templates/productTemplate/productTemplate.js`
+      ),
       context: {
         id: node.frontmatter.id,
       },
     })
   })
+}
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
+
+  if (page.path.match(/^\/404\/$/)) {
+    page.matchPath = `/*`
+    createPage(page)
+  }
 }

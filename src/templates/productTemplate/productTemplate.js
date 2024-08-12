@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
+import Seo from "../../components/seo"
 
-const ProductTemplate = ({ data }) => {
+const ProductTemplate = ({data}) => {
   const product = data?.markdownRemark
 
   if (!product) {
@@ -20,6 +21,8 @@ const ProductTemplate = ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="pavilion details" />
 
 export const query = graphql`
   query ($id: String!) {
