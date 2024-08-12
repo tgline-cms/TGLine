@@ -5,7 +5,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import Breadcrumbs from "../../components/breadcrumbs"
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 
 const OfferPage = () => {
   const data = useStaticQuery(graphql`

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Breadcrumb } from "react-bootstrap"
+import "./breadcrumbs.scss"
 
 const Breadcrumbs = ({ activeSite }) => {
   return (

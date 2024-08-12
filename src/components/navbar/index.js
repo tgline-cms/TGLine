@@ -28,15 +28,15 @@ const Navigation = () => {
   `)
   return (
     <Navbar defaultExpanded expand="lg" className="bg-body-tertiary">
-      <Container>
+      <Container className="d-flex justify-content-between">
         <Navbar.Brand href="/">
           <Logo />
         </Navbar.Brand>
         <Navbar.Toggle fixed="top" aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <NavDropdown title="Offer" id="collapsible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/offer">
+              <NavDropdown.Item as={Link} to="/offer" activeClassName="text-warning">
                 All products
               </NavDropdown.Item>
               {data.allFile.edges
@@ -54,7 +54,7 @@ const Navigation = () => {
                   return aNumber - bNumber
                 })
                 .map(({ node }) => (
-                  <NavDropdown.Item as={Link}
+                  <NavDropdown.Item as={Link} activeClassName='bg-warning text-light'
                     key={node.name}
                     to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
                   >
@@ -62,8 +62,8 @@ const Navigation = () => {
                   </NavDropdown.Item>
                 ))}
             </NavDropdown>
-            <Nav.Link  as={Link} to="/about">About us</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link  as={Link} to="/about" activeClassName="text-warning">About us</Nav.Link>
+            <Nav.Link as={Link} to="/contact" activeClassName="text-warning">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

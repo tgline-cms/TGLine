@@ -2,7 +2,7 @@ import * as React from "react"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import Breadcrumbs from '../../components/breadcrumbs'
+import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs'
 
 const ContactPage = () => (
   <Layout>

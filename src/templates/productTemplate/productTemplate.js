@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/layout"
-import Breadcrumbs from "../../components/breadcrumbs"
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 
 const ProductTemplate = ({ data }) => {
