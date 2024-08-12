@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
- */
+import React from "react"
+import "./src/style/style.scss"
+import "normalize.css"
+import Layout from "./src/components/layout"
 
-// You can delete this file if you're not using it
+// Wraps every page in a component
+export function wrapPageElement({ element, props }) {
+  return <Layout {...props}>{element}</Layout>
+}
+
+export function wrapRootElement({ element }) {
+  return <>{element}</>
+}

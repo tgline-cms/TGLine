@@ -9,8 +9,9 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "../scss/style.scss"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "normalize.css"
+import "../style/style.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,11 +28,12 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className="container">{children}</main>
-      <footer className='fixed-bottom'
-      >
-        © {new Date().getFullYear()} &middot; Built with
+      <footer className="fixed-bottom">
+        © 2024 &middot; Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://beatamaro.github.io/" target="_blank" rel="noreferrer">
+          Beta
+        </a>
       </footer>
     </>
   )

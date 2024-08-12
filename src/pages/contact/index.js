@@ -1,14 +1,18 @@
 import * as React from "react"
-
-import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs'
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope, faMobile } from "@fortawesome/free-solid-svg-icons"
 
 const ContactPage = () => (
-  <Layout>
+  <>
     <Breadcrumbs activeSite="contact" />
-    <h1>Contact</h1>
-  </Layout>
+    <h2>Contact</h2>
+    <FontAwesomeIcon icon={faEnvelope} />
+    <a href="mailto:contact@myextraspace.uk">contact@myextraspace.uk</a>
+    <FontAwesomeIcon icon={faMobile} />
+    <a href="tel:+44 7984 137 873">+44 7984 137 873</a>
+  </>
 )
 
 export const Head = () => <Seo title="Contact" />

@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../../components/layout"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
@@ -13,12 +12,12 @@ const ProductTemplate = ({data}) => {
   }
 
   return (
-    <Layout>
+    <>
       <Breadcrumbs activeSite={`pavilion-${product.frontmatter.id}`} />
       <p>{product.frontmatter.id}</p>
       <div dangerouslySetInnerHTML={{ __html: product.html }} />
       <Slider product={product.frontmatter.id} />
-    </Layout>
+    </>
   )
 }
 

@@ -3,7 +3,6 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
-import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 
@@ -52,7 +51,7 @@ const OfferPage = () => {
   `)
 
   return (
-    <Layout>
+    <>
       <Breadcrumbs activeSite="offer" />
       <Container>
         <Row>
@@ -78,7 +77,7 @@ const OfferPage = () => {
           ))}
         </Row>
       </Container>
-    </Layout>
+    </>
   )
 }
 

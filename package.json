@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Beata Maro <maro.beata@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.3",
     "decap-cms-app": "^3.1.11",
     "gatsby": "^5.13.5",
@@ -19,6 +22,7 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "node-sass": "^9.0.0",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
