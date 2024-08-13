@@ -29,7 +29,7 @@ const Navigation = () => {
   return (
     <Navbar defaultExpanded expand="lg" className="bg-body-tertiary">
       <Container className="d-flex justify-content-between">
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <Logo />
         </Navbar.Brand>
         <Navbar.Toggle fixed="top" aria-controls="responsive-navbar-nav" />
