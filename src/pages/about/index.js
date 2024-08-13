@@ -7,27 +7,29 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      markdownRemark {
-        frontmatter {
-          about_heading
-          about_image {
-            childImageSharp {
-              gatsbyImageData
+      file(relativePath: { regex: "/about/about.md/" }) {
+        childMarkdownRemark {
+          frontmatter {
+            about_heading
+            about_image {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
           }
+          html
         }
-        html
       }
     }
- `)
-  const aboutData = data?.markdownRemark
+  `)
+  const aboutData = data?.file?.childMarkdownRemark
 
   return (
     <>
       <Breadcrumbs activeSite="about us" />
-      <div dangerouslySetInnerHTML={{ __html: aboutData.html }} />
+      <div dangerouslySetInnerHTML={{ __html: aboutData?.html }} />
       <GatsbyImage
-        image={getImage(aboutData.frontmatter.about_image)}
+        image={getImage(aboutData?.frontmatter.about_image)}
         alt="pavilion"
       />
     </>
