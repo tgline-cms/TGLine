@@ -1,4 +1,5 @@
 ---
+markdownName: "pavilion"
 size: "4.0m x 2.5m"
 external_dimensions: "600cm x 250cm"
 exterior_color: "graphite/white"

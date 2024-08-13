@@ -18,7 +18,9 @@ const OfferPage = () => {
           }
         }
       }
-      pavilionsParameters: allMarkdownRemark(skip: 1) {
+      pavilionsParameters: allMarkdownRemark(
+        filter: { frontmatter: { markdownName: { eq: "pavilion" } } }
+      ) {
         edges {
           node {
             id

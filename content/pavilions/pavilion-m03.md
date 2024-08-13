@@ -1,4 +1,5 @@
 ---
+markdownName: "pavilion"
 size: "6.0m x 2.5m"
 external_dimensions: "600cm x 250cm"
 internal_dimensions: "580cm x 230cm"
