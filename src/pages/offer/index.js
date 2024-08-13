@@ -18,7 +18,7 @@ const OfferPage = () => {
           }
         }
       }
-      pavilionsParameters: allMarkdownRemark {
+      pavilionsParameters: allMarkdownRemark(skip: 1) {
         edges {
           node {
             id
