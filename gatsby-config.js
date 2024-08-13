@@ -13,7 +13,7 @@ module.exports = {
     description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions. Do you have a business idea but don't know where to start? - Nothing could be easier - contact us and we will provide you with a personalised offer.`,
     author: `Beata Maro`,
     image: `/open-graph/og-image.png`,
-    siteUrl: `https://www.myextraspace.netlify.app`,
+    siteUrl: `https://www.myextraspaceuk.netlify.app`,
   },
 
   plugins: [
@@ -33,8 +33,8 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-decap-cms`,
     `gatsby-plugin-offline`,
     {
