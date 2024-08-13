@@ -59,3 +59,18 @@ collections:
           allow_multiple: true
           media_folder: ../../src/images/pavilion-{{id}}
           public_folder: /images/pavilion-{{id}}
+  - name: about
+    label: About us
+    folder: content/about
+    slug: about-us
+    fields:
+      - label: Heading  
+        name: about_heading
+        widget: string
+      - label: About image
+        name: about_image
+        widget: image
+      - label: Body
+        name: body 
+        widget: markdown
+
