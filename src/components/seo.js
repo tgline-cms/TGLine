@@ -21,7 +21,7 @@ function Seo({ description, title, children }) {
           }
         }
         openGraphDefaultImage: file(
-          relativePath: { eq: "open-graph/og-image.png" }
+          relativePath: { eq: "open-graph/og-image.jpg" }
         ) {
           publicURL
         }
@@ -50,23 +50,3 @@ function Seo({ description, title, children }) {
 }
 
 export default Seo
-
-
-// graphql`
-    //   query {
-    //     site {
-    //       siteMetadata {
-    //         title
-    //         description
-    //         author
-    //       }
-    //     }
-    //     openGraphDefaultImage: file(
-    //       relativePath: { eq: "open-graph/og-image.png" }
-    //     ) {
-    //       childImageSharp {
-    //         gatsbyImageData(layout: FIXED, height: 580, width: 1200)
-    //       }
-    //     }
-    //   }
-    // `

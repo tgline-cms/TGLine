@@ -12,7 +12,7 @@ module.exports = {
     title: `TGLine`,
     description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
     author: `Beata Maro`,
-    image: `/open-graph/og-image.png`,
+    image: `/open-graph/og-image.jpg`,
     siteUrl: `https://www.myextraspaceuk.netlify.app`,
   },
 
