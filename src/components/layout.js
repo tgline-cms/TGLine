@@ -26,10 +26,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `TGLine - Commercial Pavilions`} />
       <main className="container">{children}</main>
       <footer className="fixed-bottom">
-        © 2024 &middot; Built with
+        © 2024 &middot;
         {` `}
         <a href="https://beatamaro.github.io/" target="_blank" rel="noreferrer">
           Beta

@@ -1,8 +1,9 @@
 import * as React from "react"
 
-
 const Hero = () => (
-<>Hero</>
+  <>
+    Hero
+  </>
 )
 
 export default Hero
