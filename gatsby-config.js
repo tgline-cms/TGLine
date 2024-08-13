@@ -10,8 +10,9 @@
 module.exports = {
   siteMetadata: {
     title: `TGLine`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `TGLine - Commercial Pavilions for every need. We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions. Do you have a business idea but don't know where to start? - Nothing could be easier - contact us and we will provide you with a personalised offer.`,
     author: `Beata Maro`,
+    image: `${__dirname}/static/og-image.png`,
     siteUrl: `https://www.myextraspace.uk`,
   },
 
@@ -47,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `TGLine - Commercial Pavilions`,
+        short_name: `TGLine`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
