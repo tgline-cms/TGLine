@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: `TGLine`,
-    description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions. Do you have a business idea but don't know where to start? - Nothing could be easier - contact us and we will provide you with a personalised offer.`,
+    description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
     author: `Beata Maro`,
     image: `/open-graph/og-image.png`,
     siteUrl: `https://www.myextraspaceuk.netlify.app`,
