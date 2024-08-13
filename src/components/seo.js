@@ -21,7 +21,7 @@ function Seo({ description, title, children }) {
           }
         }
         openGraphDefaultImage: file(
-          relativePath: { eq: "open-graph/code.png" }
+          relativePath: { eq: "open-graph/og-image.png" }
         ) {
           childImageSharp {
             gatsbyImageData(layout: FIXED, height: 580, width: 1200)
@@ -33,7 +33,7 @@ function Seo({ description, title, children }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const ogImage = getImage(openGraphDefaultImage)
+  const ogImage = getImage(site.openGraphDefaultImage)
 
   return (
     <>
