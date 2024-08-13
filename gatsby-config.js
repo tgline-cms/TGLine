@@ -13,7 +13,7 @@ module.exports = {
     description: `TGLine - Commercial Pavilions for every need. We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions. Do you have a business idea but don't know where to start? - Nothing could be easier - contact us and we will provide you with a personalised offer.`,
     author: `Beata Maro`,
     image: `${__dirname}/static/open-graph/og-image.png`,
-    siteUrl: `https://www.myextraspace.netlify.app`,
+    siteUrl: `https://www.mypavilions.netlify.app`,
   },
 
   plugins: [
