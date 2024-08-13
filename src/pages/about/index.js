@@ -6,7 +6,7 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
-    query AboutPageQuery {
+    query {
       markdownRemark {
         frontmatter {
           about_heading
