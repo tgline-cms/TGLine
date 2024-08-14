@@ -13,7 +13,7 @@ module.exports = {
     description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
     copyright: "U+00A9 2024 | Beata Maro",
     author: `Beata Maro`,
-    image: `/open-graph/og-image.jpg`,
+    image: `/open-graph/og-image.png`,
     siteUrl: `https://www.myextraspaceuk1.netlify.app`,
   },
 
