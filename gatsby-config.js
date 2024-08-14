@@ -14,7 +14,7 @@ module.exports = {
     copyright: "U+00A9 2024 | Beata Maro",
     author: `Beata Maro`,
     image: `/open-graph/og-image.png`,
-    siteUrl: `https://myextraspaceuk.netlify.app`,
+    siteUrl: `https://my-extraspace.netlify.app`,
   },
 
   plugins: [
