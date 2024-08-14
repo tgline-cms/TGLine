@@ -30,7 +30,7 @@ function Seo({ description, title, children }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const ogImageUrl = `${site.siteMetadata.siteUrl}${openGraphDefaultImage.publicURL}`
+  const ogImageUrl = `${site.siteMetadata.siteUrl}${openGraphDefaultImage.publicURL}?v=123456`
 
   return (
     <>

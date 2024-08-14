@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `TGLine`,
     description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
+    copyright: "U+00A9 2024 | Beata Maro",
     author: `Beata Maro`,
     image: `/open-graph/og-image.jpg`,
     siteUrl: `https://www.myextraspaceuk.netlify.app`,
@@ -51,11 +52,9 @@ module.exports = {
         name: `TGLine - Commercial Pavilions`,
         short_name: `TGLine`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#373634`,
+        theme_color: `#f9ac06`,
+        display: `standalone`,
         icon: `${__dirname}/static/icons/tgline_icon.png`, // This path is relative to the root of the site.
       },
     },
