@@ -30,7 +30,7 @@ function Seo({ description, title, children }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const ogImageUrl = `${site.siteMetadata.siteUrl}${openGraphDefaultImage.publicURL}?v=1234567`
+  const ogImageUrl = `${site.siteMetadata.siteUrl}${openGraphDefaultImage.publicURL}?v=12345678`
 
   return (
     <>
@@ -40,12 +40,12 @@ function Seo({ description, title, children }) {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={ogImageUrl} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={defaultTitle ? `${title} | ${defaultTitle}` : title} />
       <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image"  content={ogImageUrl} />
+
       {children}
     </>
   )
