@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import { Link } from "gatsby"
 
 const NotFoundPage = () => (
-    <Container className="d-flex vh-100">
+    <Container className="d-flex vh-100 shadow">
       <Row className="justify-content-center align-items-center flex-grow-1">
         <Col md={8} className="text-center">
           <h3>Ooops... we can't find that page!</h3>

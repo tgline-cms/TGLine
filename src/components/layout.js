@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `TGLine - Commercial Pavilions`} />
-      <main className="container">{children}</main>
+      <main>{children}</main>
       <footer className="fixed-bottom">
         © 2024 &middot;
         {` `}

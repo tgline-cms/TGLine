@@ -38,14 +38,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-decap-cms`,
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-svgr-loader`,
-      options: {
-        rule: {
-          include: `${__dirname}/static/icons`,
-        },
-      },
-    },
+    `gatsby-plugin-svgr`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

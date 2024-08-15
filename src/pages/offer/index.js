@@ -54,15 +54,15 @@ const OfferPage = () => {
 
   return (
     <>
-      <Breadcrumbs activeSite="offer" />
-      <Container>
-        <Row>
+      <Container className="shadow">
+        <Breadcrumbs activeSite="offer" />
+        <Row className="p-4">
           {data.pavilionsParameters.edges.map(({ node }) => (
             <Col key={node.id} lg={4} xs={6}>
               <Card
                 as={Link}
                 to={`/pavilion-${node.frontmatter.id}`}
-                className="shadow rounded"
+                className="shadow rounded mb-3"
               >
                 <Card.Img
                   variant="top"

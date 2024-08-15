@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap"
-import Logo from "../../../static/icons/TGLine_logo.svg"
+import { ReactComponent as Logo } from "../../../static/icons/TGLine_logo.svg"
 import "./navbar.scss"
 
 const Navigation = () => {
@@ -27,7 +27,7 @@ const Navigation = () => {
     }
   `)
   return (
-    <Navbar defaultExpanded expand="lg" className="bg-body-tertiary">
+    <Navbar defaultExpanded expand="lg" className="bg-body-tertiary shadow-sm">
       <Container className="d-flex justify-content-between">
         <Navbar.Brand as={Link} to="/">
           <Logo />

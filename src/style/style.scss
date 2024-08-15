@@ -2,18 +2,30 @@ $main: #848480;
 $brandColor: #efc840;
 
 body {
-  .card {
-    border: none;
-    cursor: pointer;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-    &:hover img {
-      transform: scale(1.1);
+  main {
+    background-color: $main;
+
+    .container {
+      background-color: white;
     }
-    .card-img-top {
-      overflow: hidden;
+    .card {
+      border: none;
+      cursor: pointer;
 
-      img {
-        transition: transform 0.35s ease-in;
+      &:hover img {
+        transform: scale(1.1);
+      }
+      .card-img-top {
+        overflow: hidden;
+
+        img {
+          transition: transform 0.35s ease-in;
+        }
       }
     }
   }

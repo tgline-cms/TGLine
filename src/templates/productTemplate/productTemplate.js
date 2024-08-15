@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
+import { Container } from 'react-bootstrap'
 
 const ProductTemplate = ({data}) => {
   const product = data?.markdownRemark
@@ -12,12 +13,12 @@ const ProductTemplate = ({data}) => {
   }
 
   return (
-    <>
+    <Container className="shadow min-vh-100">
       <Breadcrumbs activeSite={`pavilion-${product.frontmatter.id}`} />
       <p>{product.frontmatter.id}</p>
       <div dangerouslySetInnerHTML={{ __html: product.html }} />
       <Slider product={product.frontmatter.id} />
-    </>
+    </Container>
   )
 }
 
