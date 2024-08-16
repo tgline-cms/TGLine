@@ -5,14 +5,16 @@ import { ReactComponent as Logo } from "../../../static/icons/TGLine_logo.svg"
 import "./navbar.scss"
 
 const Navigation = () => {
-  const [showOffcanvas, setShowOffcanvas] = React.useState(false);
+  const [showOffcanvas, setShowOffcanvas] = React.useState(false)
 
-  const handleClose = () => setShowOffcanvas(false);
-  const handleShow = () => setShowOffcanvas(true);
+  const handleClose = () => setShowOffcanvas(false)
+  const handleShow = () => setShowOffcanvas(true)
 
   React.useEffect(() => {
-    setShowOffcanvas(false);
-  }, []);
+    if (typeof window !== "undefined") {
+      setShowOffcanvas(false)
+    }
+  }, [])
 
   const data = useStaticQuery(graphql`
     query {
@@ -34,7 +36,7 @@ const Navigation = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary shadow-sm">
@@ -118,7 +120,7 @@ const Navigation = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
