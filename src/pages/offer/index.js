@@ -5,6 +5,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
 import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import "./offer.scss"
 
 const OfferPage = () => {
   const data = useStaticQuery(graphql`
@@ -56,24 +57,24 @@ const OfferPage = () => {
     <>
       <Container className="shadow">
         <Breadcrumbs activeSite="offer" />
-        <Row className="p-4">
+        <Row className="p-sm-2 p-lg-4">
           {data.pavilionsParameters.edges.map(({ node }) => (
-            <Col key={node.id} lg={4} xs={6}>
+            <Col key={node.id} sx={12} lg={4}>
               <Card
                 as={Link}
                 to={`/pavilion-${node.frontmatter.id}`}
-                className="shadow rounded mb-3"
+                className="shadow rounded mb-3 ps-0 pe-0"
               >
-                <Card.Img
-                  variant="top"
-                  as={GatsbyImage}
-                  image={getImage(node.frontmatter.product_image)}
-                  alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}
-                />
                 <Card.Body>
                   <Card.Title>Pavilion {node.frontmatter.size}</Card.Title>
                   <Card.Text>{node.frontmatter.decoration}</Card.Text>
                 </Card.Body>
+                <Card.Img
+                  variant="bottom"
+                  as={GatsbyImage}
+                  image={getImage(node.frontmatter.product_image)}
+                  alt={`${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration} pavilion`}
+                />
               </Card>
             </Col>
           ))}

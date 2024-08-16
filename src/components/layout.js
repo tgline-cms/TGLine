@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `TGLine - Commercial Pavilions`} />
       <main>{children}</main>
-      <footer className="fixed-bottom">
+      <footer>
         © 2024 &middot;
         {` `}
         <a href="https://beatamaro.github.io/" target="_blank" rel="noreferrer">

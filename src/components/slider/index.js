@@ -31,7 +31,7 @@ const Slider = ({ product }) => {
 
     console.log(images)
   return (
-    <Carousel>
+    <Carousel fade>
       {images.map((image) => {
         return (
           <Carousel.Item interval={2000} key={uuidv4()}>

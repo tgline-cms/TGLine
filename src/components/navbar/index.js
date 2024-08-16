@@ -10,6 +10,10 @@ const Navigation = () => {
   const handleClose = () => setShowOffcanvas(false);
   const handleShow = () => setShowOffcanvas(true);
 
+  React.useEffect(() => {
+    setShowOffcanvas(false);
+  }, []);
+
   const data = useStaticQuery(graphql`
     query {
       allFile(

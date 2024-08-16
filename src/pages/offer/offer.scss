@@ -1,0 +1,15 @@
+.card {
+    border: none;
+    cursor: pointer;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+    .card-img-bottom {
+      overflow: hidden;
+
+      img {
+        transition: transform 0.35s ease-in;
+      }
+    }
+  }
