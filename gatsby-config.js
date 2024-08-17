@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: `TGLine`,
-    description: `We build bespoke pavilions. We are a company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
+    description: `Modern pavilions for every need. A company with many years of experience in the manufacture of year-round sandwich panel pavilions.`,
     copyright: "U+00A9 2024 | Beata Maro",
     author: `Beata Maro`,
     image: `/open-graph/og-image.png`,
