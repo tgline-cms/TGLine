@@ -1,14 +1,17 @@
 $main: #848480;
 $brandColor: #efc840;
+$navy: #1E2832;
 
 body {
+  font-family: 'Jura', sans-serif;
+
   a {
     text-decoration: none;
     color: inherit;
   }
 
   main {
-    background-color: $main;
+    background-color: $navy;
 
     .container {
       background-color: white;

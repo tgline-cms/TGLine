@@ -36,7 +36,7 @@ function Seo({ description, title, children }) {
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
-      <meta property="og:title" content="TGLine - Commercial Pavilions" />
+      <meta property="og:title" content="TGLine - Pawilony handlowe" />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={ogImageUrl} />

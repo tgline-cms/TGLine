@@ -7,7 +7,7 @@ const Breadcrumbs = ({ activeSite }) => {
   return (
     <Breadcrumb className="p-3 ps-0">
       <Link to="/" className="me-2">home /</Link>
-      {activeSite.includes("pavilion") && <Link to="/offer" className="me-2">offer /</Link>}
+      {activeSite.includes("pawilon") && <Link to="/oferta" className="me-2">oferta /</Link>}
       <Breadcrumb.Item active>{activeSite}</Breadcrumb.Item>
     </Breadcrumb>
   )

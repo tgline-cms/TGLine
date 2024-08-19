@@ -9,12 +9,12 @@ const ProductTemplate = ({data}) => {
   const product = data?.markdownRemark
 
   if (!product) {
-    return <p>Product not found.</p>
+    return <p>Produkt nie znaleziony</p>
   }
 
   return (
     <Container className="shadow min-vh-100">
-      <Breadcrumbs activeSite={`pavilion-${product.frontmatter.id}`} />
+      <Breadcrumbs activeSite={`pawilon-${product.frontmatter.id}`} />
       <p>{product.frontmatter.id}</p>
       <div dangerouslySetInnerHTML={{ __html: product.html }} />
       <Slider product={product.frontmatter.id} />
@@ -22,7 +22,7 @@ const ProductTemplate = ({data}) => {
   )
 }
 
-export const Head = () => <Seo title="pavilion details" />
+export const Head = () => <Seo title="Szczegóły produktu" />
 
 export const query = graphql`
   query ($id: String!) {

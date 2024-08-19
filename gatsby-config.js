@@ -32,6 +32,15 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `jura\:400,500,600,700`
+        ],
+        display: 'swap'
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,

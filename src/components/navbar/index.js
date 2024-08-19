@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Navbar, Container, Offcanvas, Nav, NavDropdown } from "react-bootstrap"
+import { Navbar, Offcanvas, Nav, NavDropdown } from "react-bootstrap"
 import { ReactComponent as Logo } from "../../../static/icons/TGLine_logo.svg"
 import "./navbar.scss"
 
@@ -21,7 +21,7 @@ const Navigation = () => {
       allFile(
         filter: {
           extension: { eq: "md" }
-          relativeDirectory: { eq: "pavilions" }
+          relativeDirectory: { eq: "pawilony" }
         }
       ) {
         edges {
@@ -39,8 +39,7 @@ const Navigation = () => {
   `)
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary shadow-sm">
-      <Container className="d-flex justify-content-between">
+    <Navbar expand="lg" className="bg-body-tertiary shadow-sm d-flex justify-content-between">
         <Navbar.Brand as={Link} to="/">
           <Logo />
         </Navbar.Brand>
@@ -64,27 +63,26 @@ const Navigation = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="ms-auto">
-              <NavDropdown title="Offer" id="collapsible-nav-dropdown">
+              <NavDropdown title="Oferta" id="collapsible-nav-dropdown">
                 <NavDropdown.Item
                   as={Link}
-                  to="/offer"
+                  to="/oferta"
                   activeClassName="text-warning"
                   onClick={handleClose}
                 >
-                  All products
+                  Wszystkie produkty
                 </NavDropdown.Item>
                 {data.allFile.edges
                   .sort((a, b) => {
                     const aNumber = parseInt(
-                      a.node.name.replace("pavilion-m", ""),
+                      a.node.name.replace("pawilon-m", ""),
                       10
                     )
                     const bNumber = parseInt(
-                      b.node.name.replace("pavilion-m", ""),
+                      b.node.name.replace("pawilon-m", ""),
                       10
                     )
 
-                    // Compare the numeric parts
                     return aNumber - bNumber
                   })
                   .map(({ node }) => (
@@ -92,7 +90,7 @@ const Navigation = () => {
                       as={Link}
                       activeClassName="bg-warning text-light"
                       key={node.name}
-                      to={`/pavilion-${node.childrenMarkdownRemark[0].frontmatter.id}`}
+                      to={`/pawilon-${node.childrenMarkdownRemark[0].frontmatter.id}`}
                       onClick={handleClose}
                     >
                       {node.name}
@@ -101,24 +99,23 @@ const Navigation = () => {
               </NavDropdown>
               <Nav.Link
                 as={Link}
-                to="/about"
+                to="/o-nas"
                 activeClassName="text-warning"
                 onClick={handleClose}
               >
-                About us
+                O nas
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                to="/contact"
+                to="/kontakt"
                 activeClassName="text-warning"
                 onClick={handleClose}
               >
-                Contact
+                Kontakt
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
-      </Container>
     </Navbar>
   )
 }

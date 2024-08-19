@@ -9,7 +9,7 @@ const Slider = ({ product }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { relativeDirectory: { regex: "/^pavilion-/" } }
+        filter: { relativeDirectory: { regex: "/^pawilon-/" } }
       ) {
         edges {
           node {
@@ -26,7 +26,7 @@ const Slider = ({ product }) => {
   `)
 
   const images = data.allFile.edges
-    .filter(({node}) => node.relativeDirectory === `pavilion-${product.toLowerCase()}`)
+    .filter(({node}) => node.relativeDirectory === `pawilon-${product.toLowerCase()}`)
     .map(edge => getImage(edge.node.childImageSharp.gatsbyImageData))
 
     console.log(images)

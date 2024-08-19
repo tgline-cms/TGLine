@@ -4,19 +4,17 @@ import Seo from "../components/seo"
 import { Link } from "gatsby"
 
 const NotFoundPage = () => (
-    <Container className="d-flex vh-100 shadow">
-      <Row className="justify-content-center align-items-center flex-grow-1">
-        <Col md={8} className="text-center">
-          <h3>Ooops... we can't find that page!</h3>
-          <p>
-            The page you were trying to get to might have been moved or changed.
-          </p>
-          <Link to="/">Come back home.</Link>
-        </Col>
-      </Row>
-    </Container>
+  <Container className="d-flex vh-100 shadow">
+    <Row className="justify-content-center align-items-center flex-grow-1">
+      <Col md={8} className="text-center">
+        <h3>Ooops... Nie możemy znaleźć tej strony!</h3>
+        <p>Być może została przeniesona lub zmieniona.</p>
+        <Link to="/">Wróć na stronę główną.</Link>
+      </Col>
+    </Row>
+  </Container>
 )
 
-export const Head = () => <Seo title="Page not found" />
+export const Head = () => <Seo title="Strona nie znaleziona" />
 
 export default NotFoundPage

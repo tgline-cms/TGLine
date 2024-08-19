@@ -27,11 +27,11 @@ const AboutPage = () => {
 
   return (
     <Container className="shadow min-vh-100">
-      <Breadcrumbs activeSite="about us" />
+      <Breadcrumbs activeSite="O nas" />
       <div dangerouslySetInnerHTML={{ __html: aboutData?.html }} />
       <GatsbyImage
         image={getImage(aboutData?.frontmatter.about_image)}
-        alt="pavilion"
+        alt="pawilon"
       />
     </Container>
   )

@@ -5,12 +5,12 @@ backend:
 media_folder: ../../src/images
 public_folder: /images
 collections:
-  - name: pavilions
+  - name: pawilony
     preview: false
-    label: Pavilions
-    folder: content/pavilions
+    label: Pawilony
+    folder: content/pawilony
     create: true
-    slug: pavilion-{{id}}
+    slug: pawilon-{{id}}
     fields:
       - label: Size
         name: size
@@ -45,7 +45,7 @@ collections:
       - label: Slug
         name: slug
         widget: hidden
-        default: pavilion-{{id}}
+        default: pawilon-{{id}}
       - label: Body
         name: body
         widget: markdown
@@ -57,12 +57,12 @@ collections:
           name: image
           widget: image
           allow_multiple: true
-          media_folder: ../../src/images/pavilion-{{id}}
-          public_folder: /images/pavilion-{{id}}
+          media_folder: ../../src/images/pawilon-{{id}}
+          public_folder: /images/pawilon-{{id}}
   - name: about
-    label: About us
+    label: O nas
     folder: content/about
-    slug: about-us
+    slug: o-nas
     fields:
       - label: Heading  
         name: about_heading
@@ -73,4 +73,33 @@ collections:
       - label: Body
         name: body 
         widget: markdown
+  - name: contact
+    label: Kontakt
+    folder: content/kontakt
+    slug: kontakt
+    fields:
+      - label: Nagłówek
+        name: contact_heading
+        widget: string
+      - label: Mapa
+        name: contact_image
+        widget: image
+  - name: hero
+    label: Home
+    folder: content/home
+    slug: /
+    fields:
+      - label: Home tytuł
+        name: hero_heading1
+        widget: string
+      - label: Home subtytuł
+        name: hero_heading2
+        widget: string
+      - label: Zdjęcie
+        name: hero_image
+        widget: image
+      - label: Link tekst
+        name: hero_link
+        widget: string
+
 

@@ -6,6 +6,6 @@ const ProductDetailsPage = () => (
     <ProductTemplate />
 )
 
-export const Head = () => <Seo title="Product details" />
+export const Head = () => <Seo title="Szczegóły produktu" />
 
 export default ProductDetailsPage
