@@ -8,7 +8,7 @@ dimension_tolerance: "1.5%"
 decoration: "Natural wood"
 delivery: "8-10 weeks"
 price: "£11,900"
-product_image: "../../src/images/pavilion8.webp"
+product_image: "../../src/images/pawilon8.webp"
 product_gallery: 
     - image: "../../src/images/pavilion-m08/pavilion8_1.webp"
     - image: "../../src/images/pavilion-m08/pavilion8_2.webp"
