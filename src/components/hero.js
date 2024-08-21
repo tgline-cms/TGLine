@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { regex: "/home/home.md/" }) {
+      file(relativePath: { regex: "/hero/hero.md/" }) {
         childMarkdownRemark {
           frontmatter {
             hero_heading1

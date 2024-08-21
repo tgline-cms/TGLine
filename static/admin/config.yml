@@ -12,31 +12,31 @@ collections:
     create: true
     slug: pawilon-{{id}}
     fields:
-      - label: Size
+      - label: Rozmiar
         name: size
         widget: string
-      - label: External dimensions
+      - label: Wymiary zewnętrzne
         name: external_dimensions
         widget: string
-      - label: Internal dimensions
+      - label: Wymiary wewnętrzne
         name: internal_dimensions
         widget: string
-      - label: Internal height
+      - label: Wysokość wewnątrz
         name: internal_height
         widget: string
-      - label: Dimension tolerance
+      - label: Tolerancja wymiarów
         name: dimension_tolerance
         widget: string
-      - label: Decoration
+      - label: Wykończenie
         name: decoration
         widget: string
-      - label: Delivery
+      - label: Czas dostawy
         name: delivery
         widget: string
-      - label: Price
+      - label: Cena
         name: price
         widget: string
-      - label: Product image
+      - label: Zdjęcie produktu
         name: product_image
         widget: image
       - label: Id
@@ -85,14 +85,14 @@ collections:
         name: contact_image
         widget: image
   - name: hero
-    label: Home
-    folder: content/home
+    label: Strona główna
+    folder: content/hero
     slug: /
     fields:
-      - label: Home tytuł
+      - label: Główne hasło
         name: hero_heading1
         widget: string
-      - label: Home subtytuł
+      - label: Subtytuł
         name: hero_heading2
         widget: string
       - label: Zdjęcie
