@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Navbar, Offcanvas, Nav, NavDropdown } from "react-bootstrap"
+import { Navbar, Offcanvas, Nav, NavDropdown, Container } from "react-bootstrap"
 import { ReactComponent as Logo } from "../../../static/icons/TGLine_logo.svg"
 import "./navbar.scss"
 
@@ -39,7 +39,11 @@ const Navigation = () => {
   `)
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary shadow-sm d-flex justify-content-between">
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary shadow-sm d-flex justify-content-between"
+    >
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
           <Logo />
         </Navbar.Brand>
@@ -116,6 +120,7 @@ const Navigation = () => {
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
+      </Container>
     </Navbar>
   )
 }

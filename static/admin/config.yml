@@ -81,6 +81,15 @@ collections:
       - label: Nagłówek
         name: contact_heading
         widget: string
+      - label: E-mail
+        name: contact_email
+        widget: string
+      - label: Telefon
+        name: contact_phone
+        widget: string
+      - label: Adres
+        name: contact_address
+        widget: string
       - label: Mapa
         name: contact_image
         widget: image

@@ -12,6 +12,7 @@ import Header from "./header"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "normalize.css"
 import "../style/style.scss"
+import Footer from './footer/footer'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,15 +27,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `TGLine - Pawilony handlowe`} />
+      <Header
+        siteTitle={
+          data.site.siteMetadata?.title || `TGLine - Pawilony handlowe`
+        }
+      />
       <main>{children}</main>
-      <footer>
-        © 2024 &middot;
-        {` `}
-        <a href="https://beatamaro.github.io/" target="_blank" rel="noreferrer">
-          Beta
-        </a>
-      </footer>
+      <Footer />
     </>
   )
 }

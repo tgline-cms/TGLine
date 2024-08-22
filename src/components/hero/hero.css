@@ -1,0 +1,37 @@
+body {
+  font-family: "Jura", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body main {
+  min-height: 80vh;
+}
+body main .container {
+  background-color: white;
+}
+
+.hero-bg {
+  background: linear-gradient(to right, #1E2832 90%, white 10%);
+  min-height: 90vh;
+  position: relative;
+}
+.hero-bg:after {
+  content: url("../../images/arrow_right.svg");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.hero-bg .offer-link {
+  position: absolute;
+  bottom: 20%;
+}
+.hero-bg h1 {
+  font-size: 2rem;
+}
+.hero-bg h2 {
+  color: #9ea8b1;
+  font-size: 1.2rem;
+  font-weight: 100;
+}

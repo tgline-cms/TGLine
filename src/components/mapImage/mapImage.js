@@ -6,24 +6,27 @@ import "./mapImage.scss"
 function MapImage() {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "map.webp" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            quality: 90
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-          )
+      file(relativePath: { regex: "/contact/contact.md/" }) {
+        childMarkdownRemark {
+          frontmatter {
+            contact_map {
+              childImageSharp {
+                gatsbyImageData (width: 1000)
+              }
+            }
+          }
         }
       }
     }
   `)
 
+  const mapImage = data?.file?.childMarkdownRemark?.frontmatter?.contact_map
+
   return (
     <GatsbyImage
       className="mapImage"
-      image={getImage(data.file)}
-      alt="mapa siedziby firmy TGLine. Gliwice, Złota 10"
+      image={getImage(mapImage)}
+      alt={`Mapa siedziby firmy TGLINE. ${mapImage}`}
     />
   )
 }

@@ -1,0 +1,43 @@
+@import "../../style/style.scss";
+
+.hero-bg {
+  background: linear-gradient(to right, $navy 90%, white 10%);
+  min-height: clamp(70vh, 90vh, 100vh);
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  --bs-gutter-x: 0;
+
+  h1 {
+    font-size: clamp(1.9rem, 5vw + 1rem, 4rem);
+  }
+
+  h2 {
+    color: #9ea8b1;
+    font-size: clamp(1.125rem, 4vw + 1rem, 3rem);
+    font-weight: 100;
+    width: 50%;
+
+    @media (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  .offer-link {
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    transition: 0.3s ease;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: $brandColor;
+
+      + .arrow-icon {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .arrow-icon {
+    transition: 0.3s ease;
+  }
+}

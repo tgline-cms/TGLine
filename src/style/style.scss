@@ -1,6 +1,7 @@
 $main: #848480;
 $brandColor: #efc840;
 $navy: #1E2832;
+$lightGrey: #E7ECF3;
 
 body {
   font-family: 'Jura', sans-serif;
@@ -11,6 +12,8 @@ body {
   }
 
   main {
+    min-height: clamp(70vh, 80vh, 85vh);
+    overflow-x: hidden;
     background-color: $navy;
 
     .container {

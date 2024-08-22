@@ -1,5 +1,7 @@
+@import "../../style/style.scss";
+
 .icon-background {
-  background-color: lightgray;
+  background-color: $lightGrey;
   width: 3rem;
   height: 3rem;
 }

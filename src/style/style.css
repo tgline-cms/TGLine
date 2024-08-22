@@ -1,0 +1,13 @@
+body {
+  font-family: "Jura", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body main {
+  min-height: 80vh;
+}
+body main .container {
+  background-color: white;
+}
