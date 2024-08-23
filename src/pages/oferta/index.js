@@ -41,8 +41,12 @@ const OfferPage = () => {
                   gatsbyImageData(
                     aspectRatio: 1.5
                     backgroundColor: "grey"
+                    placeholder: BLURRED
                     width: 1200
-                    transformOptions: { fit: COVER, cropFocus: SOUTH }
+                    transformOptions: {
+                      fit: COVER
+                      cropFocus: SOUTH
+                    }
                   )
                 }
               }

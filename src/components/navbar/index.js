@@ -43,7 +43,7 @@ const Navigation = () => {
       expand="lg"
       className="bg-body-tertiary shadow-sm d-flex justify-content-between"
     >
-      <Container fluid>
+      <Container className="container-fluid container-lg">
         <Navbar.Brand as={Link} to="/">
           <Logo />
         </Navbar.Brand>
@@ -61,9 +61,6 @@ const Navigation = () => {
           onHide={handleClose}
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-              Offcanvas
-            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="ms-auto">
@@ -71,7 +68,7 @@ const Navigation = () => {
                 <NavDropdown.Item
                   as={Link}
                   to="/oferta"
-                  activeClassName="text-warning"
+                  activeClassName="active-navitem"
                   onClick={handleClose}
                 >
                   Wszystkie produkty
@@ -92,7 +89,7 @@ const Navigation = () => {
                   .map(({ node }) => (
                     <NavDropdown.Item
                       as={Link}
-                      activeClassName="bg-warning text-light"
+                      activeClassName="active-navitem"
                       key={node.name}
                       to={`/pawilon-${node.childrenMarkdownRemark[0].frontmatter.id}`}
                       onClick={handleClose}
@@ -104,7 +101,7 @@ const Navigation = () => {
               <Nav.Link
                 as={Link}
                 to="/o-nas"
-                activeClassName="text-warning"
+                activeClassName="active-menuitem"
                 onClick={handleClose}
               >
                 O nas
@@ -112,7 +109,7 @@ const Navigation = () => {
               <Nav.Link
                 as={Link}
                 to="/kontakt"
-                activeClassName="text-warning"
+                activeClassName="active-menuitem"
                 onClick={handleClose}
               >
                 Kontakt

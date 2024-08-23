@@ -1,5 +1,151 @@
 @import "../../style/style.scss";
 
-.navbar .dropdown-item.active, .dropdown-item:focus {
+.navbar-toggler {
+  border: none !important;
   background-color: $navy !important;
+  width: 2rem;
+  height: 0.3rem !important;
+  padding: 0 !important;
+  border-radius: 40px;
+  transition: all 0.3s linear !important;
+  align-self: center;
+  position: relative;
+  margin-right: 1rem;
+
+  &.collapsed {
+    background-color: grey !important;
+    transform: rotate(45deg) translate(-13px, 2px) !important;
+  }
+
+  ::before,
+  ::after {
+    position: absolute;
+    content: "";
+    height: 0.3rem;
+    width: 2rem;
+    right: 0;
+    border-radius: 40px;
+    background-color: $navy !important;
+    transition: all 0.3s linear;
+  }
+
+  ::before {
+    top: -0.5rem;
+  }
+
+  ::after {
+    top: 0.5rem;
+  }
+  &.collapsed .navbar-toggler-icon::after {
+    transform: rotate(90deg) translate(-0.5rem, 0) !important;
+    background-color: grey !important;
+    height: 0.3rem;
+  }
+  &.collapsed .navbar-toggler-icon::before {
+    opacity: 0;
+    height: 0.3rem;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+  &-icon {
+    background-image: none !important;
+  }
+}
+
+.offcanvas {
+  transition: 4s linear;
+}
+
+.offcanvas .offcanvas-header .btn-close {
+  margin-top: 1rem !important;
+  margin-right: 1rem !important;
+  --bs-btn-close-bg: none;
+  padding: 0 !important;
+  position: relative;
+  transition: 0.2s linear !important;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 0.3rem;
+    background-color: grey;
+    border-radius: 40px;
+    transition: 0.1s linear;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
+.offcanvas-toggling .offcanvas-header .btn-close {
+  &::after {
+    transform: rotate(90deg) !important;
+  }
+  &::before {
+    transform: rotate(45deg) !important;
+  }
+}
+
+.nav-item.dropdown:has(.dropdown-menu .active-navitem) {
+  .dropdown-toggle.nav-link {
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    position: relative;
+    padding-bottom: 0 !important;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: $brandColor;
+      width: 100%;
+      height: 1.2rem;
+      z-index: -1;
+    }
+  }
+}
+
+
+.navbar .dropdown-item.active,
+.dropdown-item:focus {
+  background-color: $navy !important;
+}
+
+.active-navitem {
+  background-color: $brandColor !important;
+}
+
+.nav-link {
+  z-index: 100;
+  margin-left: 2rem;
+}
+
+.active-menuitem {
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  position: relative;
+  padding-bottom: 0 !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $brandColor;
+    width: 100%;
+    height: 1.2rem;
+    z-index: -1;
+  }
 }

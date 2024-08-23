@@ -26,7 +26,7 @@ const ContactPage = () => {
   const contactData = data?.file?.childMarkdownRemark
 
   return (
-    <Container className="shadow vh-100">
+    <Container className="shadow vh-100 contact">
       <Breadcrumbs activeSite="kontakt" />
       <h2 className="text-center">
         {contactData?.frontmatter?.contact_heading}
@@ -54,7 +54,7 @@ const ContactPage = () => {
           <Col sm={{ offset: 4 }} className="d-flex align-items-center">
             <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
               <a
-                href={contactData.frontmatter.contact_phone}
+                href={contactData?.frontmatter?.contact_phone}
                 aria-label="Call us"
               >
                 <FontAwesomeIcon icon={faMobile} className="contact-icon" />

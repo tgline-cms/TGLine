@@ -1,9 +1,11 @@
+@import "../../style/style.scss";
+
 .breadcrumb {
     a {
       text-decoration: none;
       color: inherit;
     }
     li.active {
-      color: yellow;
+      color: $brandColor;
     }
   }

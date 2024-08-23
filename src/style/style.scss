@@ -1,10 +1,10 @@
 $main: #848480;
 $brandColor: #efc840;
-$navy: #1E2832;
-$lightGrey: #E7ECF3;
+$navy: #1e2832;
+$lightGrey: #e7ecf3;
 
 body {
-  font-family: 'Jura', sans-serif;
+  font-family: "Jura", sans-serif;
 
   a {
     text-decoration: none;
@@ -15,6 +15,20 @@ body {
     min-height: clamp(70vh, 80vh, 85vh);
     overflow-x: hidden;
     background-color: $navy;
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw + 1rem, 4rem);
+    }
+
+    h2 {
+      font-size: clamp(1.125rem, 4vw + 1rem, 3rem);
+      font-weight: 100;
+      width: 50%;
+
+      @media (min-width: 1200px) {
+        width: 100%;
+      }
+    }
 
     .container {
       background-color: white;

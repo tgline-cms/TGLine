@@ -75,7 +75,7 @@ collections:
         widget: markdown
   - name: contact
     label: Kontakt
-    folder: content/kontakt
+    folder: content/contact
     slug: kontakt
     fields:
       - label: Nagłówek
