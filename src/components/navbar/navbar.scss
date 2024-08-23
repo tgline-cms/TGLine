@@ -1,5 +1,13 @@
 @import "../../style/style.scss";
 
+.logo {
+  width: 7rem;
+}
+
+.nav {
+  font-size: 1.25rem !important;
+}
+
 .navbar-toggler {
   border: none !important;
   background-color: $navy !important;
@@ -55,6 +63,13 @@
 
 .offcanvas {
   transition: 4s linear;
+
+  .dropdown-item {
+    text-align: right;
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
 }
 
 .offcanvas .offcanvas-header .btn-close {
@@ -99,17 +114,15 @@
 
 .nav-item.dropdown:has(.dropdown-menu .active-navitem) {
   .dropdown-toggle.nav-link {
-    font-weight: 700 !important;
-    font-size: 1.2rem !important;
     position: relative;
     padding-bottom: 0 !important;
-  
+
     &::before {
       content: "";
       position: absolute;
       top: 50%;
       left: 0;
-      background-color: $brandColor;
+      background-color: $lightGrey;
       width: 100%;
       height: 1.2rem;
       z-index: -1;
@@ -117,14 +130,13 @@
   }
 }
 
-
 .navbar .dropdown-item.active,
 .dropdown-item:focus {
   background-color: $navy !important;
 }
 
 .active-navitem {
-  background-color: $brandColor !important;
+  background-color: $lightGrey !important;
 }
 
 .nav-link {
@@ -133,19 +145,19 @@
 }
 
 .active-menuitem {
-  font-weight: 700 !important;
-  font-size: 1.2rem !important;
   position: relative;
   padding-bottom: 0 !important;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background-color: $brandColor;
-    width: 100%;
-    height: 1.2rem;
-    z-index: -1;
+  @media (min-width: 1200px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: $lightGrey;
+      width: 100%;
+      height: 1.2rem;
+      z-index: -1;
+    }
   }
 }

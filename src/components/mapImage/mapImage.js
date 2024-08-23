@@ -11,7 +11,7 @@ function MapImage() {
           frontmatter {
             contact_map {
               childImageSharp {
-                gatsbyImageData (width: 1000)
+                gatsbyImageData(width: 1000, height: 400, placeholder: BLURRED)
               }
             }
           }

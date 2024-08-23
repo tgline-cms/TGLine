@@ -41,11 +41,11 @@ const Navigation = () => {
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary shadow-sm d-flex justify-content-between"
+      className="bg-body-tertiary shadow-sm d-flex justify-content-between p-lg-2"
     >
-      <Container className="container-fluid container-lg">
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <Logo />
+          <Logo className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -60,8 +60,7 @@ const Navigation = () => {
           show={showOffcanvas}
           onHide={handleClose}
         >
-          <Offcanvas.Header closeButton>
-          </Offcanvas.Header>
+          <Offcanvas.Header closeButton></Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="ms-auto">
               <NavDropdown title="Oferta" id="collapsible-nav-dropdown">
@@ -70,6 +69,7 @@ const Navigation = () => {
                   to="/oferta"
                   activeClassName="active-navitem"
                   onClick={handleClose}
+                  className="pt-3 pb-3 border-bottom"
                 >
                   Wszystkie produkty
                 </NavDropdown.Item>
@@ -93,6 +93,7 @@ const Navigation = () => {
                       key={node.name}
                       to={`/pawilon-${node.childrenMarkdownRemark[0].frontmatter.id}`}
                       onClick={handleClose}
+                      className="pt-3 pb-3 border-bottom"
                     >
                       {node.name}
                     </NavDropdown.Item>
@@ -103,6 +104,7 @@ const Navigation = () => {
                 to="/o-nas"
                 activeClassName="active-menuitem"
                 onClick={handleClose}
+                className="pt-2 pb-2"
               >
                 O nas
               </Nav.Link>
@@ -111,6 +113,7 @@ const Navigation = () => {
                 to="/kontakt"
                 activeClassName="active-menuitem"
                 onClick={handleClose}
+                className="pt-2 pb-2"
               >
                 Kontakt
               </Nav.Link>

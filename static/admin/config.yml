@@ -67,9 +67,15 @@ collections:
       - label: Heading  
         name: about_heading
         widget: string
-      - label: About image
+      - label: Zdjęcie1
         name: about_image
         widget: image
+      - label: Zdjęcie2
+        name: about_image2
+        widget: image
+      - label: Tekst
+        name: about_text
+        widget: string
       - label: Body
         name: body 
         widget: markdown

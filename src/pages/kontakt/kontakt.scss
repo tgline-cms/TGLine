@@ -1,10 +1,10 @@
 @import "../../style/style.scss";
 
 
-body main .contact h2 {
-  font-size: 1rem;
-  width: 100%;
-}
+// body main .contact h2 {
+//   font-size: 3rem;
+//   width: 100%;
+// }
 
 .icon-background {
   background-color: $lightGrey;
@@ -12,6 +12,11 @@ body main .contact h2 {
   height: 3rem;
 }
 
+.arrow-icon {
+  width: 5rem;
+  height: auto;
+}
+
 .contact-icon {
-  color: rgb(42, 41, 41);
+  color: $navy;
 }
