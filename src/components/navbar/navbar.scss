@@ -1,7 +1,7 @@
 @import "../../style/style.scss";
 
 .logo {
-  width: 7rem;
+  width: 6rem;
 }
 
 .nav {
@@ -20,18 +20,18 @@
       transition: all 0.3s linear !important;
       position: relative;
 
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        height: 0.3rem;
+        width: 2rem;
+        right: 0;
+        border-radius: 40px;
+        background-color: $navy !important;
+        transition: all 0.3s linear;
+      }
 
-    &::before, &::after {
-      position: absolute;
-      content: "";
-      height: 0.3rem;
-      width: 2rem;
-      right: 0;
-      border-radius: 40px;
-      background-color: $navy !important;
-      transition: all 0.3s linear;
-    }
-  
       &::after {
         transform: rotate(90deg) !important;
         background-color: grey !important;
@@ -85,53 +85,73 @@
 }
 
 .offcanvas {
-  transition: 4s linear;
-
+  .dropdown-menu {
+    border: none;
+    box-shadow: 1px 1px 1.2rem rgba(0,0,0,.2);
+  }
   .dropdown-item {
     text-align: right;
     &:last-child {
       border-bottom: none !important;
     }
   }
-}
 
-.offcanvas .offcanvas-header .btn-close {
-  margin-top: 2.5rem !important;
-  margin-right: 1rem !important;
-  --bs-btn-close-bg: none;
-  padding: 0 !important;
-  position: relative;
-  transition: 0.2s linear !important;
+  &-header .btn-close {
+    margin-top: 2.5rem !important;
+    margin-right: 1rem !important;
+    --bs-btn-close-bg: none;
+    padding: 0 !important;
+    position: relative;
+    transition: 0.2s linear !important;
 
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2rem;
-    height: 0.3rem;
-    background-color: grey;
-    border-radius: 40px;
-    transition: 0.1s linear;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2rem;
+      height: 0.3rem;
+      background-color: grey;
+      border-radius: 40px;
+      transition: 0.1s linear;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
   }
 
-  &::before {
-    transform: rotate(-45deg);
+  &-toggling &-header .btn-close {
+    &::after {
+      transform: rotate(90deg) !important;
+    }
+    &::before {
+      transform: rotate(45deg) !important;
+    }
   }
-
-  &::after {
-    transform: rotate(45deg);
-  }
-}
-
-.offcanvas-toggling .offcanvas-header .btn-close {
-  &::after {
-    transform: rotate(90deg) !important;
-  }
-  &::before {
-    transform: rotate(45deg) !important;
+  &-body {
+    padding: 0 !important;
+    .navbar-nav {
+      // .nav-item {
+      //   @media (max-width: 920px) {
+      //     border-bottom: 1px solid $lightGrey;
+      //   }
+      // }
+      .nav-link {
+        @media (max-width: 992px) {
+          border-bottom: 1px solid $lightGrey;
+        }
+      //   &.active-menuitem {
+      //     background-color: $lightGrey;
+      //   }
+      }
+    }
   }
 }
 
@@ -140,15 +160,17 @@
     position: relative;
     padding-bottom: 0 !important;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      background-color: $lightGrey;
-      width: 100%;
-      height: 1.2rem;
-      z-index: -1;
+    @media (min-width: 1200px) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: $lightGrey;
+        width: 100%;
+        height: 1.2rem;
+        z-index: -1;
+      }
     }
   }
 }
@@ -160,24 +182,30 @@
 
 .active-navitem {
   background-color: $lightGrey !important;
-}
+} 
 
 .nav-link {
   z-index: 100;
-  margin-left: 2rem;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    margin-left: 2rem;
+  }
 }
 
 .active-menuitem {
   position: relative;
   padding-bottom: 0 !important;
+  background-color: $lightGrey !important;
 
   @media (min-width: 1200px) {
+    background-color: transparent !important;
     &::before {
       content: "";
       position: absolute;
       top: 50%;
       left: 0;
-      background-color: $lightGrey;
+      background-color: pink;
       width: 100%;
       height: 1.2rem;
       z-index: -1;

@@ -1,9 +1,10 @@
 import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "./hero.scss"
-import { Container } from "react-bootstrap"
+import { Container, Stack } from "react-bootstrap"
+import { motion } from "framer-motion"
 import { ReactComponent as RightArrow } from "../../images/arrow_right.svg"
+import "./hero.scss"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -33,24 +34,48 @@ const Hero = () => {
   const heroData = data?.file?.childMarkdownRemark
 
   return (
-    <Container fluid className="hero-bg d-flex flex-column justify-content-between">
+    <Container
+      fluid
+      className="hero-bg d-flex flex-column justify-content-between"
+    >
       <div className="d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-end">
-        <GatsbyImage
-          image={getImage(heroData?.frontmatter?.hero_image)}
-          alt="pawilon handlowy"
-          className="mb-1 shadow"
-        />
-        <article>
-          <h1 className="text-white">{heroData?.frontmatter?.hero_heading1}</h1>
+        <motion.div
+          initial={{ x: 200 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.55 }}
+        >
+          <GatsbyImage
+            image={getImage(heroData?.frontmatter?.hero_image)}
+            alt="pawilon handlowy"
+            className="mb-1 shadow"
+          />
+        </motion.div>
+        <motion.article
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.55 }}
+          className="text-white"
+        >
+          <h1> {heroData?.frontmatter?.hero_heading1}</h1>
           <h2>{heroData?.frontmatter?.hero_heading2}</h2>
-        </article>
+        </motion.article>
       </div>
-      <div className="d-flex justify-content-sm-end align-items-center gap-1 gap-lg-4 me-lg-4">
-        <Link to="/oferta" className="text-lg-center offer-link">
-          {heroData?.frontmatter?.hero_link}
-        </Link>
-        <RightArrow className="arrow-icon"/>
-      </div>
+      <Stack
+        direction="horizontal"
+        className="d-flex justify-content-end align-items-center gap-1 gap-lg-4 me-lg-4"
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.55 }}
+        >
+          <Link to="/oferta" className="text-lg-center offer-link">
+            {heroData?.frontmatter?.hero_link}
+          </Link>
+
+          <RightArrow className="arrow-icon" />
+        </motion.div>
+      </Stack>
     </Container>
   )
 }

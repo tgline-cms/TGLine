@@ -3,8 +3,10 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { Card, Container } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
+import { motion } from "framer-motion"
 import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import "./oferta.scss"
 
 const OfferPage = () => {
@@ -43,10 +45,7 @@ const OfferPage = () => {
                     backgroundColor: "grey"
                     placeholder: BLURRED
                     width: 1200
-                    transformOptions: {
-                      fit: COVER
-                      cropFocus: SOUTH
-                    }
+                    transformOptions: { fit: COVER, cropFocus: SOUTH }
                   )
                 }
               }
@@ -58,12 +57,25 @@ const OfferPage = () => {
   `)
 
   return (
-    <>
-      <Container className="shadow">
-        <Breadcrumbs activeSite="Oferta" />
-        <Row className="p-sm-2 p-lg-4">
-          {data.pavilionsParameters.edges.map(({ node }) => (
-            <Col key={node.id} md={6} lg={4}>
+    <Container className="shadow">
+      <Breadcrumbs activeSite="Oferta" />
+      <motion.header
+        initial={{ x: -200 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.55 }}
+        className="d-flex align-items-center"
+      >
+        <RightArrow className="arrow-icon me-3" />
+        <h2>Produkty</h2>
+      </motion.header>
+      <Row className="p-sm-2 p-lg-4">
+        {data.pavilionsParameters.edges.map(({ node }) => (
+          <Col key={node.id} md={6} lg={4}>
+            <motion.div
+              initial={{ x: 200 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.55 }}
+            >
               <Card
                 as={Link}
                 to={`/pawilon-${node.frontmatter.id}`}
@@ -80,11 +92,11 @@ const OfferPage = () => {
                   alt={`Pawilon ${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration}`}
                 />
               </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </>
+            </motion.div>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 

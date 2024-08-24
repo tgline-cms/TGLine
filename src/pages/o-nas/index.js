@@ -1,9 +1,10 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Container } from "react-bootstrap"
+import { motion } from "framer-motion"
 import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
-import { Container } from "react-bootstrap"
 import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import "./o_nas.scss"
 
@@ -48,26 +49,42 @@ const AboutPage = () => {
   return (
     <Container className="shadow min-vh-100">
       <Breadcrumbs activeSite="O nas" />
-      <div className="p-3 p-lg-5">
-        <header className="d-flex align-items-center">
-          <RightArrow className="arrow-icon" />
-          <h2>O nas</h2>
-        </header>
-        <div className="d-lg-flex">
-          <div dangerouslySetInnerHTML={{ __html: aboutData?.html }} />
+      <motion.header
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="d-flex align-items-center"
+      >
+        <RightArrow className="arrow-icon me-4" />
+        <h2>O nas</h2>
+      </motion.header>
+      <div className="d-lg-flex">
+        <div dangerouslySetInnerHTML={{ __html: aboutData?.html }} />
+        <motion.div
+          initial={{ x: 200 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.55 }}
+        >
           <GatsbyImage
             image={getImage(aboutData?.frontmatter?.about_image)}
             alt="pawilon handlowy"
           />
-        </div>
-        <article className="d-lg-flex justify-content-between">
+        </motion.div>
+      </div>
+      <article className="d-lg-flex justify-content-between">
+        <motion.div
+          initial={{ x: -200 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.55 }}
+        >
           <GatsbyImage
             image={getImage(aboutData?.frontmatter?.about_image2)}
             alt="pawilon"
           />
-          <p>{aboutData?.frontmatter?.about_text}</p>
-        </article>
-      </div>
+        </motion.div>
+
+        <p>{aboutData?.frontmatter?.about_text}</p>
+      </article>
     </Container>
   )
 }

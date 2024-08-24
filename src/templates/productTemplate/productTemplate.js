@@ -3,21 +3,23 @@ import { graphql } from "gatsby"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
-import { Container } from 'react-bootstrap'
+import { Container } from "react-bootstrap"
 
-const ProductTemplate = ({data}) => {
+const ProductTemplate = ({ data }) => {
   const product = data?.markdownRemark
 
   if (!product) {
-    return <p>Produkt nie znaleziony</p>
+    return <p>Produkt nie został znaleziony.</p>
   }
 
   return (
     <Container className="shadow min-vh-100">
       <Breadcrumbs activeSite={`pawilon-${product.frontmatter.id}`} />
-      <p>{product.frontmatter.id}</p>
-      <div dangerouslySetInnerHTML={{ __html: product.html }} />
-      <Slider product={product.frontmatter.id} />
+      <Container className="p-3 p-lg-5">
+        <p>{product.frontmatter.id}</p>
+        <div dangerouslySetInnerHTML={{ __html: product.html }} />
+        <Slider product={product.frontmatter.id} />
+      </Container>
     </Container>
   )
 }
