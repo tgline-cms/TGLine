@@ -8,7 +8,16 @@ const Navigation = () => {
   const [showOffcanvas, setShowOffcanvas] = React.useState(false)
 
   const handleClose = () => setShowOffcanvas(false)
-  const handleShow = () => setShowOffcanvas(true)
+  // const handleShow = () => setShowOffcanvas(true)
+
+  const handleToggle = () => {
+    setShowOffcanvas(prevShow => !prevShow)
+  }
+
+  const handleCloseButtonClick = event => {
+    event.stopPropagation()
+    setShowOffcanvas(false)
+  }
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,7 +60,8 @@ const Navigation = () => {
           aria-controls="responsive-navbar-nav"
           aria-expanded={showOffcanvas}
           aria-label="Toggle navigation"
-          onClick={handleShow}
+          onClick={handleToggle}
+          className={showOffcanvas ? "" : "collapsed"}
         />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-lg`}
@@ -60,7 +70,10 @@ const Navigation = () => {
           show={showOffcanvas}
           onHide={handleClose}
         >
-          <Offcanvas.Header closeButton></Offcanvas.Header>
+          <Offcanvas.Header
+            closeButton
+            onClick={handleCloseButtonClick}
+          ></Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="ms-auto">
               <NavDropdown title="Oferta" id="collapsible-nav-dropdown">

@@ -9,50 +9,73 @@
 }
 
 .navbar-toggler {
-  border: none !important;
-  background-color: $navy !important;
-  width: 2rem;
-  height: 0.3rem !important;
-  padding: 0 !important;
-  border-radius: 40px;
-  transition: all 0.3s linear !important;
-  align-self: center;
-  position: relative;
-  margin-right: 1rem;
+  &:not(.collapsed) {
+    border: none !important;
+    .navbar-toggler-icon {
+      background-color: grey !important;
+      transform: rotate(45deg) translate(-13px, 2px) !important;
+      height: 0.3rem;
+      width: 2rem;
+      border-radius: 40px;
+      transition: all 0.3s linear !important;
+      position: relative;
 
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      height: 0.3rem;
+      width: 2rem;
+      right: 0;
+      border-radius: 40px;
+      background-color: $navy !important;
+      transition: all 0.3s linear;
+    }
+  
+      &::after {
+        transform: rotate(90deg) !important;
+        background-color: grey !important;
+        height: 0.3rem;
+      }
+      &::before {
+        opacity: 0;
+        height: 0.3rem;
+      }
+    }
+  }
   &.collapsed {
-    background-color: grey !important;
-    transform: rotate(45deg) translate(-13px, 2px) !important;
-  }
-
-  ::before,
-  ::after {
-    position: absolute;
-    content: "";
-    height: 0.3rem;
-    width: 2rem;
-    right: 0;
-    border-radius: 40px;
+    border: none !important;
     background-color: $navy !important;
-    transition: all 0.3s linear;
+    width: 2rem;
+    height: 0.3rem !important;
+    padding: 0 !important;
+    border-radius: 40px;
+    transition: all 0.3s linear !important;
+    align-self: center;
+    position: relative;
+    margin-right: 1rem;
+
+    ::before,
+    ::after {
+      position: absolute;
+      content: "";
+      height: 0.3rem;
+      width: 2rem;
+      right: 0;
+      border-radius: 40px;
+      background-color: $navy !important;
+      transition: all 0.3s linear;
+    }
+
+    ::before {
+      top: -0.5rem;
+    }
+
+    ::after {
+      top: 0.5rem;
+    }
   }
 
-  ::before {
-    top: -0.5rem;
-  }
-
-  ::after {
-    top: 0.5rem;
-  }
-  &.collapsed .navbar-toggler-icon::after {
-    transform: rotate(90deg) translate(-0.5rem, 0) !important;
-    background-color: grey !important;
-    height: 0.3rem;
-  }
-  &.collapsed .navbar-toggler-icon::before {
-    opacity: 0;
-    height: 0.3rem;
-  }
   &:focus {
     box-shadow: none !important;
   }
@@ -73,7 +96,7 @@
 }
 
 .offcanvas .offcanvas-header .btn-close {
-  margin-top: 1rem !important;
+  margin-top: 2.5rem !important;
   margin-right: 1rem !important;
   --bs-btn-close-bg: none;
   padding: 0 !important;

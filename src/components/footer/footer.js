@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap"
 function Footer() {
   return (
     <footer className="fixed-lg-bottom bg-light">
-      <Container fluid className="p-3 d-flex flex-column flex-lg-row justify-content-lg-between">
+      <Container fluid className="p-1 p-lg-3 d-flex flex-column flex-lg-row justify-content-lg-between">
         <div className="text-center text-lg-start">
           <span>©2024&middot;TGLine.</span>
           {` `}
