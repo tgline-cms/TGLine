@@ -10,8 +10,6 @@ decoration: "panels"
 delivery: "8-10 weeks"
 price: "£14.250"
 product_image: "../../src/images/pawilon7.webp"
-gallery: 
-    - image: "../../src/images/pawilon7.webp"
 id: "M07"
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit

@@ -9,8 +9,6 @@ decoration: "Natural wood"
 delivery: "8-10 weeks"
 price: "£11,900"
 product_image: "../../src/images/pawilon8.webp"
-gallery: 
-    - image: "../../src/images/pawilon8.webp"
 id: "M08"
 ---
 OPTIONAL EXTRAS

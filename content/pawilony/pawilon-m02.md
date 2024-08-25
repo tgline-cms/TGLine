@@ -3,7 +3,7 @@ markdownName: "pawilon"
 size: "6.0m x 2.5m"
 external_dimensions: "600cm x 250cm"
 gallery:
-  - image: "../../src/images/pawilon2.webp"
+  - image: "../../src/images/pawilon-m02/polka.webp"
 exterior_color: "graphite/white"
 internal_dimensions: "580cm x 230cm"
 internal_height: "250cm lowered to 240cm"

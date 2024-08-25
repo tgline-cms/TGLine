@@ -3,7 +3,7 @@ markdownName: "pawilon"
 size: "9.0 x 2.5m"
 external_dimensions: "900cm x 250cm"
 gallery:
-  - image: "../../src/images/pawilon4.webp"
+  - image: "../../src/images/pawilon-m04/img_20211026_120346.jpg"
 internal_dimensions: "880cm x 230cm"
 internal_height: "250 cm lowered to 240 cm"
 dimension_tolerance: "1.5%"
