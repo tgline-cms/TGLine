@@ -49,16 +49,6 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: Galeria
-        name: gallery
-        widget: list
-        field:
-          label: Zdjecie
-          name: image
-          widget: image
-          allow_multiple: true
-          media_folder: "../../src/images/pawilon-{{id}}"
-          public_folder: "/images/pawilon-{{id}}"
   - name: about
     label: O_nas
     folder: content/about
