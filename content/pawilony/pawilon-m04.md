@@ -3,8 +3,7 @@ markdownName: "pawilon"
 size: "9.0 x 2.5m"
 external_dimensions: "900cm x 250cm"
 gallery:
-  - image: "../../src/images/pawilon-m04/pawilon4_1.jpg"
-  - image: "../../src/images/pawilon-m04/pawilon4_2.jpg"
+  - image: "../../src/images/pawilon4.webp"
 internal_dimensions: "880cm x 230cm"
 internal_height: "250 cm lowered to 240 cm"
 dimension_tolerance: "1.5%"
@@ -13,9 +12,6 @@ delivery: "8-10 weeks"
 price: "£17,900"
 product_image: "../../src/images/pawilon4.webp"
 id: "M04"
-gallery:
-  - "../../src/images/pawilon-m04/img_20211026_120346.jpg"
-  - "../../src/images/pawilon-m04/img_20211027_133109.jpg"
 ---
 OPTIONAL EXTRAS
 
