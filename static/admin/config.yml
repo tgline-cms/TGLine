@@ -2,8 +2,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "../../src/images"
-public_folder: "/images"
+media_folder: ../../src/images
+public_folder: /images
 collections:
   - name: pawilony
     preview: false
@@ -15,28 +15,28 @@ collections:
       - label: Rozmiar
         name: size
         widget: string
-      - label: Wymiary_zewnetrzne
+      - label: Wymiary zewnetrzne
         name: external_dimensions
         widget: string
-      - label: Wymiary_wewnetrzne
+      - label: Wymiary wewnetrzne
         name: internal_dimensions
         widget: string
-      - label: Wysokosc_wewnatrz
+      - label: Wysokosc wewnatrz
         name: internal_height
         widget: string
-      - label: Tolerancja_wymiarow
+      - label: Tolerancja wymiarow
         name: dimension_tolerance
         widget: string
       - label: Wykonczenie
         name: decoration
         widget: string
-      - label: Czas_dostawy
+      - label: Czas dostawy
         name: delivery
         widget: string
       - label: Cena
         name: price
         widget: string
-      - label: Zdjecie_produktu
+      - label: Zdjecie produktu
         name: product_image
         widget: image
       - label: Id
@@ -50,7 +50,7 @@ collections:
         name: body
         widget: markdown
   - name: about
-    label: O_nas
+    label: O nas
     folder: content/about
     slug: o-nas
     fields:
@@ -87,7 +87,7 @@ collections:
         name: contact_address
         widget: string
   - name: hero
-    label: Strona_głowna
+    label: Strona głowna
     folder: content/hero
     slug: /
     fields:
@@ -100,6 +100,6 @@ collections:
       - label: Zdjecie
         name: hero_image
         widget: image
-      - label: Tekst_linku_do_oferty
+      - label: Tekst linku do oferty
         name: hero_link
         widget: string
