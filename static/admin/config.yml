@@ -1,9 +1,9 @@
 ---
 backend:
-  name: git-gateway
-  branch: main
-media_folder: ../../src/images
-public_folder: /images
+name: git-gateway
+branch: main
+media_folder: "../../src/images"
+public_folder: "/images"
 collections:
   - name: pawilony
     preview: false
@@ -57,14 +57,14 @@ collections:
           name: image
           widget: image
           allow_multiple: true
-          media_folder: ../../src/images/pawilon-{{id}}
-          public_folder: /images/pawilon-{{id}}
+          media_folder: "../../src/images/pawilon-{{id}}"
+          public_folder: "/images/pawilon-{{id}}"
   - name: about
     label: O_nas
     folder: content/about
     slug: o-nas
     fields:
-      - label: Naglowek  
+      - label: Naglowek
         name: about_heading
         widget: string
       - label: Zdjecie1
@@ -77,7 +77,7 @@ collections:
         name: about_text
         widget: string
       - label: Body
-        name: body 
+        name: body
         widget: markdown
   - name: contact
     label: Kontakt
@@ -113,5 +113,3 @@ collections:
       - label: Tekst_linku_do_oferty
         name: hero_link
         widget: string
-
-
