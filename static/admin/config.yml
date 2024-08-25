@@ -64,7 +64,7 @@ collections:
     folder: content/about
     slug: o-nas
     fields:
-      - label: Nagłowek  
+      - label: Naglowek  
         name: about_heading
         widget: string
       - label: Zdjecie1
@@ -84,7 +84,7 @@ collections:
     folder: content/contact
     slug: kontakt
     fields:
-      - label: Nagłowek
+      - label: Naglowek
         name: contact_heading
         widget: string
       - label: E-mail
