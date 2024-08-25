@@ -32,7 +32,7 @@ const ContactPage = () => {
   const contactData = data?.file?.childMarkdownRemark
 
   return (
-    <Container className="shadow contact">
+    <Container className="shadow contact min-vh-100 pb-5 mt-4 mb-4">
       <Breadcrumbs activeSite="kontakt" />
       <Container className="p-3 p-lg-5">
         <motion.header
@@ -59,7 +59,7 @@ const ContactPage = () => {
           className="mt-5"
         >
           <Row className="mb-1">
-            <Col sm={{ offset: 4 }} className="d-flex align-items-center">
+            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
                 <a
                   href={contactData?.frontmatter?.contact_email}
@@ -77,7 +77,7 @@ const ContactPage = () => {
             </Col>
           </Row>
           <Row className="mb-1">
-            <Col sm={{ offset: 4 }} className="d-flex align-items-center">
+            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
                 <a
                   href={contactData?.frontmatter?.contact_phone}
@@ -97,7 +97,7 @@ const ContactPage = () => {
         </motion.article>
         <article>
           <Row>
-            <Col sm={{ offset: 4 }} className="d-flex align-items-center">
+            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
               <motion.div
                 initial={{ x: -200 }}
                 animate={{ x: 0 }}
@@ -112,7 +112,7 @@ const ContactPage = () => {
                     <FontAwesomeIcon icon={faHouse} className="contact-icon" />
                   </a>
                 </div>
-                <p>{contactData?.frontmatter?.contact_address}</p>
+                <p className="mb-0">{contactData?.frontmatter?.contact_address}</p>
               </motion.div>
             </Col>
           </Row>

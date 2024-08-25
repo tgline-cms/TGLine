@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import { motion } from "framer-motion"
 import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
@@ -32,7 +32,7 @@ const AboutPage = () => {
                 gatsbyImageData(
                   layout: CONSTRAINED
                   placeholder: BLURRED
-                  width: 700
+                  width: 900
                   breakpoints: [576, 768, 992, 1200]
                   formats: [AUTO, WEBP]
                 )
@@ -47,44 +47,61 @@ const AboutPage = () => {
   const aboutData = data?.file?.childMarkdownRemark
 
   return (
-    <Container className="shadow min-vh-100">
+    <Container className="shadow min-vh-100 pb-5 mt-4 mb-4">
       <Breadcrumbs activeSite="O nas" />
-      <motion.header
-        initial={{ x: -100 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="d-flex align-items-center"
+      <Row
+        className="d-lg-flex flex-column flex-lg-row p-3 pb-0 p-lg-5"
+        lg={{ offset: 4 }}
       >
-        <RightArrow className="arrow-icon me-4" />
-        <h2>O nas</h2>
-      </motion.header>
-      <div className="d-lg-flex">
-        <div dangerouslySetInnerHTML={{ __html: aboutData?.html }} />
-        <motion.div
-          initial={{ x: 200 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.55 }}
-        >
-          <GatsbyImage
-            image={getImage(aboutData?.frontmatter?.about_image)}
-            alt="pawilon handlowy"
-          />
-        </motion.div>
-      </div>
-      <article className="d-lg-flex justify-content-between">
-        <motion.div
-          initial={{ x: -200 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.55 }}
-        >
-          <GatsbyImage
-            image={getImage(aboutData?.frontmatter?.about_image2)}
-            alt="pawilon"
-          />
-        </motion.div>
-
-        <p>{aboutData?.frontmatter?.about_text}</p>
-      </article>
+        <Col>
+          <motion.header
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="d-flex align-items-center mb-3"
+          >
+            <RightArrow className="arrow-icon me-2" />
+            <h2>O nas</h2>
+          </motion.header>
+          <div
+            dangerouslySetInnerHTML={{ __html: aboutData?.html }}
+            className="about-text pb-5"
+          />    
+        </Col>
+        <Col>
+          <motion.div
+            initial={{ x: 200 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.55 }}
+          >
+            <GatsbyImage
+              image={getImage(aboutData?.frontmatter?.about_image)}
+              alt="pawilon handlowy"
+              className="about-image-1 shadow"
+            />
+          </motion.div>
+        </Col>
+      </Row>
+      <Row className="second-row p-3 pt-0">
+        <Col>
+          <article className="d-lg-flex flex-lg-row-reverse justify-content-lg-end gap-5">
+            <p className="pt-3 pb-3 mt-3 mb-3 mt-lg-0 mb-lg-0 about-text-2">
+              {aboutData?.frontmatter?.about_text}
+            </p> 
+            <motion.div
+              initial={{ x: -200 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.55 }}
+            >
+              <GatsbyImage
+                image={getImage(aboutData?.frontmatter?.about_image2)}
+                alt="pawilon"
+                className="about-image-2 shadow"
+              />
+            </motion.div>
+          </article>
+        </Col>
+      </Row>
     </Container>
   )
 }

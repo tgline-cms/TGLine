@@ -8,9 +8,9 @@ import "./breadcrumbs.scss"
 
 const Breadcrumbs = ({ activeSite }) => {
   return (
-    <Breadcrumb className="p-3 ps-0">
+    <Breadcrumb className="p-3">
       <Link to="/" className="me-2">Strona główna <FontAwesomeIcon icon={faAngleRight} /></Link>
-      {activeSite.includes("pawilon") && <Link to="/oferta" className="me-2">oferta <FontAwesomeIcon icon={faAngleRight} /></Link>}
+      {activeSite.includes("pawilon") && <Link to="/oferta" className="me-2">Oferta <FontAwesomeIcon icon={faAngleRight} /></Link>}
       <Breadcrumb.Item active>{activeSite}</Breadcrumb.Item>
     </Breadcrumb>
   )

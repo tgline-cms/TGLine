@@ -1,3 +1,15 @@
-.right-arrow {
-    width: 7rem;
+.arrow-icon {
+  width: 7rem;
+}
+
+.about-image-2 {
+  @media (min-width: 992px) {
+    margin-top: -15%;
+  }
+}
+
+.about-text-2 {
+  @media (min-width: 992px) {
+    width: 60%;
+  }
 }
