@@ -1,5 +1,5 @@
 ---
-markdownName: "pavilion"
+markdownName: "pawilon"
 size: "4.0m x 2.5m"
 external_dimensions: "600cm x 250cm"
 exterior_color: "graphite/white"
@@ -10,9 +10,8 @@ decoration: "panels"
 delivery: "8-10 weeks"
 price: "£14.250"
 product_image: "../../src/images/pawilon7.webp"
-product_gallery: 
-    - image: "../../src/images/pawilon-m07/pawilon7_1.jpg"
-    - image: "../../src/images/pawilon-m07/pawilon7_2.jpg"
+gallery: 
+    - image: "../../src/images/pawilon7.webp"
 id: "M07"
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit

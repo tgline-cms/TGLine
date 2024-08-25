@@ -2,7 +2,7 @@
 markdownName: "pawilon"
 size: "9.0 x 2.5m"
 external_dimensions: "900cm x 250cm"
-product_gallery:
+gallery:
   - image: "../../src/images/pawilon-m04/pawilon4_1.jpg"
   - image: "../../src/images/pawilon-m04/pawilon4_2.jpg"
 internal_dimensions: "880cm x 230cm"

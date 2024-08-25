@@ -59,7 +59,11 @@ const ContactPage = () => {
           className="mt-5"
         >
           <Row className="mb-1">
-            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
+            <Col
+              xs={{ offset: 2 }}
+              lg={{ offset: 5 }}
+              className="d-flex align-items-center"
+            >
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
                 <a
                   href={contactData?.frontmatter?.contact_email}
@@ -77,7 +81,11 @@ const ContactPage = () => {
             </Col>
           </Row>
           <Row className="mb-1">
-            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
+            <Col
+              xs={{ offset: 2 }}
+              lg={{ offset: 5 }}
+              className="d-flex align-items-center"
+            >
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
                 <a
                   href={contactData?.frontmatter?.contact_phone}
@@ -97,7 +105,11 @@ const ContactPage = () => {
         </motion.article>
         <article>
           <Row>
-            <Col sm={{ offset: 2 }} className="d-flex align-items-center">
+            <Col
+              xs={{ offset: 2 }}
+              lg={{ offset: 5 }}
+              className="d-flex align-items-center"
+            >
               <motion.div
                 initial={{ x: -200 }}
                 animate={{ x: 0 }}
@@ -112,7 +124,9 @@ const ContactPage = () => {
                     <FontAwesomeIcon icon={faHouse} className="contact-icon" />
                   </a>
                 </div>
-                <p className="mb-0">{contactData?.frontmatter?.contact_address}</p>
+                <p className="mb-0">
+                  {contactData?.frontmatter?.contact_address}
+                </p>
               </motion.div>
             </Col>
           </Row>

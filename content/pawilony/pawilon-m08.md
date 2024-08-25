@@ -1,5 +1,5 @@
 ---
-markdownName: "pavilion"
+markdownName: "pawilon"
 size: "6.0m x 2.5m"
 external_dimensions: "400 cm x 250 cm"
 internal_dimensions: "380 cm x 230 cm"
@@ -9,9 +9,8 @@ decoration: "Natural wood"
 delivery: "8-10 weeks"
 price: "£11,900"
 product_image: "../../src/images/pawilon8.webp"
-product_gallery: 
-    - image: "../../src/images/pavilion-m08/pavilion8_1.webp"
-    - image: "../../src/images/pavilion-m08/pavilion8_2.webp"
+gallery: 
+    - image: "../../src/images/pawilon8.webp"
 id: "M08"
 ---
 OPTIONAL EXTRAS

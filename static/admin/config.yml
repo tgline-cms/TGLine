@@ -15,28 +15,28 @@ collections:
       - label: Rozmiar
         name: size
         widget: string
-      - label: Wymiary zewnętrzne
+      - label: Wymiary_zewnętrzne
         name: external_dimensions
         widget: string
-      - label: Wymiary wewnętrzne
+      - label: Wymiary_wewnętrzne
         name: internal_dimensions
         widget: string
-      - label: Wysokość wewnątrz
+      - label: Wysokosc_wewnątrz
         name: internal_height
         widget: string
-      - label: Tolerancja wymiarów
+      - label: Tolerancja_wymiarow
         name: dimension_tolerance
         widget: string
-      - label: Wykończenie
+      - label: Wykonczenie
         name: decoration
         widget: string
-      - label: Czas dostawy
+      - label: Czas_dostawy
         name: delivery
         widget: string
       - label: Cena
         name: price
         widget: string
-      - label: Zdjęcie produktu
+      - label: Zdjecie_produktu
         name: product_image
         widget: image
       - label: Id
@@ -53,24 +53,24 @@ collections:
         name: gallery
         widget: list
         field:
-          label: Zdjęcie
+          label: Zdjecie
           name: image
           widget: image
           allow_multiple: true
           media_folder: ../../src/images/pawilon-{{id}}
           public_folder: /images/pawilon-{{id}}
   - name: about
-    label: O nas
+    label: O_nas
     folder: content/about
     slug: o-nas
     fields:
-      - label: Heading  
+      - label: Nagłowek  
         name: about_heading
         widget: string
-      - label: Zdjęcie1
+      - label: Zdjecie1
         name: about_image
         widget: image
-      - label: Zdjęcie2
+      - label: Zdjecie2
         name: about_image2
         widget: image
       - label: Tekst
@@ -84,7 +84,7 @@ collections:
     folder: content/contact
     slug: kontakt
     fields:
-      - label: Nagłówek
+      - label: Nagłowek
         name: contact_heading
         widget: string
       - label: E-mail
@@ -100,20 +100,20 @@ collections:
         name: contact_image
         widget: image
   - name: hero
-    label: Strona główna
+    label: Strona_głowna
     folder: content/hero
     slug: /
     fields:
-      - label: Główne hasło
+      - label: Tytul
         name: hero_heading1
         widget: string
-      - label: Subtytuł
+      - label: Subtytul
         name: hero_heading2
         widget: string
-      - label: Zdjęcie
+      - label: Zdjecie
         name: hero_image
         widget: image
-      - label: Link tekst
+      - label: Tekst_linku_do_oferty
         name: hero_link
         widget: string
 

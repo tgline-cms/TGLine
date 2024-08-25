@@ -2,7 +2,7 @@
 markdownName: "pawilon"
 size: "6.0m x 2.5m"
 external_dimensions: "600cm x 250cm"
-product_gallery:
+gallery:
   - image: "../../src/images/pawilon-m02/pawilon2_1.jpg"
   - image: "../../src/images/pawilon-m02/pawilon2_2.jpg"
 exterior_color: "graphite/white"
