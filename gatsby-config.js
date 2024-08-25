@@ -51,11 +51,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `TGLine - Commercial Pavilions`,
+        name: `TGLine - Pawilony Handlowe`,
         short_name: `TGLine`,
         start_url: `/`,
         background_color: `#373634`,
-        theme_color: `#f9ac06`,
+        theme_color: `#e7ecf3`,
         display: `standalone`,
         icon: `${__dirname}/static/icons/tgline_icon.png`, // This path is relative to the root of the site.
       },
