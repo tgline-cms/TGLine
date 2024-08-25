@@ -1,115 +1,115 @@
 ---
 backend:
-name: git-gateway
-branch: main
-media_folder: "../../src/images"
-public_folder: "/images"
-collections:
-  - name: pawilony
-    preview: false
-    label: Pawilon
-    folder: content/pawilony
-    create: true
-    slug: pawilon-{{id}}
-    fields:
-      - label: Rozmiar
-        name: size
-        widget: string
-      - label: Wymiary_zewnetrzne
-        name: external_dimensions
-        widget: string
-      - label: Wymiary_wewnetrzne
-        name: internal_dimensions
-        widget: string
-      - label: Wysokosc_wewnatrz
-        name: internal_height
-        widget: string
-      - label: Tolerancja_wymiarow
-        name: dimension_tolerance
-        widget: string
-      - label: Wykonczenie
-        name: decoration
-        widget: string
-      - label: Czas_dostawy
-        name: delivery
-        widget: string
-      - label: Cena
-        name: price
-        widget: string
-      - label: Zdjecie_produktu
-        name: product_image
-        widget: image
-      - label: Id
-        name: id
-        widget: string
-      - label: Slug
-        name: slug
-        widget: hidden
-        default: pawilon-{{id}}
-      - label: Body
-        name: body
-        widget: markdown
-      - label: Galeria
-        name: gallery
-        widget: list
-        field:
-          label: Zdjecie
-          name: image
+  name: git-gateway
+  branch: main
+  media_folder: "../../src/images"
+  public_folder: "/images"
+  collections:
+    - name: pawilony
+      preview: false
+      label: Pawilon
+      folder: content/pawilony
+      create: true
+      slug: pawilon-{{id}}
+      fields:
+        - label: Rozmiar
+          name: size
+          widget: string
+        - label: Wymiary_zewnetrzne
+          name: external_dimensions
+          widget: string
+        - label: Wymiary_wewnetrzne
+          name: internal_dimensions
+          widget: string
+        - label: Wysokosc_wewnatrz
+          name: internal_height
+          widget: string
+        - label: Tolerancja_wymiarow
+          name: dimension_tolerance
+          widget: string
+        - label: Wykonczenie
+          name: decoration
+          widget: string
+        - label: Czas_dostawy
+          name: delivery
+          widget: string
+        - label: Cena
+          name: price
+          widget: string
+        - label: Zdjecie_produktu
+          name: product_image
           widget: image
-          allow_multiple: true
-          media_folder: "../../src/images/pawilon-{{id}}"
-          public_folder: "/images/pawilon-{{id}}"
-  - name: about
-    label: O_nas
-    folder: content/about
-    slug: o-nas
-    fields:
-      - label: Naglowek
-        name: about_heading
-        widget: string
-      - label: Zdjecie1
-        name: about_image
-        widget: image
-      - label: Zdjecie2
-        name: about_image2
-        widget: image
-      - label: Tekst
-        name: about_text
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-  - name: contact
-    label: Kontakt
-    folder: content/contact
-    slug: kontakt
-    fields:
-      - label: Naglowek
-        name: contact_heading
-        widget: string
-      - label: E-mail
-        name: contact_email
-        widget: string
-      - label: Telefon
-        name: contact_phone
-        widget: string
-      - label: Adres
-        name: contact_address
-        widget: string
-  - name: hero
-    label: Strona_głowna
-    folder: content/hero
-    slug: /
-    fields:
-      - label: Tytul
-        name: hero_heading1
-        widget: string
-      - label: Subtytul
-        name: hero_heading2
-        widget: string
-      - label: Zdjecie
-        name: hero_image
-        widget: image
-      - label: Tekst_linku_do_oferty
-        name: hero_link
-        widget: string
+        - label: Id
+          name: id
+          widget: string
+        - label: Slug
+          name: slug
+          widget: hidden
+          default: pawilon-{{id}}
+        - label: Body
+          name: body
+          widget: markdown
+        - label: Galeria
+          name: gallery
+          widget: list
+          field:
+            label: Zdjecie
+            name: image
+            widget: image
+            allow_multiple: true
+            media_folder: "../../src/images/pawilon-{{id}}"
+            public_folder: "/images/pawilon-{{id}}"
+    - name: about
+      label: O_nas
+      folder: content/about
+      slug: o-nas
+      fields:
+        - label: Naglowek
+          name: about_heading
+          widget: string
+        - label: Zdjecie1
+          name: about_image
+          widget: image
+        - label: Zdjecie2
+          name: about_image2
+          widget: image
+        - label: Tekst
+          name: about_text
+          widget: string
+        - label: Body
+          name: body
+          widget: markdown
+    - name: contact
+      label: Kontakt
+      folder: content/contact
+      slug: kontakt
+      fields:
+        - label: Naglowek
+          name: contact_heading
+          widget: string
+        - label: E-mail
+          name: contact_email
+          widget: string
+        - label: Telefon
+          name: contact_phone
+          widget: string
+        - label: Adres
+          name: contact_address
+          widget: string
+    - name: hero
+      label: Strona_głowna
+      folder: content/hero
+      slug: /
+      fields:
+        - label: Tytul
+          name: hero_heading1
+          widget: string
+        - label: Subtytul
+          name: hero_heading2
+          widget: string
+        - label: Zdjecie
+          name: hero_image
+          widget: image
+        - label: Tekst_linku_do_oferty
+          name: hero_link
+          widget: string
