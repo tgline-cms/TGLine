@@ -97,7 +97,7 @@ collections:
         name: contact_address
         widget: string
       - label: Mapa
-        name: contact_image
+        name: contact_map
         widget: image
   - name: hero
     label: Strona_głowna
