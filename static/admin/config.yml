@@ -15,13 +15,13 @@ collections:
       - label: Rozmiar
         name: size
         widget: string
-      - label: Wymiary_zewnętrzne
+      - label: Wymiary_zewnetrzne
         name: external_dimensions
         widget: string
-      - label: Wymiary_wewnętrzne
+      - label: Wymiary_wewnetrzne
         name: internal_dimensions
         widget: string
-      - label: Wysokosc_wewnątrz
+      - label: Wysokosc_wewnatrz
         name: internal_height
         widget: string
       - label: Tolerancja_wymiarow
