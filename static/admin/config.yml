@@ -7,7 +7,7 @@ public_folder: /images
 collections:
   - name: pawilony
     preview: false
-    label: Pawilony
+    label: Pawilon
     folder: content/pawilony
     create: true
     slug: pawilon-{{id}}
