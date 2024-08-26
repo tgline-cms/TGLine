@@ -3,8 +3,7 @@ size: 6.0m x 2.5m
 external_dimensions: 600cm x 250cm
 decoration: panels
 product_gallery:
-  - image: ../../src/images/pawilon-m02/pawilon2_1.jpg
-    product_gallery_image: /images/pawilon-m02/pawilon1.jpg
+    gallery_product_image: ../../src/images/pawilon-m02/pawilon1.jpg
 exterior_color: graphite/white
 internal_dimensions: 580cm x 230cm
 internal_height: 250cm lowered to 240cm

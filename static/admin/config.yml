@@ -55,9 +55,9 @@ collections:
         allow_add: true
         fields:
           - label: Zdjecie produktu
-            name: product_gallery_image
+            name: gallery_product_image
             widget: image
-            media_folder: src/images/pawilon-{{id}}
+            media_folder: ../../src/images/pawilon-{{id}}
             public_folder: /images/pawilon-{{id}}
   - name: about
     label: O nas
