@@ -20,20 +20,6 @@ function MapImage() {
     }
   `)
 
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: "map.webp" }) {
-  //       childImageSharp {
-  //         gatsbyImageData(
-  //           layout: CONSTRAINED
-  //           placeholder: BLURRED
-  //           formats: [AUTO, WEBP, AVIF]
-  //         )
-  //       }
-  //     }
-  //   }
-  // `)
-
   const mapImage = data?.file?.childMarkdownRemark?.frontmatter?.contact_map
 
   return (

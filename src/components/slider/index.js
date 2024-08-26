@@ -8,9 +8,7 @@ import "./slider.scss"
 const Slider = ({ product }) => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(
-        filter: { relativeDirectory: { regex: "/^pawilon-/" } }
-      ) {
+      allFile(filter: { relativeDirectory: { regex: "/^pawilon-/" } }) {
         edges {
           node {
             id
@@ -26,23 +24,26 @@ const Slider = ({ product }) => {
   `)
 
   const images = data.allFile.edges
-    .filter(({node}) => node.relativeDirectory === `pawilon-${product.toLowerCase()}`)
-    .map(edge => getImage(edge.node.childImageSharp.gatsbyImageData))
+    .filter(
+      ({ node }) =>
+        node.relativeDirectory === `pawilon-${product?.toLowerCase()}`
+    )
+    .map(edge => getImage(edge?.node?.childImageSharp.gatsbyImageData))
 
   return (
-    <Carousel fade>
-      {images.map((image) => {
-        return (
-          <Carousel.Item interval={2000} key={uuidv4()}>
-            <GatsbyImage image={image} alt={product} />
-            <Carousel.Caption>
-              <h3>Label for this slide</h3>
-              <p>Sample Text for this Image</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        )
-      })}
-    </Carousel>
+    <>
+      {images && (
+        <Carousel fade>
+          {images.map(image => {
+            return (
+              <Carousel.Item interval={2000} key={uuidv4()}>
+                <GatsbyImage image={image} alt={product} />
+              </Carousel.Item>
+            )
+          })}
+        </Carousel>
+      )}
+    </>
   )
 }
 

@@ -62,6 +62,24 @@ collections:
             widget: image
             media_folder: ../../src/images/pawilon-{{id}}
             public_folder: ../../src/images/pawilon-{{id}}
+      - label: Zdjecie sciany
+        name: wall_image
+        widget: image
+        default: ../../src/images/eps_sandwich1.webp
+        media_folder: ../../src/images/
+        public_folder: ../../src/images/
+      - label: Zdjecie dachu
+        name: roof_image
+        widget: image
+        default: ../../src/images/eps_sandwich2.webp
+        media_folder: ../../src/images/
+        public_folder: ../../src/images/
+      - label: Zdjecie podlogi
+        name: floor_image
+        widget: image
+        default: ../../src/images/eps_sandwich3.webp
+        media_folder: ../../src/images/
+        public_folder: ../../src/images/    
   - name: about
     label: O nas
     folder: content/about

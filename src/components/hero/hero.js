@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <Container
       fluid
-      className="hero-bg d-flex flex-column justify-content-between"
+      className="hero-bg p-3 ps-xl-5 d-flex flex-column justify-content-between"
     >
       <div className="d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-end">
         <motion.div
@@ -54,7 +54,7 @@ const Hero = () => {
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.55 }}
-          className="text-white"
+          className="text-white pt-4 pt-lg-0"
         >
           <h1> {heroData?.frontmatter?.hero_heading1}</h1>
           <h2>{heroData?.frontmatter?.hero_heading2}</h2>

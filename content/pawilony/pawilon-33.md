@@ -13,5 +13,8 @@ slug: pawilon-{{id}}
 product_gallery:
   - gallery_product_image: ../../src/images/pawilon-33/eps_sandwich2.webp
   - gallery_product_image: ../../src/images/pawilon-33/eps_sandwich3.webp
+wall_image: ../../src/images/eps_sandwich1.webp
+roof_image: ../../src/images/eps_sandwich2.webp
+floor_image: ../../src/images/eps_sandwich3.webp
 ---
 Nowoczesny kontener handlowy.

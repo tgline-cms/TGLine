@@ -1,56 +1,64 @@
 @import "../../style/style.scss";
 
-.hero-bg {
-  background-color: $navy;
-  min-height: clamp(70vh, 90vh, 100vh);
-  padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
-  --bs-gutter-x: 0;
-  z-index: 0;
+main {
+  .hero-bg {
+    background-color: $navy;
+    min-height: clamp(70vh, 90vh, 100vh);
+    --bs-gutter-x: 0;
+    z-index: 0;
 
-  @media (min-width: 992px) {
-    padding-left: 6rem;
-    background: linear-gradient(to right, $navy 90%, white 10%);
-  }
+    @media (min-width: 992px) {
+      padding-left: 6rem;
+      background: linear-gradient(to right, $navy 90%, white 10%);
+    }
 
-  h2 {
-    color: #9ea8b1;
-    width: 80%;
-  }
+    h2 {
+      color: #9ea8b1;
+      width: 100%;
+      font-size: clamp(1.6rem, 2.5vw + 1rem, 2rem);
 
-  .hero-image {
-    z-index: 1;
-  }
-
-  .offer-link-container {
-    margin-top: -7%;
-    z-index: 1000;
-    .offer-link {
-      font-size: clamp(1rem, 1.4rem, 2rem);
-      transition: 0.3s ease;
-      color: white;
-      cursor: pointer;
-
-      &:hover {
-        color: $brandColor;
-
-        + .arrow-icon {
-          transform: scale(1.1);
-        }
+      @media (min-width: 1200px) {
+        width: 80%;
       }
     }
 
-    .arrow-icon {
-      transition: 0.3s ease;
-      width: 7rem;
-      cursor: pointer;
+    .hero-image {
+      z-index: 1;
+    }
 
-      @media (min-width: 1200px) {
-        width: 12rem;
+    .offer-link-container {
+      z-index: 500;
+
+      @media (min-width: 992px) {
+        margin-top: -7%;
+      }
+      .offer-link {
+        font-size: clamp(1rem, 1.4rem, 2rem);
+        transition: 0.3s ease;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: $brandColor;
+
+          + .arrow-icon {
+            transform: scale(1.1);
+          }
+        }
       }
 
-      &:hover {
-        transform: scale(1.1);
+      .arrow-icon {
+        transition: 0.3s ease;
+        width: 7rem;
+        cursor: pointer;
+
+        @media (min-width: 1200px) {
+          width: 12rem;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

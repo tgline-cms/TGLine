@@ -6,17 +6,22 @@ $lightGrey: #e7ecf3;
 body {
   font-family: "Jura", sans-serif;
 
+  .arrow-icon {
+    width: 5rem;
+    height: auto;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
   }
 
   .error-page-link {
-    transition: .2s linear;
+    transition: 0.2s linear;
     cursor: pointer;
 
     & + .error-page-arrow {
-      transition: .2s linear;
+      transition: 0.2s linear;
 
       &:hover {
         transform: scale(1.1);
@@ -31,12 +36,12 @@ body {
   }
 
   main {
-    min-height: clamp(70vh, 80vh, 85vh);
+    min-height: clamp(90vh, 95vh, 97vh);
     overflow-x: hidden;
     background-color: $navy;
 
     h1 {
-      font-size: clamp(1.9rem, 5vw + 1rem, 4rem);
+      font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
     }
 
     h2 {
@@ -51,6 +56,13 @@ body {
 
     .container {
       background-color: white;
+    }
+
+    .grey-bg {
+      margin: 0 -0.8rem 0 -0.8rem;
+      & .container {
+        background-color: $lightGrey;
+      }
     }
   }
 }

@@ -9,18 +9,10 @@ decoration: Naturalne drewno
 delivery: 8-10 tygodni
 price: £11,900
 product_image: ../../src/images/pawilon8.webp
+product_gallery:
+    gallery_product_image: ../../src/images/pawilon-m02/pawilon1.jpg
 id: M08
+wall_image: ../../src/images/eps_sandwich1.webp
+roof_image: ../../src/images/eps_sandwich2.webp
+floor_image: ../../src/images/eps_sandwich3.webp
 ---
-OPTIONAL EXTRAS
-
-Polyurethane PIR sandwich panels on walls and roof (instead of polystyrene) – £600
-
-Tilt & turn PVC window 100x100 - £400
-
-Tilt & turn PVC window 90x190 - £600
-
-Air Conditioner – Dual function heat/cool SINCLAIR 3,4 kW - £950
-
-Kitchenette including upper and lower cabinets, worktop, sink, water tap - £450
-
-Toilet : sink, toilet bowl, under sink cabinet, small window, water heater - £400
