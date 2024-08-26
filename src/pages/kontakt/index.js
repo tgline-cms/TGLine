@@ -24,6 +24,7 @@ const ContactPage = () => {
             contact_email
             contact_phone
             contact_address
+            contact_map_url
           }
         }
       }
@@ -61,7 +62,7 @@ const ContactPage = () => {
           <Row className="mb-1">
             <Col
               xs={{ offset: 2 }}
-              lg={{ offset: 5 }}
+              lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
@@ -83,7 +84,7 @@ const ContactPage = () => {
           <Row className="mb-1">
             <Col
               xs={{ offset: 2 }}
-              lg={{ offset: 5 }}
+              lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >
               <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
@@ -107,7 +108,7 @@ const ContactPage = () => {
           <Row>
             <Col
               xs={{ offset: 2 }}
-              lg={{ offset: 5 }}
+              lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >
               <motion.div
@@ -137,7 +138,7 @@ const ContactPage = () => {
                 animate={{ x: 0 }}
                 transition={{ duration: 0.55 }}
                 className="d-flex align-items-center"
-                href="https://www.google.pl/maps/place/Z%C5%82ota+10,+44-121+Gliwice/@50.3058847,18.6259742,281m/data=!3m1!1e3!4m6!3m5!1s0x4711307f0099d381:0x85f1585fd4408dca!8m2!3d50.305974!4d18.626319!16s%2Fg%2F11c2ctbv6_?entry=ttu"
+                href={contactData?.frontmatter?.contact_map_url}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Lokalizacja firmy TGLine - przekieruj do map Google, ${contactData?.frontmatter?.contact_address}`}

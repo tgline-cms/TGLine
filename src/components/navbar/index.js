@@ -8,7 +8,6 @@ const Navigation = () => {
   const [showOffcanvas, setShowOffcanvas] = React.useState(false)
 
   const handleClose = () => setShowOffcanvas(false)
-  // const handleShow = () => setShowOffcanvas(true)
 
   const handleToggle = () => {
     setShowOffcanvas(prevShow => !prevShow)

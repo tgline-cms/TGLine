@@ -6,6 +6,7 @@
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
   --bs-gutter-x: 0;
+  z-index: 0;
 
   @media (min-width: 992px) {
     padding-left: 6rem;
@@ -17,27 +18,35 @@
     width: 80%;
   }
 
-  .offer-link {
-    font-size: clamp(1rem, 1.4rem, 2rem);
-    transition: 0.3s ease;
-    color: white;
-    cursor: pointer;
-
-    &:hover {
-      color: $brandColor;
-
-      + .arrow-icon {
-        transform: scale(1.1);
-      }
-    }
+  .hero-image {
+    z-index: 1;
   }
 
-  .arrow-icon {
-    transition: 0.3s ease;
-    width: 7rem;
+  .offer-link-container {
+    margin-top: -7%;
+    z-index: 1000;
+    .offer-link {
+      font-size: clamp(1rem, 1.4rem, 2rem);
+      transition: 0.3s ease;
+      color: white;
+      cursor: pointer;
 
-    @media (min-width: 1200px) {
-      width: 12rem;
+      &:hover {
+        color: $brandColor;
+
+        + .arrow-icon {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .arrow-icon {
+      transition: 0.3s ease;
+      width: 7rem;
+
+      @media (min-width: 1200px) {
+        width: 12rem;
+      }
     }
   }
 }

@@ -20,7 +20,7 @@ const Hero = () => {
                 gatsbyImageData(
                   layout: CONSTRAINED
                   placeholder: BLURRED
-                  width: 1084
+                  width: 1284
                   breakpoints: [576, 768, 992, 1200]
                   formats: [AUTO, WEBP]
                 )
@@ -47,7 +47,7 @@ const Hero = () => {
           <GatsbyImage
             image={getImage(heroData?.frontmatter?.hero_image)}
             alt="pawilon handlowy"
-            className="mb-1 shadow"
+            className="mb-1 shadow hero-image"
           />
         </motion.div>
         <motion.article
@@ -62,7 +62,7 @@ const Hero = () => {
       </div>
       <Stack
         direction="horizontal"
-        className="d-flex justify-content-end align-items-center gap-1 gap-lg-4 me-lg-4"
+        className="d-flex justify-content-end align-items-center gap-1 gap-lg-4 me-lg-4 offer-link-container"
       >
         <motion.div
           initial={{ scale: 0 }}

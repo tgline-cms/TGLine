@@ -56,9 +56,7 @@ const OfferPage = () => {
     }
   `)
 
-    // Sortowanie produktów według frontmatter.id
     const sortedProducts = data.pavilionsParameters.edges.sort((a, b) => {
-      // Wyciągnij liczbową część z ID, np. z "m02" -> 2
       const numA = parseInt(a.node.frontmatter.id.replace(/\D/g, ''), 10)
       const numB = parseInt(b.node.frontmatter.id.replace(/\D/g, ''), 10)
   
@@ -78,7 +76,6 @@ const OfferPage = () => {
         <h2>Produkty</h2>
       </motion.header>
       <Row className="p-sm-2 p-lg-4">
-        {/* {data.pavilionsParameters.edges.map(({ node }) => ( */}
         {sortedProducts.map(({ node }) => (
 
           <Col key={node.id} md={6} lg={4}>

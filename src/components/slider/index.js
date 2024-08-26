@@ -29,14 +29,12 @@ const Slider = ({ product }) => {
     .filter(({node}) => node.relativeDirectory === `pawilon-${product.toLowerCase()}`)
     .map(edge => getImage(edge.node.childImageSharp.gatsbyImageData))
 
-    console.log(images)
   return (
     <Carousel fade>
       {images.map((image) => {
         return (
           <Carousel.Item interval={2000} key={uuidv4()}>
             <GatsbyImage image={image} alt={product} />
-
             <Carousel.Caption>
               <h3>Label for this slide</h3>
               <p>Sample Text for this Image</p>
