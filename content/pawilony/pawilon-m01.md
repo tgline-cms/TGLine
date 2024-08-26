@@ -9,7 +9,7 @@ exterior_color: "graphite/white"
 decoration: "panels"
 delivery: "8-10 weeks"
 price:  "£14.250"
-product_image: "../../src/images/pawilon1.webp"
+product_image: ../../src/images/pawilon1.webp
 id: "M01"
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit

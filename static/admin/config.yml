@@ -49,6 +49,16 @@ collections:
       - label: Body
         name: body
         widget: markdown
+      - label: Product gallery
+        name: product_gallery
+        widget: list
+        allow_add: true,
+        field:
+          - label: Zdjecie produktu
+            name: product_gallery_image
+            widget: image
+            media_folder: src/images/pawilon-{{id}}
+            public_folder: /images/pawilon-{{id}}
   - name: about
     label: O nas
     folder: content/about

@@ -9,7 +9,7 @@ exterior_color: "grafitowy/biały"
 decoration: "Panele"
 delivery: "8-10 tygodni"
 price:  "£14.250"
-product_image: "../../src/images/pawilon6.webp"
+product_image: ../../src/images/pawilon6.webp
 id: "M06"
 ---
 Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit

@@ -8,7 +8,7 @@ dimension_tolerance: "1.5%"
 decoration: "Naturalne drewno"
 delivery: "8-10 tygodni"
 price: "£11,900"
-product_image: "../../src/images/pawilon8.webp"
+product_image: ../../src/images/pawilon8.webp
 id: "M08"
 ---
 OPTIONAL EXTRAS

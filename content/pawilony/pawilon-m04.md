@@ -8,7 +8,10 @@ dimension_tolerance: "1.5%"
 decoration: "Panels"
 delivery: "8-10 weeks"
 price: "£17,900"
-product_image: "../../src/images/pawilon4.webp"
+product_gallery:
+  - image: ../../src/images/pawilon-m04/pawilon4_1.jpg
+  - image: ../../src/images/pawilon-m04/pawilon4_2.jpg
+product_image: ../../src/images/pawilon4.webp
 id: "M04"
 ---
 OPTIONAL EXTRAS
