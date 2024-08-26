@@ -44,6 +44,10 @@ collections:
       - label: Id
         name: id
         widget: string
+      - label: markdownName
+        name: markdownName
+        widget: hidden
+        default: pawilon
       - label: Slug
         name: slug
         widget: hidden

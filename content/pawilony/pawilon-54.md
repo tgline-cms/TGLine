@@ -1,4 +1,5 @@
 ---
+markdownName: pawilon
 size: 5x5
 external_dimensions: 5x5
 internal_dimensions: 5x5
@@ -13,5 +14,8 @@ slug: pawilon-{{id}}
 product_gallery:
   - gallery_product_image: ../../src/images/pawilon-54/eps_sandwich1.webp
   - gallery_product_image: ../../src/images/pawilon-54/eps_sandwich3.webp
+wall_image: ../../src/images/eps_sandwich1.webp
+roof_image: ../../src/images/eps_sandwich2.webp
+floor_image: ../../src/images/eps_sandwich3.webp
 ---
 Kontener
