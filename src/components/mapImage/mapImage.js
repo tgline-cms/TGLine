@@ -35,8 +35,6 @@ function MapImage() {
   // `)
 
   const mapImage = data?.file?.childMarkdownRemark?.frontmatter?.contact_map
-  // const mapImage = data?.file
-
 
   return (
     <GatsbyImage
