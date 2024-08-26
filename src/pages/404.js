@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Container, Stack } from "react-bootstrap"
-import Seo from "../components/seo"
 import { Link } from "gatsby"
+import Seo from "../components/seo"
 
 const NotFoundPage = () => (
-  <Container className="d-flex vh-100 shadow">
+  <Container className="d-flex justify-content-center vh-100 shadow">
     <Stack direction="vertical" className="h-100 justify-content-center">
       <h3>Ups... Nie możemy znaleźć tej strony!</h3>
       <p>Być może została przeniesona lub zmieniona.</p>
