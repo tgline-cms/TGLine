@@ -31,6 +31,10 @@ const ContactPage = () => {
     }
   `)
   const contactData = data?.file?.childMarkdownRemark
+  const contactMapUrl = contactData?.frontmatter?.contact_map_url
+  const formattedContactMapUrl = contactMapUrl?.startsWith('http://') || contactMapUrl?.startsWith('https://')
+  ? contactMapUrl
+  : `https://${contactMapUrl}`;
 
   return (
     <Container className="shadow contact min-vh-100 pb-5 mt-4 mb-4">
@@ -131,22 +135,24 @@ const ContactPage = () => {
               </motion.div>
             </Col>
           </Row>
-          <Row className="mt-5">
-            <Col className="d-flex align-items-center justify-content-center">
-              <motion.a
-                initial={{ x: 200 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.55 }}
-                className="d-flex align-items-center"
-                href={contactData?.frontmatter?.contact_map_url}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Lokalizacja firmy TGLine - przekieruj do map Google, ${contactData?.frontmatter?.contact_address}`}
-              >
-                <MapImage />
-              </motion.a>
-            </Col>
-          </Row>
+          {contactMapUrl && (
+            <Row className="mt-5">
+              <Col className="d-flex align-items-center justify-content-center">
+                <motion.a
+                  initial={{ x: 200 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.55 }}
+                  className="d-flex align-items-center"
+                  href={formattedContactMapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Lokalizacja firmy TGLine - przekieruj do map Google, ${contactData?.frontmatter?.contact_address}`}
+                >
+                  <MapImage />
+                </motion.a>
+              </Col>
+            </Row>
+          )}
         </article>
       </Container>
     </Container>

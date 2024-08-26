@@ -11,6 +11,25 @@ body {
     color: inherit;
   }
 
+  .error-page-link {
+    transition: .2s linear;
+    cursor: pointer;
+
+    & + .error-page-arrow {
+      transition: .2s linear;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &:hover {
+      color: $brandColor;
+      & + .error-page-arrow {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   main {
     min-height: clamp(70vh, 80vh, 85vh);
     overflow-x: hidden;

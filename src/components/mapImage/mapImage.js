@@ -37,11 +37,15 @@ function MapImage() {
   const mapImage = data?.file?.childMarkdownRemark?.frontmatter?.contact_map
 
   return (
-    <GatsbyImage
-      className="mapImage"
-      image={getImage(mapImage)}
-      alt={`Mapa siedziby firmy TGLINE. ${mapImage}`}
-    />
+    <>
+      {mapImage && (
+        <GatsbyImage
+          className="mapImage"
+          image={getImage(mapImage)}
+          alt={`Mapa siedziby firmy TGLINE. ${mapImage}`}
+        />
+      )}
+    </>
   )
 }
 
