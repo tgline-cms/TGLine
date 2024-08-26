@@ -39,6 +39,8 @@ collections:
       - label: Zdjecie produktu
         name: product_image
         widget: image
+        media_folder: ../../src/images/
+        public_folder: /images
       - label: Id
         name: id
         widget: string
@@ -70,9 +72,13 @@ collections:
       - label: Zdjecie1
         name: about_image
         widget: image
+        media_folder: ../../src/images/
+        public_folder: /images
       - label: Zdjecie2
         name: about_image2
         widget: image
+        media_folder: ../../src/images/
+        public_folder: /images
       - label: Tekst
         name: about_text
         widget: string
@@ -110,6 +116,8 @@ collections:
       - label: Zdjecie
         name: hero_image
         widget: image
+        media_folder: ../../src/images/
+        public_folder: /images
       - label: Tekst linku do oferty
         name: hero_link
         widget: string
