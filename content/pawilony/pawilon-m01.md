@@ -5,7 +5,7 @@ dimension_tolerance: 1.5%
 decoration: panels
 delivery: 8-10 weeks
 product_gallery:
-  - gallery_product_image: /images/pawilon-m01/eps_sandwich1.webp
+  - gallery_product_image: ../../src/images/pawilon-m01/eps_sandwich1.webp
 exterior_color: graphite/white
 internal_dimensions: 580cm x 230cm
 internal_height: 250cm lowered to 240cm

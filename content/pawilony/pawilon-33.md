@@ -7,11 +7,11 @@ dimension_tolerance: 1.5%
 decoration: Drewno
 delivery: 1-5 tygodni
 price: 12 000zł
-product_image: /images/pawilon6.webp
-id: "33"
+product_image: ../../src/images/pawilon6.webp
+id: "M33"
 slug: pawilon-{{id}}
 product_gallery:
-  - gallery_product_image: /images/pawilon-33/eps_sandwich2.webp
-  - gallery_product_image: /images/pawilon-33/eps_sandwich3.webp
+  - gallery_product_image: ../../src/images/pawilon-33/eps_sandwich2.webp
+  - gallery_product_image: ../../src/images/pawilon-33/eps_sandwich3.webp
 ---
 Nowoczesny kontener handlowy.

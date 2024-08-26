@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Container } from "react-bootstrap"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
-import { Container } from "react-bootstrap"
 
 const ProductTemplate = ({ data }) => {
   const product = data?.markdownRemark
