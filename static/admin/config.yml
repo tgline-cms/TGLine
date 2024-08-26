@@ -52,7 +52,7 @@ collections:
       - label: Product gallery
         name: product_gallery
         widget: list
-        allow_add: true,
+        allow_add: true
         field:
           - label: Zdjecie produktu
             name: product_gallery_image
