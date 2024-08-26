@@ -10,7 +10,7 @@ exterior_color: graphite/white
 internal_dimensions: 580cm x 230cm
 internal_height: 250cm lowered to 240cm
 price: £14.250
-product_image: ../../src/images/pawilon1.webp
+product_image: ../../src/images/about_image2.webp
 markdownName: pawilon
 id: M01
 ---
