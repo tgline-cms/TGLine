@@ -44,7 +44,7 @@ const ProductTemplate = ({ data }) => {
           </Col>
           <Col lg={{ offset: 1 }}>
             <article className="specification mt-5 mt-lg-0 pt-lg-5 pb-5">
-              <h4 className="m-3 m-lg-0">Specyfikacja:</h4>
+              <h4 className="m-3 m-lg-0 mb-lg-2">Specyfikacja:</h4>
               <ListGroup
                 variant="flush"
                 className="specification-list ps-5"
@@ -81,7 +81,7 @@ const ProductTemplate = ({ data }) => {
         <Container className="bg-grey pt-5 pb-5 shadow-sm">
           <Row>
             <Col lg={{ offset: 1 }}>
-              <h4 className="m-3 m-lg-0">
+              <h4 className="m-3 m-lg-0 mb-lg-2">
                 Wyposażenie:
               </h4>
               <ListGroup variant="flush" className="product-table ps-5">
@@ -154,7 +154,7 @@ const ProductTemplate = ({ data }) => {
         <Container className="mt-5 pb-5 pt-5 shadow-sm">
           <Row>
             <Col lg={{ offset: 1}}>
-              <h4 className="m-3 m-lg-0">
+              <h4 className="m-3 m-lg-0 mb-lg-2">
                 Dodatkowe opcje wyposażenia:
               </h4>
               <ListGroup variant="flush" className="product-table ps-5">
