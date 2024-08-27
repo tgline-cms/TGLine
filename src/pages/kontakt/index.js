@@ -65,7 +65,8 @@ const ContactPage = () => {
         >
           <Row className="mb-1">
             <Col
-              xs={{ offset: 2 }}
+              xs={{ offset: 1 }}
+              sm={{ offset: 2 }}
               lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >
@@ -87,7 +88,8 @@ const ContactPage = () => {
           </Row>
           <Row className="mb-1">
             <Col
-              xs={{ offset: 2 }}
+              xs={{ offset: 1 }}
+              sm={{ offset: 2}}
               lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >
@@ -111,7 +113,8 @@ const ContactPage = () => {
         <article>
           <Row>
             <Col
-              xs={{ offset: 2 }}
+              xs={{ offset: 1 }}
+              sm={{ offset: 2 }}
               lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >

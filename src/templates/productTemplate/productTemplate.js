@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, ListGroup, Stack } from "react-bootstrap"
+import { Container, ListGroup, Row, Col, Stack } from "react-bootstrap"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
 import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import "./productTemplate.scss"
 
 const ProductTemplate = ({ data }) => {
   const product = data?.markdownRemark
@@ -15,53 +16,113 @@ const ProductTemplate = ({ data }) => {
   }
 
   return (
-    <Container className="shadow min-vh-100">
+    <Container className="shadow min-vh-100 mt-4 mb-4">
       <Breadcrumbs activeSite={`pawilon-${product?.frontmatter?.id}`} />
-      <header>
-        <Stack direction="horizontal">
-          <RightArrow className="arrow-icon me-3" />
-          <h3>Pawilon {product?.frontmatter?.size}</h3>
-        </Stack>
-        <h4> {product?.frontmatter?.price} - zawiera koszt dostawy</h4>
-        <h5>Nr ref. {product?.frontmatter?.id}</h5>
-      </header>
-      {/* <Container className="p-3 p-lg-5"> */}
-      <Slider product={product?.frontmatter?.id} />
-      {/* </Container> */}
-      <Container className="p-3 p-lg-5">
-        <div dangerouslySetInnerHTML={{ __html: product?.html }} />
-      </Container>
+      <Row>
+        <Container className="d-flex flex-wrap align-items-start p-3 shadow-sm">
+          <Col sm={2} lg={1} className="d-flex">
+            <RightArrow className="arrow-icon me-3" />
+          </Col>
+          <Col sm={8} lg={4} className="d-flex flex-column">
+            <header className="d-flex flex-column mt-5">
+              <h3>Pawilon {product?.frontmatter?.size}</h3>
+              <Stack>
+                <h4> {product?.frontmatter?.price}</h4>
+                <span>zawiera koszt dostawy</span>
+                <h5 className="mt-3 mb-3">
+                  Nr ref. {product?.frontmatter?.id}
+                </h5>
+              </Stack>
+            </header>
+          </Col>
+          <Col
+            sm={12}
+            lg={7}
+            className="mt-4 justify-self-lg-end ms-lg-auto slider"
+          >
+            <Slider product={product?.frontmatter?.id} />
+            {/* // <div dangerouslySetInnerHTML={{ __html: product?.html }} /> */}
+          </Col>
+          <Col sm={{ offset: 1 }}>
+            <article className="specification mt-5 mt-lg-0 pt-3 pt-lg-5 pb-5">
+              <h4 className="mt-3 mb-3">Specyfikacja:</h4>
+              <ListGroup
+                variant="flush"
+                className="specification-list ps-5"
+              >
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Wymiary zewnętrzne:{" "}
+                  {product?.frontmatter?.external_dimensions}
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Wymiary wewnętrzne:{" "}
+                  {product?.frontmatter?.internal_dimensions}
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Wysokość wewnętrzna: {product?.frontmatter?.internal_height}
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Tolerancja wymiarów:{" "}
+                  {product?.frontmatter?.dimension_tolerance}
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Wykończenie: {product?.frontmatter?.decoration}
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                  Ściany z płyt warstwowych EPS z rdzeniem polistyrenowym o
+                  grubości 10 cm – współczynnik przenikania ciepła dla
+                  polistyrenu wynosi 0,38 W/m2K.
+                </ListGroup.Item>
+              </ListGroup>
+            </article>
+          </Col>
+        </Container>
+        {/* // <div dangerouslySetInnerHTML={{ __html: product?.html }} /> */}
+      </Row>
       <article className="grey-bg">
-        <Container className="p-3 p-lg-5">
-          <h4 className="mb-3">Specyfikacja</h4>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              Wymiary zewnętrzne: {product?.frontmatter?.external_dimensions}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Wymiary wewnętrzne: {product?.frontmatter?.internal_dimensions}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Wysokość wewnętrzna: {product?.frontmatter?.internal_height}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Tolerancja wymiarów: {product?.frontmatter?.dimension_tolerance}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Wykończenie: {product?.frontmatter?.decoration}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Ściany z płyt warstwowych EPS z rdzeniem polistyrenowym o grubości
-              10 cm – współczynnik przenikania ciepła dla polistyrenu wynosi
-              0,38 W/m2K.
-            </ListGroup.Item>
-          </ListGroup>
+        <Container className="p-3 bg-grey pt-5 pb-5 shadow-sm">
+          <Row>
+            <Col sm={{ offset: 1 }}>
+              <h4 className="mt-3 mb-3">
+                Wyposażenie:
+              </h4>
+              <ListGroup variant="flush" className="product-table ps-5 ps-lg-5">
+                <ListGroup.Item className="ps-0">
+                  Instalacja elektryczna: AC
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  oświetlenie LED
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  skrzynka bezpieczników
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">2 gniazdka</ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  instalacja elektryczna
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  1x Aluminiowe drzwi jednoskrzydłowe 108 x 110 cm
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  2x Okna z dwiema warstwami szkła: 100 x 200 cm
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Konstrukcja stalowa – wykonana z profilu stalowego 50x50x4 mm,
+                  w tym haki transportowe
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Transport i rozładunek na terenie Polski wliczone w cenę
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </Row>
         </Container>
       </article>
-      <Container className="d-flex flex-column align-items-center justify-content-center">
+      <Container className="d-flex flex-column align-items-center justify-content-center shadow-sm">
         <GatsbyImage
           image={getImage(product?.frontmatter?.wall_image)}
           className="mb-3 mb-lg-5 mt-lg-5"
+          alt="Przekrój ściany pawilonu"
         />
         <p>
           Walls of EPS sandwich panels with polystyrene core, thickness 10 cm –
@@ -72,6 +133,7 @@ const ProductTemplate = ({ data }) => {
         <GatsbyImage
           image={getImage(product?.frontmatter?.roof_image)}
           className="mb-3 mb-lg-5 mt-lg-5"
+          alt="Dach pawilonu"
         />
         <p>
           Roof EPS sandwich panels with polystyrene core, thickness 10 cm – the
@@ -82,6 +144,7 @@ const ProductTemplate = ({ data }) => {
         <GatsbyImage
           image={getImage(product?.frontmatter?.floor_image)}
           className="mb-3 mb-lg-5 mt-lg-5"
+          alt="Warstwy podłogi pawilonu"
         />
         <p>
           Floor of EPS sandwich panels with polyurethane core, thickness 10 cm +
@@ -89,51 +152,34 @@ const ProductTemplate = ({ data }) => {
           is 0.22 W/m2K.
         </p>
       </Container>
-      <Container className="p-3 p-lg-5">
-        <h4>Wyposażenie</h4>
-        <ListGroup>
-          <ListGroup.Item>Instalacja elektryczna: AC</ListGroup.Item>
-          <ListGroup.Item>oświetlenie LED</ListGroup.Item>
-          <ListGroup.Item>skrzynka bezpieczników</ListGroup.Item>
-          <ListGroup.Item>2 gniazdka</ListGroup.Item>
-          <ListGroup.Item>instalacja elektryczna</ListGroup.Item>
-          <ListGroup.Item>
-            1x Aluminiowe drzwi jednoskrzydłowe 108 x 110 cm
-          </ListGroup.Item>
-          <ListGroup.Item>
-            2x Okna z dwiema warstwami szkła: 100 x 200 cm
-          </ListGroup.Item>
-          <ListGroup.Item>
-            Konstrukcja stalowa – wykonana z profilu stalowego 50x50x4 mm, w tym
-            haki transportowe
-          </ListGroup.Item>
-          <ListGroup.Item>
-            Transport i rozładunek na terenie Polski wliczone w cenę
-          </ListGroup.Item>
-        </ListGroup>
-      </Container>
       <article className="grey-bg">
-        <Container className="mt-5 p-3 p-lg-5">
-          <h4>Dodatkowe opcje</h4>
-          <ListGroup variant="flush">
-            <ListGroup.Item variant="dark">
-              Okno uchylno-rozwierne z PVC 100x100 – 400 GBP
-            </ListGroup.Item>
-            <ListGroup.Item variant="dark">
-              Okno uchylno-rozwierne z PVC 90x190 – 600 GBP
-            </ListGroup.Item>
-            <ListGroup.Item variant="dark">
-              Dwufunkcyjny grzanie/chłodzenie SINCLAIR 3,4 kW – 950 GBP
-            </ListGroup.Item>
-            <ListGroup.Item variant="dark">
-              Aneks kuchenny z szafkami górnymi i dolnymi, blatem, zlewem,
-              kranem – 450 GB
-            </ListGroup.Item>
-            <ListGroup.Item variant="dark">
-              Toaleta: zlew, muszla klozetowa, szafka pod zlewem, małe okno,
-              podgrzewacz wody – 400 GBP
-            </ListGroup.Item>
-          </ListGroup>
+        <Container className="mt-5 p-3 pb-5 pt-5 shadow-sm">
+          <Row>
+            <Col sm={{ offset: 1}}>
+              <h4 className="mt-3 mb-3">
+                Dodatkowe opcje wyposażenia:
+              </h4>
+              <ListGroup variant="flush" className="product-table ps-5">
+                <ListGroup.Item className="ps-0">
+                  Okno uchylno-rozwierne z PVC 100x100 – 400 GBP
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Okno uchylno-rozwierne z PVC 90x190 – 600 GBP
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Dwufunkcyjny grzanie/chłodzenie SINCLAIR 3,4 kW – 950 GBP
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Aneks kuchenny z szafkami górnymi i dolnymi, blatem, zlewem,
+                  kranem – 450 GB
+                </ListGroup.Item>
+                <ListGroup.Item className="ps-0">
+                  Toaleta: zlew, muszla klozetowa, szafka pod zlewem, małe okno,
+                  podgrzewacz wody – 400 GBP
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </Row>
         </Container>
       </article>
     </Container>

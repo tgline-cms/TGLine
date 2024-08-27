@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <p>Być może została przeniesona lub zmieniona.</p>
     <Link to="/">
       <span className="error-page-link">Wróć na stronę główną.</span>
-      <RightArrow className="error-page-arrow"/>
+      <RightArrow className="arrow-icon"/>
     </Link>
   </Container>
 )

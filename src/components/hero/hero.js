@@ -72,7 +72,6 @@ const Hero = () => {
           <Link to="/oferta" className="text-lg-center offer-link">
             {heroData?.frontmatter?.hero_link}
           </Link>
-
           <RightArrow className="arrow-icon" />
         </motion.div>
       </Stack>
