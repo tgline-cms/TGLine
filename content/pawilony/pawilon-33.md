@@ -18,4 +18,3 @@ wall_image: ../../src/images/eps_sandwich1.webp
 roof_image: ../../src/images/eps_sandwich2.webp
 floor_image: ../../src/images/eps_sandwich3.webp
 ---
-Nowoczesny kontener handlowy.

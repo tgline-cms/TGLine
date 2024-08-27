@@ -41,7 +41,6 @@ const ProductTemplate = ({ data }) => {
             className="mt-4 justify-self-lg-end ms-lg-auto slider"
           >
             <Slider product={product?.frontmatter?.id} />
-            {/* // <div dangerouslySetInnerHTML={{ __html: product?.html }} /> */}
           </Col>
           <Col sm={{ offset: 1 }}>
             <article className="specification mt-5 mt-lg-0 pt-3 pt-lg-5 pb-5">
@@ -77,7 +76,6 @@ const ProductTemplate = ({ data }) => {
             </article>
           </Col>
         </Container>
-        {/* // <div dangerouslySetInnerHTML={{ __html: product?.html }} /> */}
       </Row>
       <article className="grey-bg">
         <Container className="p-3 bg-grey pt-5 pb-5 shadow-sm">
@@ -118,13 +116,13 @@ const ProductTemplate = ({ data }) => {
           </Row>
         </Container>
       </article>
-      <Container className="d-flex flex-column align-items-center justify-content-center shadow-sm">
+      <Container className="d-flex flex-column align-items-center justify-content-center">
         <GatsbyImage
           image={getImage(product?.frontmatter?.wall_image)}
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Przekrój ściany pawilonu"
         />
-        <p>
+        <p className="p-3">
           Walls of EPS sandwich panels with polystyrene core, thickness 10 cm –
           the thermal transmittance for polystyrene is 0.38 W/m2K.
         </p>
@@ -135,7 +133,7 @@ const ProductTemplate = ({ data }) => {
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Dach pawilonu"
         />
-        <p>
+        <p className="p-3">
           Roof EPS sandwich panels with polystyrene core, thickness 10 cm – the
           thermal transmittance for polystyrene is 0.38 W/m2K.
         </p>
@@ -146,7 +144,7 @@ const ProductTemplate = ({ data }) => {
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Warstwy podłogi pawilonu"
         />
-        <p>
+        <p className="p-3">
           Floor of EPS sandwich panels with polyurethane core, thickness 10 cm +
           OSB board + vinyl floor - the thermal transmittance for polyurethane
           is 0.22 W/m2K.

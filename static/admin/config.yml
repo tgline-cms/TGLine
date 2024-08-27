@@ -52,10 +52,6 @@ collections:
         name: slug
         widget: hidden
         default: pawilon-{{id}}
-      - label: Body
-        name: body
-        widget: markdown
-        required: false
       - label: Product gallery
         name: product_gallery
         required: false

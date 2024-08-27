@@ -17,8 +17,4 @@ wall_image: ../../src/images/eps_sandwich1.webp
 roof_image: ../../src/images/eps_sandwich2.webp
 floor_image: ../../src/images/eps_sandwich3.webp
 ---
-Lorem lorem ipsum dolor sit amet consectetuer adipiscing elit
-lorem ipsum dolor sit amet consectetuer adipiscing elit
-lorem ipsum dolor sit amet consectetuer adipiscing elit
-lorem ipsum dolor sit amet consectetuer adipiscing elit
-lorem ipsum dolor sit amet consectetuer adipiscing elit
+L
