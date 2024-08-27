@@ -7,8 +7,12 @@ body {
   font-family: "Jura", sans-serif;
 
   .arrow-icon {
-    width: 5rem;
+    width: 4rem;
     height: auto;
+
+    @media (min-width: 920px) {
+      width: 5rem;
+    }
   }
 
   a {

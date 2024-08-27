@@ -21,10 +21,10 @@ const ProductTemplate = ({ data }) => {
       <Row>
         <Container className="d-flex flex-wrap align-items-start p-3 shadow-sm">
           <Col sm={2} lg={1} className="d-flex">
-            <RightArrow className="arrow-icon me-3" />
+            <RightArrow className="arrow-icon me-2" />
           </Col>
           <Col sm={8} lg={4} className="d-flex flex-column">
-            <header className="d-flex flex-column mt-5">
+            <header className="d-flex flex-column mt-4">
               <h3>Pawilon {product?.frontmatter?.size}</h3>
               <Stack>
                 <h4> {product?.frontmatter?.price}</h4>
@@ -42,32 +42,32 @@ const ProductTemplate = ({ data }) => {
           >
             <Slider product={product?.frontmatter?.id} />
           </Col>
-          <Col sm={{ offset: 1 }}>
-            <article className="specification mt-5 mt-lg-0 pt-3 pt-lg-5 pb-5">
-              <h4 className="mt-3 mb-3">Specyfikacja:</h4>
+          <Col lg={{ offset: 1 }}>
+            <article className="specification mt-5 mt-lg-0 pt-lg-5 pb-5">
+              <h4 className="m-3 m-lg-0">Specyfikacja:</h4>
               <ListGroup
                 variant="flush"
                 className="specification-list ps-5"
               >
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Wymiary zewnętrzne:{" "}
                   {product?.frontmatter?.external_dimensions}
                 </ListGroup.Item>
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Wymiary wewnętrzne:{" "}
                   {product?.frontmatter?.internal_dimensions}
                 </ListGroup.Item>
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Wysokość wewnętrzna: {product?.frontmatter?.internal_height}
                 </ListGroup.Item>
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Tolerancja wymiarów:{" "}
                   {product?.frontmatter?.dimension_tolerance}
                 </ListGroup.Item>
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Wykończenie: {product?.frontmatter?.decoration}
                 </ListGroup.Item>
-                <ListGroup.Item className="ps-lg-0 pb-2 pb-lg-3">
+                <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Ściany z płyt warstwowych EPS z rdzeniem polistyrenowym o
                   grubości 10 cm – współczynnik przenikania ciepła dla
                   polistyrenu wynosi 0,38 W/m2K.
@@ -78,13 +78,13 @@ const ProductTemplate = ({ data }) => {
         </Container>
       </Row>
       <article className="grey-bg">
-        <Container className="p-3 bg-grey pt-5 pb-5 shadow-sm">
+        <Container className="bg-grey pt-5 pb-5 shadow-sm">
           <Row>
-            <Col sm={{ offset: 1 }}>
-              <h4 className="mt-3 mb-3">
+            <Col lg={{ offset: 1 }}>
+              <h4 className="m-3 m-lg-0">
                 Wyposażenie:
               </h4>
-              <ListGroup variant="flush" className="product-table ps-5 ps-lg-5">
+              <ListGroup variant="flush" className="product-table ps-5">
                 <ListGroup.Item className="ps-0">
                   Instalacja elektryczna: AC
                 </ListGroup.Item>
@@ -122,7 +122,7 @@ const ProductTemplate = ({ data }) => {
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Przekrój ściany pawilonu"
         />
-        <p className="p-3">
+        <p className="text-center p-3">
           Walls of EPS sandwich panels with polystyrene core, thickness 10 cm –
           the thermal transmittance for polystyrene is 0.38 W/m2K.
         </p>
@@ -133,7 +133,7 @@ const ProductTemplate = ({ data }) => {
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Dach pawilonu"
         />
-        <p className="p-3">
+        <p className="text-center p-3">
           Roof EPS sandwich panels with polystyrene core, thickness 10 cm – the
           thermal transmittance for polystyrene is 0.38 W/m2K.
         </p>
@@ -144,17 +144,17 @@ const ProductTemplate = ({ data }) => {
           className="mb-3 mb-lg-5 mt-lg-5"
           alt="Warstwy podłogi pawilonu"
         />
-        <p className="p-3">
+        <p className="text-center p-3">
           Floor of EPS sandwich panels with polyurethane core, thickness 10 cm +
           OSB board + vinyl floor - the thermal transmittance for polyurethane
           is 0.22 W/m2K.
         </p>
       </Container>
       <article className="grey-bg">
-        <Container className="mt-5 p-3 pb-5 pt-5 shadow-sm">
+        <Container className="mt-5 pb-5 pt-5 shadow-sm">
           <Row>
-            <Col sm={{ offset: 1}}>
-              <h4 className="mt-3 mb-3">
+            <Col lg={{ offset: 1}}>
+              <h4 className="m-3 m-lg-0">
                 Dodatkowe opcje wyposażenia:
               </h4>
               <ListGroup variant="flush" className="product-table ps-5">

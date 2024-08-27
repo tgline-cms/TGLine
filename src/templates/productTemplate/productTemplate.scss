@@ -1,13 +1,16 @@
 @import "../../style/style.scss";
 
-h3 {
-  font-weight: 800;
+header {
+  h3, h4 {
+    font-weight: 800;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
 }
 
-h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
 .product-table {
   --bs-list-group-bg: $lightGrey;
 }
@@ -17,21 +20,3 @@ h4 {
     width: 50%;
   }
 }
-
-// header {
-//   order: 1;
-// }
-
-// .specification {
-//   order: 3;
-//   @media (min-width: 920px) {
-//     order: 2;
-//   }
-// }
-
-// .slider {
-//   order: 2;
-//   @media (min-width: 920px) {
-//     order: 3;
-//   }
-// }

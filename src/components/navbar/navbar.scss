@@ -1,13 +1,13 @@
 @import "../../style/style.scss";
 
 .logo {
-  width: 3rem;
+  width: 4rem;
 
   @media (min-width: 768px) {
-    width: 4rem;
+    width: 5rem;
   }
   @media (min-width: 992px) {
-    width: 5rem;
+    width: 6rem;
   }
 }
 

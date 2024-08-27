@@ -66,7 +66,6 @@ const Slider = ({ product }) => {
   const [selectedImage, setSelectedImage] = React.useState(null)
 
   const handleShowModal = image => {
-    console.log("dziala")
     setSelectedImage(image)
     setShowModal(true)
   }
@@ -103,7 +102,6 @@ const Slider = ({ product }) => {
           />
         </Container>
       )}
-      {/* Modal do wyświetlania powiększonego zdjęcia */}
       <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
