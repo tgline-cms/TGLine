@@ -41,9 +41,9 @@ const ProductTemplate = ({ data }) => {
               <h3>Pawilon {product?.frontmatter?.size}</h3>
               <Stack>
                 <h4> {product?.frontmatter?.price}</h4>
-                <span>zawiera koszt dostawy</span>
+                <span>{product?.frontmatter?.price_description}</span>
                 <h5 className="mt-3 mb-3">
-                  Nr ref. {product?.frontmatter?.id}
+                  {product?.frontmatter?.ref_description} {product?.frontmatter?.id}
                 </h5>
               </Stack>
             </motion.header>
@@ -78,9 +78,7 @@ const ProductTemplate = ({ data }) => {
                   Wykończenie: {product?.frontmatter?.decoration}
                 </ListGroup.Item>
                 <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
-                  Ściany z płyt warstwowych EPS z rdzeniem polistyrenowym o
-                  grubości 10 cm – współczynnik przenikania ciepła dla
-                  polistyrenu wynosi 0,38 W/m2K.
+                  {product?.frontmatter?.wall_image_description}
                 </ListGroup.Item>
               </ListGroup>
             </article>
@@ -93,71 +91,48 @@ const ProductTemplate = ({ data }) => {
             <Col lg={{ offset: 1 }}>
               <h4 className="m-3 m-lg-0 mb-lg-2">Wyposażenie:</h4>
               <ListGroup variant="flush" className="product-table ps-5">
-                <ListGroup.Item className="ps-0">
-                  Instalacja elektryczna: AC
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  oświetlenie LED
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  skrzynka bezpieczników
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">2 gniazdka</ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  instalacja elektryczna
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  1x Aluminiowe drzwi jednoskrzydłowe 108 x 110 cm
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  2x Okna z dwiema warstwami szkła: 100 x 200 cm
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Konstrukcja stalowa – wykonana z profilu stalowego 50x50x4 mm,
-                  w tym haki transportowe
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Transport i rozładunek na terenie Polski wliczone w cenę
-                </ListGroup.Item>
+                {product?.frontmatter?.equipment.map(({ equipment_item }) => (
+                  <ListGroup.Item className="ps-0">
+                    {equipment_item}
+                  </ListGroup.Item>
+                ))}
               </ListGroup>
             </Col>
           </Row>
         </Container>
       </article>
-      <Container className="d-flex flex-column align-items-center justify-content-center">
-        <GatsbyImage
-          image={getImage(product?.frontmatter?.wall_image)}
-          className="mb-3 mb-lg-5 mt-lg-5"
-          alt="Przekrój ściany pawilonu"
-        />
-        <p className="text-center p-3">
-          Walls of EPS sandwich panels with polystyrene core, thickness 10 cm –
-          the thermal transmittance for polystyrene is 0.38 W/m2K.
-        </p>
-      </Container>
-      <Container className="d-flex flex-column justify-content-center align-items-center">
-        <GatsbyImage
-          image={getImage(product?.frontmatter?.roof_image)}
-          className="mb-3 mb-lg-5 mt-lg-5"
-          alt="Dach pawilonu"
-        />
-        <p className="text-center p-3">
-          Roof EPS sandwich panels with polystyrene core, thickness 10 cm – the
-          thermal transmittance for polystyrene is 0.38 W/m2K.
-        </p>
-      </Container>
-      <Container className="d-flex flex-column justify-content-center align-items-center">
-        <GatsbyImage
-          image={getImage(product?.frontmatter?.floor_image)}
-          className="mb-3 mb-lg-5 mt-lg-5"
-          alt="Warstwy podłogi pawilonu"
-        />
-        <p className="text-center p-3">
-          Floor of EPS sandwich panels with polyurethane core, thickness 10 cm +
-          OSB board + vinyl floor - the thermal transmittance for polyurethane
-          is 0.22 W/m2K.
-        </p>
-      </Container>
+      <article>
+        <Container className="d-flex flex-column align-items-center justify-content-center">
+          <GatsbyImage
+            image={getImage(product?.frontmatter?.wall_image)}
+            className="mb-3 mb-lg-5 mt-lg-5"
+            alt="Przekrój ściany pawilonu"
+          />
+          <p className="text-center p-3">
+            {product?.frontmatter?.wall_image_description}
+          </p>
+        </Container>
+        <Container className="d-flex flex-column justify-content-center align-items-center">
+          <GatsbyImage
+            image={getImage(product?.frontmatter?.roof_image)}
+            className="mb-3 mb-lg-5 mt-lg-5"
+            alt="Dach pawilonu"
+          />
+          <p className="text-center p-3">
+            {product?.frontmatter?.roof_image_description}
+          </p>
+        </Container>
+        <Container className="d-flex flex-column justify-content-center align-items-center">
+          <GatsbyImage
+            image={getImage(product?.frontmatter?.floor_image)}
+            className="mb-3 mb-lg-5 mt-lg-5"
+            alt="Warstwy podłogi pawilonu"
+          />
+          <p className="text-center p-3">
+            {product?.frontmatter?.floor_image_description}
+          </p>
+        </Container>
+      </article>
       <article className="grey-bg">
         <Container className="mt-5 pb-5 pt-5 shadow-sm">
           <Row>
@@ -166,23 +141,13 @@ const ProductTemplate = ({ data }) => {
                 Dodatkowe opcje wyposażenia:
               </h4>
               <ListGroup variant="flush" className="product-table ps-5">
-                <ListGroup.Item className="ps-0">
-                  Okno uchylno-rozwierne z PVC 100x100 – 400 GBP
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Okno uchylno-rozwierne z PVC 90x190 – 600 GBP
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Dwufunkcyjny grzanie/chłodzenie SINCLAIR 3,4 kW – 950 GBP
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Aneks kuchenny z szafkami górnymi i dolnymi, blatem, zlewem,
-                  kranem – 450 GB
-                </ListGroup.Item>
-                <ListGroup.Item className="ps-0">
-                  Toaleta: zlew, muszla klozetowa, szafka pod zlewem, małe okno,
-                  podgrzewacz wody – 400 GBP
-                </ListGroup.Item>
+                {product?.frontmatter?.extra_equipment.map(
+                  ({ extra_equipment_item }) => (
+                    <ListGroup.Item className="ps-0">
+                      {extra_equipment_item}
+                    </ListGroup.Item>
+                  )
+                )}
               </ListGroup>
             </Col>
           </Row>
@@ -199,6 +164,7 @@ export const query = graphql`
     markdownRemark(frontmatter: { id: { eq: $id } }) {
       frontmatter {
         id
+        ref_description
         external_dimensions
         internal_dimensions
         internal_height
@@ -208,6 +174,13 @@ export const query = graphql`
         delivery
         size
         price
+        price_description
+        equipment {
+          equipment_item
+        }
+        extra_equipment {
+          extra_equipment_item
+        }
         wall_image {
           childImageSharp {
             gatsbyImageData(
@@ -219,6 +192,7 @@ export const query = graphql`
             )
           }
         }
+        wall_image_description
         roof_image {
           childImageSharp {
             gatsbyImageData(
@@ -230,6 +204,7 @@ export const query = graphql`
             )
           }
         }
+        roof_image_description
         floor_image {
           childImageSharp {
             gatsbyImageData(
@@ -241,8 +216,8 @@ export const query = graphql`
             )
           }
         }
+        floor_image_description
       }
-      html
     }
   }
 `

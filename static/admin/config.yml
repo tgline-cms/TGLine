@@ -36,6 +36,9 @@ collections:
       - label: Cena
         name: price
         widget: string
+      - label: Cena - opis
+        name: price_description
+        widget: string
       - label: Zdjecie produktu
         name: product_image
         widget: image
@@ -43,6 +46,9 @@ collections:
         public_folder: ../../src/images
       - label: Id
         name: id
+        widget: string
+      - label: Ref - opis
+        name: ref_description
         widget: string
       - label: markdownName
         name: markdownName
@@ -52,6 +58,22 @@ collections:
         name: slug
         widget: hidden
         default: pawilon-{{id}}
+      - label: Wyposażenie
+        name: equipment
+        widget: list
+        allow_add: true
+        fields:
+          - label: Element wyposażenia
+            name: equipment_item
+            widget: string
+      - label: Dodatkowe wyposażenie
+        name: extra_equipment
+        widget: list
+        allow_add: true
+        fields:
+          - label: Element dodatkowego wyposażenia
+            name: extra_equipment_item
+            widget: string
       - label: Product gallery
         name: product_gallery
         required: false
@@ -63,24 +85,33 @@ collections:
             widget: image
             media_folder: ../../src/images/pawilon-{{id}}
             public_folder: ../../src/images/pawilon-{{id}}
-      - label: Zdjecie sciany
+      - label: Grafika 1
         name: wall_image
         widget: image
         default: ../../src/images/eps_sandwich1.webp
         media_folder: ../../src/images/
         public_folder: ../../src/images/
-      - label: Zdjecie dachu
+      - label: Opis grafiki 1
+        name: wall_image_description
+        widget: string
+      - label: Grafika 2
         name: roof_image
         widget: image
         default: ../../src/images/eps_sandwich2.webp
         media_folder: ../../src/images/
         public_folder: ../../src/images/
-      - label: Zdjecie podlogi
+      - label: Opis grafiki 2
+        name: roof_image_description
+        widget: string
+      - label: Grafika 3
         name: floor_image
         widget: image
         default: ../../src/images/eps_sandwich3.webp
         media_folder: ../../src/images/
-        public_folder: ../../src/images/    
+        public_folder: ../../src/images/ 
+      - label: Opis grafiki 3
+        name: floor_image_description
+        widget: string   
   - name: about
     label: O nas
     folder: content/about
