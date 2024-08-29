@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, ListGroup, Row, Col, Stack } from "react-bootstrap"
+import { Container, ListGroup, Row, Col, Stack, Badge } from "react-bootstrap"
 import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
@@ -40,10 +40,13 @@ const ProductTemplate = ({ data }) => {
             >
               <h3>Pawilon {product?.frontmatter?.size}</h3>
               <Stack>
-                <h4> {product?.frontmatter?.price}</h4>
+                <h4>{product?.frontmatter?.price}</h4>
                 <span>{product?.frontmatter?.price_description}</span>
                 <h5 className="mt-3 mb-3">
-                  {product?.frontmatter?.ref_description} {product?.frontmatter?.id}
+                  <Badge bg="secondary">
+                    {product?.frontmatter?.ref_description}{" "}
+                    {product?.frontmatter?.id}
+                  </Badge>
                 </h5>
               </Stack>
             </motion.header>
@@ -58,7 +61,7 @@ const ProductTemplate = ({ data }) => {
           <Col lg={{ offset: 1 }}>
             <article className="specification mt-5 mt-lg-0 pt-lg-5 pb-5">
               <h4 className="m-3 m-lg-0 mb-lg-2">Specyfikacja:</h4>
-              <ListGroup variant="flush" className="specification-list ps-5">
+              <ListGroup variant="flush" className="specification-list ps-4">
                 <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
                   Wymiary zewnętrzne:{" "}
                   {product?.frontmatter?.external_dimensions}
@@ -90,7 +93,7 @@ const ProductTemplate = ({ data }) => {
           <Row>
             <Col lg={{ offset: 1 }}>
               <h4 className="m-3 m-lg-0 mb-lg-2">Wyposażenie:</h4>
-              <ListGroup variant="flush" className="product-table ps-5">
+              <ListGroup variant="flush" className="product-table ps-4">
                 {product?.frontmatter?.equipment.map(({ equipment_item }) => (
                   <ListGroup.Item className="ps-0">
                     {equipment_item}
@@ -140,7 +143,7 @@ const ProductTemplate = ({ data }) => {
               <h4 className="m-3 m-lg-0 mb-lg-2">
                 Dodatkowe opcje wyposażenia:
               </h4>
-              <ListGroup variant="flush" className="product-table ps-5">
+              <ListGroup variant="flush" className="product-table ps-4">
                 {product?.frontmatter?.extra_equipment.map(
                   ({ extra_equipment_item }) => (
                     <ListGroup.Item className="ps-0">

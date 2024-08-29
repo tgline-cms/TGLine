@@ -1,15 +1,25 @@
+@import "../../style/style.scss";
+
 .card {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 
-    &:hover img {
-      transform: scale(1.1);
-    }
-    .card-img-bottom {
-      overflow: hidden;
+  &:hover img {
+    transform: scale(1.1);
+  }
 
-      img {
-        transition: transform 0.35s ease-in;
-      }
+  &-body {
+    background-color: $lightGrey;
+    &-title {
+      font-weight: 700;
     }
   }
+
+  .card-img-bottom {
+    overflow: hidden;
+
+    img {
+      transition: transform 0.35s ease-in;
+    }
+  }
+}

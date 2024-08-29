@@ -87,9 +87,9 @@ const OfferPage = () => {
               <Card
                 as={Link}
                 to={`/pawilon-${node.frontmatter.id}`}
-                className="shadow rounded mb-3 ps-0 pe-0"
+                className="shadow rounded mb-4"
               >
-                <Card.Body>
+                <Card.Body className="p-5 ps-3 rounded">
                   <Card.Title>Pawilon {node.frontmatter.size}</Card.Title>
                   <Card.Text>{node.frontmatter.decoration}</Card.Text>
                 </Card.Body>

@@ -6,6 +6,10 @@ $lightGrey: #e7ecf3;
 body {
   font-family: "Jura", sans-serif;
 
+  ::selection {
+    background-color: $lightGrey;
+  }
+
   .arrow-icon {
     width: 4rem;
     height: auto;

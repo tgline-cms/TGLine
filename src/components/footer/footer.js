@@ -1,9 +1,10 @@
 import React from "react"
 import { Container } from "react-bootstrap"
+import "./footer.scss"
 
 function Footer() {
   return (
-    <footer className="fixed-lg-bottom bg-light">
+    <footer className="fixed-lg-bottom">
       <Container fluid className="p-1 p-lg-3 d-flex flex-column flex-lg-row justify-content-lg-between">
         <div className="text-center text-lg-start">
           <span>©2024&middot;TGLine.</span>

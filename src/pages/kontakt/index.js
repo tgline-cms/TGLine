@@ -11,6 +11,7 @@ import { motion } from "framer-motion"
 import Seo from "../../components/seo"
 import MapImage from "../../components/mapImage/mapImage"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import Socials from "../../components/socials/socials"
 import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import "./kontakt.scss"
 
@@ -158,6 +159,7 @@ const ContactPage = () => {
           )}
         </article>
       </Container>
+      <Socials />
     </Container>
   )
 }

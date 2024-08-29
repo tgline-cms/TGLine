@@ -153,6 +153,18 @@ collections:
       - label: Adres
         name: contact_address
         widget: string
+      - label: Facebook
+        name: facebook_url
+        required: false
+        widget: string
+      - label: YouTube
+        name: youtube_url
+        required: false
+        widget: string
+      - label: Instagram
+        name: instagram_url
+        required: false
+        widget: string
       - label: Zdjęcie mapy
         name: contact_map
         widget: image

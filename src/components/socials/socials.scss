@@ -1,0 +1,13 @@
+@import "../../style/style.scss";
+
+.socials {
+    position: fixed;
+    right: 0;
+    bottom: 15vh;
+    border-radius: 4px 0 0 4px;
+
+    .container {
+        background-color: $lightGrey;
+        border-radius: 8px 0 0 8px;
+    }
+}

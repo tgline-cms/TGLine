@@ -10,8 +10,8 @@ id: M01
 ref_description: Nr ref.
 markdownName: pawilon
 product_gallery:
-  - gallery_product_image: ../../src/images/pawilon-m01/pavilion1.webp
-  - gallery_product_image: ../../src/images/pawilon-m01/pawilon-m1.jpeg
+  - gallery_product_image: ../../src/images/pawilon-m02/pawilon2.webp
+  - gallery_product_image: ../../src/images/pawilon-m02/pawilon2_2.webp
 exterior_color: graphite/white
 internal_height: 250cm lowered to 240cm
 price: 70 000zł
