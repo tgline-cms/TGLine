@@ -12,7 +12,7 @@ price: £14.250
 price_description: Zawiera koszt dostawy
 product_image: ../../src/images/pawilon3.webp
 product_gallery:
-    gallery_product_image: ../../src/images/pawilon-m02/pawilon1.jpg
+    gallery_product_image: ../../src/images/pawilon-m03/pawilon3.webp
 id: M03
 ref_description: Nr ref.
 equipment: 

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Carousel, Container, Modal } from "react-bootstrap"
+import { Carousel, Modal } from "react-bootstrap"
 import { v4 as uuidv4 } from "uuid"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -18,6 +18,7 @@ const Slider = ({ product }) => {
               gatsbyImageData(
                 layout: CONSTRAINED
                 width: 900
+
                 placeholder: BLURRED
               )
             }
@@ -37,8 +38,9 @@ const Slider = ({ product }) => {
                   gatsbyImageData(
                     backgroundColor: "grey"
                     placeholder: BLURRED
-                    width: 1200
-                    height: 800
+                    quality: 100
+                    width: 900
+                    height: 600
                     transformOptions: { fit: COVER, cropFocus: CENTER }
                   )
                 }
@@ -57,10 +59,13 @@ const Slider = ({ product }) => {
     )
     .map(edge => getImage(edge?.node?.childImageSharp.gatsbyImageData))
 
-  const currentProduct = data.pavilionsParameters.edges.filter(
+  const currentProduct = data?.pavilionsParameters?.edges?.find(
     ({ node }) => node.frontmatter.id === product
-  )[0]
-  const currentProductImage = currentProduct?.node?.frontmatter?.product_image
+  )
+
+  const currentProductImage = currentProduct
+    ? getImage(currentProduct.node.frontmatter.product_image)
+    : null
 
   const [showModal, setShowModal] = React.useState(false)
   const [selectedImage, setSelectedImage] = React.useState(null)
@@ -78,7 +83,7 @@ const Slider = ({ product }) => {
   return (
     <>
       {images.length >= 2 ? (
-        <Carousel fade className="mt-4 mb-4">
+        <Carousel fade className="mt-4 mt-lg-0 mb-4">
           {images.map(image => {
             return (
               <Carousel.Item
@@ -95,12 +100,17 @@ const Slider = ({ product }) => {
           })}
         </Carousel>
       ) : (
-        <Container className="img-container" onClick={() => handleShowModal(getImage(currentProductImage))}>
-          <GatsbyImage
-            image={getImage(currentProductImage)}
-            alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
-          />
-        </Container>
+        currentProductImage && (
+          <button
+            className="img-container"
+            onClick={() => handleShowModal(getImage(currentProductImage))}
+          >
+            <GatsbyImage
+              image={currentProductImage}
+              alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
+            />
+          </button>
+        )
       )}
       <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
         <Modal.Header closeButton></Modal.Header>
