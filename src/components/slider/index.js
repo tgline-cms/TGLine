@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Carousel, Modal } from "react-bootstrap"
+import { Carousel, Modal, Container } from "react-bootstrap"
 import { v4 as uuidv4 } from "uuid"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -69,6 +69,7 @@ const Slider = ({ product }) => {
 
   const [showModal, setShowModal] = React.useState(false)
   const [selectedImage, setSelectedImage] = React.useState(null)
+  const [carouselKey, setCarouselKey] = React.useState(uuidv4())
 
   const handleShowModal = image => {
     setSelectedImage(image)
@@ -78,17 +79,18 @@ const Slider = ({ product }) => {
   const handleCloseModal = () => {
     setShowModal(false)
     setSelectedImage(null)
+    setCarouselKey(uuidv4()) 
   }
 
   return (
-    <>
+    <article>
       {images.length >= 2 ? (
         <Carousel fade className="mt-4 mt-lg-0 mb-4">
           {images.map(image => {
             return (
               <Carousel.Item
                 interval={2000}
-                key={uuidv4()}
+                key={carouselKey}
                 onClick={() => handleShowModal(image)}
               >
                 <GatsbyImage
@@ -101,7 +103,7 @@ const Slider = ({ product }) => {
         </Carousel>
       ) : (
         currentProductImage && (
-          <button
+          <Container
             className="img-container"
             onClick={() => handleShowModal(getImage(currentProductImage))}
           >
@@ -109,7 +111,7 @@ const Slider = ({ product }) => {
               image={currentProductImage}
               alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
             />
-          </button>
+          </Container>
         )
       )}
       <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
@@ -123,7 +125,7 @@ const Slider = ({ product }) => {
           )}
         </Modal.Body>
       </Modal>
-    </>
+    </article>
   )
 }
 

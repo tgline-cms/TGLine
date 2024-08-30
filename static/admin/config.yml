@@ -42,6 +42,9 @@ collections:
       - label: Zdjecie produktu
         name: product_image
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         media_folder: ../../src/images/
         public_folder: ../../src/images
       - label: Id
@@ -83,11 +86,17 @@ collections:
           - label: Zdjecie produktu
             name: gallery_product_image
             widget: image
+            pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
             media_folder: ../../src/images/pawilon-{{id}}
             public_folder: ../../src/images/pawilon-{{id}}
       - label: Grafika 1
         name: wall_image
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         default: ../../src/images/eps_sandwich1.webp
         media_folder: ../../src/images/
         public_folder: ../../src/images/
@@ -97,6 +106,9 @@ collections:
       - label: Grafika 2
         name: roof_image
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         default: ../../src/images/eps_sandwich2.webp
         media_folder: ../../src/images/
         public_folder: ../../src/images/
@@ -106,6 +118,9 @@ collections:
       - label: Grafika 3
         name: floor_image
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         default: ../../src/images/eps_sandwich3.webp
         media_folder: ../../src/images/
         public_folder: ../../src/images/ 
@@ -123,11 +138,17 @@ collections:
       - label: Zdjecie1
         name: about_image
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         media_folder: ../../src/images/
         public_folder: ../../src/images
       - label: Zdjecie2
         name: about_image2
         widget: image
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         media_folder: ../../src/images/
         public_folder: ../../src/images
       - label: Tekst
