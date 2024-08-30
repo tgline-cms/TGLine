@@ -88,8 +88,8 @@ collections:
             name: gallery_product_image
             widget: image
             pattern:
-          - .*\.(webp|jpg|jpeg|png)$
-          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
+              - .*\.(webp|jpg|jpeg|png)$
+              - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
             media_folder: ../../src/images/pawilon-{{id}}
             public_folder: ../../src/images/pawilon-{{id}}
       - label: Grafika 1
