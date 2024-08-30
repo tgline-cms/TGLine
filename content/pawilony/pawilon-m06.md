@@ -7,7 +7,7 @@ dimension_tolerance: 1.5%
 decoration: Panele
 delivery: 8-10 tygodni
 price: £14.250
-product_image: ../../src/images/arrow_right.svg
+product_image: ../../src/images/pawilon6.webp
 id: M06
 ref_description: Nr ref.
 markdownName: pawilon
