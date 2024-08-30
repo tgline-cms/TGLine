@@ -36,9 +36,9 @@ const Hero = () => {
   return (
     <Container
       fluid
-      className="hero-bg p-3 ps-xl-5 d-flex flex-column justify-content-between"
+      className="hero-bg p-3 ps-xl-5 d-flex flex-column justify-content-center"
     >
-      <div className="d-flex flex-column flex-lg-row-reverse align-items-center align-items-lg-end">
+      <div className="d-flex flex-column flex-xl-row-reverse align-items-center align-items-xl-end">
         <motion.div
           initial={{ x: 200 }}
           animate={{ x: 0 }}
@@ -47,7 +47,7 @@ const Hero = () => {
           <GatsbyImage
             image={getImage(heroData?.frontmatter?.hero_image)}
             alt="pawilon handlowy"
-            className="mb-1 shadow hero-image"
+            className="mb-1 shadow hero-image rounded"
           />
         </motion.div>
         <motion.article
@@ -62,7 +62,7 @@ const Hero = () => {
       </div>
       <Stack
         direction="horizontal"
-        className="d-flex justify-content-end align-items-center gap-1 gap-lg-4 me-lg-4 offer-link-container"
+        className="d-flex justify-content-end align-items-center gap-1 gap-lg-5 me-lg-4 offer-link-container mt-3"
       >
         <motion.div
           initial={{ scale: 0 }}
@@ -70,7 +70,7 @@ const Hero = () => {
           transition={{ duration: 0.55 }}
         >
           <Link to="/oferta" className="text-lg-center offer-link">
-            {heroData?.frontmatter?.hero_link}
+            <span className="me-3" role="button">{heroData?.frontmatter?.hero_link}</span>
             <RightArrow className="arrow-icon" />
           </Link>
         </motion.div>

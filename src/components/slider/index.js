@@ -85,7 +85,7 @@ const Slider = ({ product }) => {
   return (
     <article>
       {images.length >= 2 ? (
-        <Carousel fade className="mt-4 mt-lg-0 mb-4">
+        <Carousel fade pause={false} className="mt-4 mt-lg-0 mb-4">
           {images.map(image => {
             return (
               <Carousel.Item

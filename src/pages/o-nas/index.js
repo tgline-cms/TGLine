@@ -50,7 +50,7 @@ const AboutPage = () => {
     <Container className="shadow min-vh-100 pb-5 mt-4 mb-4">
       <Breadcrumbs activeSite="O nas" />
       <Row
-        className="d-lg-flex flex-column flex-lg-row p-3 pb-0 p-lg-5"
+        className="d-lg-flex flex-column align-items-center flex-xl-row p-3 pb-0 pb-xl-2 ps-xl-5"
         lg={{ offset: 4 }}
       >
         <Col>
@@ -58,14 +58,14 @@ const AboutPage = () => {
             initial={{ x: -100 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5 }}
-            className="d-flex align-items-center mb-3"
+            className="d-flex align-items-center"
           >
             <RightArrow className="arrow-icon me-2" />
             <h2>O nas</h2>
           </motion.header>
           <div
             dangerouslySetInnerHTML={{ __html: aboutData?.html }}
-            className="about-text pb-5"
+            className="about-text"
           />    
         </Col>
         <Col>
@@ -77,15 +77,15 @@ const AboutPage = () => {
             <GatsbyImage
               image={getImage(aboutData?.frontmatter?.about_image)}
               alt="pawilon handlowy"
-              className="about-image-1 shadow"
+              className="about-image-1 shadow rounded"
             />
           </motion.div>
         </Col>
       </Row>
       <Row className="second-row p-3 ps-lg-5 pt-0">
         <Col>
-          <article className="d-lg-flex flex-lg-row-reverse justify-content-lg-end gap-3">
-            <p className="pt-3 pb-3 mt-3 mb-3 mt-lg-0 mb-lg-0 about-text-2">
+          <article className="d-xl-flex flex-xl-row-reverse justify-content-xl-end gap-3">
+            <p className="p-3 pe-4 mt-3 mb-3 mt-lg-0 mb-lg-0 about-text-2">
               {aboutData?.frontmatter?.about_text}
             </p> 
             <motion.div
@@ -96,7 +96,7 @@ const AboutPage = () => {
               <GatsbyImage
                 image={getImage(aboutData?.frontmatter?.about_image2)}
                 alt="pawilon"
-                className="about-image-2 shadow"
+                className="about-image-2 shadow mt-lg-2 rounded"
               />
             </motion.div>
           </article>

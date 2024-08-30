@@ -3,11 +3,11 @@
 main {
   .hero-bg {
     background-color: $navy;
-    min-height: clamp(70vh, 90vh, 100vh);
+    min-height: clamp(90vh, 95vh, 100vh);
     --bs-gutter-x: 0;
     z-index: 0;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       padding-left: 6rem;
       background: linear-gradient(to right, $navy 90%, white 10%);
     }
@@ -29,9 +29,9 @@ main {
     .offer-link-container {
       z-index: 500;
 
-      @media (min-width: 992px) {
-        margin-top: -7%;
-      }
+      // @media (min-width: 1200px) {
+      //   margin-top: -5%;
+      // }
       .offer-link {
         font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
         transition: 0.3s ease;
@@ -41,7 +41,7 @@ main {
         &:hover {
           color: $brandColor;
 
-          + .arrow-icon {
+          .arrow-icon {
             transform: scale(1.1);
           }
         }
@@ -49,11 +49,11 @@ main {
 
       .arrow-icon {
         transition: 0.3s ease;
-        width: 6rem;
+        width: 4rem;
         cursor: pointer;
 
         @media (min-width: 1200px) {
-          width: 12rem;
+          width: 9rem;
         }
 
         &:hover {

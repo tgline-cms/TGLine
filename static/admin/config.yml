@@ -45,6 +45,7 @@ collections:
         pattern:
           - .*\.(webp|jpg|jpeg|png)$
           - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
+        hint: "Dodaj zdjęcie w orientacji poziomej"
         media_folder: ../../src/images/
         public_folder: ../../src/images
       - label: Id
@@ -154,9 +155,11 @@ collections:
       - label: Tekst
         name: about_text
         widget: string
+        maxLenght: 800
       - label: Body
         name: body
         widget: markdown
+        maxLength: 1000
   - name: contact
     label: Kontakt
     folder: content/contact
@@ -190,6 +193,9 @@ collections:
         name: contact_map
         widget: image
         default: ../../src/images/map.webp
+        pattern:
+          - .*\.(webp|jpg|jpeg|png)$
+          - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"
         required: false
         media_folder: ../../src/images/
         public_folder: ../../src/images
@@ -208,9 +214,11 @@ collections:
     fields:
       - label: Tytul
         name: hero_heading1
+        max-length: 40
         widget: string
       - label: Subtytul
         name: hero_heading2
+        maxLength: 40
         widget: string
       - label: Zdjecie
         name: hero_image

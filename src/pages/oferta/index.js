@@ -91,7 +91,7 @@ const OfferPage = () => {
               >
                 <Card.Body className="p-5 ps-3 rounded">
                   <Card.Title>Pawilon {node.frontmatter.size}</Card.Title>
-                  <Card.Text>{node.frontmatter.decoration}</Card.Text>
+                  <Card.Text>{node.frontmatter.id}</Card.Text>
                 </Card.Body>
                 <Card.Img
                   variant="bottom"

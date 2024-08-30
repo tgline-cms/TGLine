@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Navbar, Offcanvas, Nav, NavDropdown, Container } from "react-bootstrap"
-import { ReactComponent as Logo } from "../../../static/icons/TGLine_logo.svg"
+import { ReactComponent as Logo } from "../../../static/icons/logo-TGline.svg"
 import "./navbar.scss"
 
 const Navigation = () => {
