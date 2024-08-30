@@ -7,7 +7,7 @@ dimension_tolerance: 1.5%
 decoration: Panele
 delivery: 8-10 tygodni
 price: 72.590zł
-product_image: ../../src/images/pawilon7.webp
+product_image: ../../src/images/liczniki.jpg
 id: M07
 ref_description: Nr ref.
 markdownName: pawilon
