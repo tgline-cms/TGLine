@@ -156,10 +156,16 @@ collections:
         name: about_text
         widget: string
         max_length: 800
+        pattern:
+          - ".{1,800}"
+          - "Tekst nie może przekraczać 800 znaków."
       - label: Body
         name: body
         widget: markdown
         max_length: 1000
+        pattern:
+          - ".{1,1000}"
+          - "Tekst nie może przekraczać 1000 znaków."
   - name: contact
     label: Kontakt
     folder: content/contact
@@ -214,14 +220,23 @@ collections:
     fields:
       - label: Tytul
         name: hero_heading1
+        hint: "Maksymalna długość tytułu to 40 znaków"
         max_length: 40
+        pattern:
+          - ".{1,40}"
+          - "Tekst nie może przekraczać 40 znaków."
         widget: string
       - label: Subtytul
         name: hero_heading2
+        hint: "Maksymalna długość subtytułu to 40 znaków"
         max_length: 40
+        pattern:
+          - ".{1,40}"
+          - "Tekst nie może przekraczać 40 znaków."
         widget: string
       - label: Zdjecie
         name: hero_image
+        hint: "Dodaj zdjęcie o wysokiej rozdzielczości, w orientacji poziomej."
         widget: image
         media_folder: ../../src/images/
         public_folder: ../../src/images
