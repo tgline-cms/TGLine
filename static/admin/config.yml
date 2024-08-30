@@ -155,7 +155,7 @@ collections:
       - label: Tekst
         name: about_text
         widget: string
-        max_lenght: 800
+        max_length: 800
       - label: Body
         name: body
         widget: markdown
