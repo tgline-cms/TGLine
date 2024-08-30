@@ -155,11 +155,11 @@ collections:
       - label: Tekst
         name: about_text
         widget: string
-        maxLenght: 800
+        max_lenght: 800
       - label: Body
         name: body
         widget: markdown
-        maxLength: 1000
+        max_length: 1000
   - name: contact
     label: Kontakt
     folder: content/contact
@@ -214,11 +214,11 @@ collections:
     fields:
       - label: Tytul
         name: hero_heading1
-        max-length: 40
+        max_length: 40
         widget: string
       - label: Subtytul
         name: hero_heading2
-        maxLength: 40
+        max_length: 40
         widget: string
       - label: Zdjecie
         name: hero_image
