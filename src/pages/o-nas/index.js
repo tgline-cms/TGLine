@@ -47,13 +47,13 @@ const AboutPage = () => {
   const aboutData = data?.file?.childMarkdownRemark
 
   return (
-    <Container className="shadow min-vh-100 pb-5 mt-4 mb-4">
+    <Container className="shadow min-vh-100 pb-5 mt-4 mb-4 rounded">
       <Breadcrumbs activeSite="O nas" />
       <Row
         className="d-lg-flex flex-column align-items-center flex-xl-row p-3 pb-0 pb-xl-2 ps-xl-5"
         lg={{ offset: 4 }}
       >
-        <Col>
+        <Col className="align-self-start">
           <motion.header
             initial={{ x: -100 }}
             animate={{ x: 0 }}

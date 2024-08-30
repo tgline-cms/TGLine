@@ -15,12 +15,7 @@ const Slider = ({ product }) => {
             name
             relativeDirectory
             childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED
-                width: 900
-
-                placeholder: BLURRED
-              )
+              gatsbyImageData(placeholder: BLURRED)
             }
           }
         }
@@ -38,10 +33,7 @@ const Slider = ({ product }) => {
                   gatsbyImageData(
                     backgroundColor: "grey"
                     placeholder: BLURRED
-                    quality: 100
-                    width: 900
-                    height: 600
-                    transformOptions: { fit: COVER, cropFocus: CENTER }
+                    layout: CONSTRAINED
                   )
                 }
               }
@@ -79,19 +71,24 @@ const Slider = ({ product }) => {
   const handleCloseModal = () => {
     setShowModal(false)
     setSelectedImage(null)
-    setCarouselKey(uuidv4()) 
+    setCarouselKey(uuidv4())
   }
 
   return (
     <article>
-      {images.length >= 2 ? (
-        <Carousel fade pause={false} className="mt-4 mt-lg-0 mb-4">
+      {images.length >= 2 && (
+        <Carousel
+          fade
+          pause={false}
+          className="mt-4 mt-lg-0 mb-4"
+          key={carouselKey}
+        >
           {images.map(image => {
             return (
               <Carousel.Item
                 interval={2000}
-                key={carouselKey}
                 onClick={() => handleShowModal(image)}
+                key={uuidv4()}
               >
                 <GatsbyImage
                   image={image}
@@ -101,18 +98,18 @@ const Slider = ({ product }) => {
             )
           })}
         </Carousel>
-      ) : (
-        currentProductImage && (
-          <Container
-            className="img-container"
-            onClick={() => handleShowModal(getImage(currentProductImage))}
-          >
-            <GatsbyImage
-              image={currentProductImage}
-              alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
-            />
-          </Container>
-        )
+      )}
+
+      {images.length === 1 && (
+        <Container
+          className="img-container"
+          onClick={() => handleShowModal(getImage(currentProductImage))}
+        >
+          <GatsbyImage
+            image={images[0]}
+            alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
+          />
+        </Container>
       )}
       <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
         <Modal.Header closeButton></Modal.Header>

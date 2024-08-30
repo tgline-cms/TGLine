@@ -64,7 +64,7 @@ const OfferPage = () => {
     })
 
   return (
-    <Container className="shadow mt-4 mb-4">
+    <Container className="shadow mt-4 mb-4 rounded">
       <Breadcrumbs activeSite="Oferta" />
       <motion.header
         initial={{ x: -200 }}

@@ -4,6 +4,7 @@ import { Container, ListGroup, Row, Col, Stack, Badge } from "react-bootstrap"
 import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import { v4 as uuidv4 } from "uuid"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Slider from "../../components/slider"
 import Seo from "../../components/seo"
@@ -18,7 +19,7 @@ const ProductTemplate = ({ data }) => {
   }
 
   return (
-    <Container className="shadow min-vh-100 mt-4 mb-4">
+    <Container className="shadow min-vh-100 mt-4 mb-4 rounded">
       <Breadcrumbs activeSite={`pawilon-${product?.frontmatter?.id}`} />
       <Row>
         <Container className="d-flex flex-wrap align-items-start p-3 shadow-sm">
@@ -95,7 +96,7 @@ const ProductTemplate = ({ data }) => {
               <h4 className="m-3 m-lg-0 mb-lg-2">Wyposażenie:</h4>
               <ListGroup variant="flush" className="product-table ps-4">
                 {product?.frontmatter?.equipment.map(({ equipment_item }) => (
-                  <ListGroup.Item className="ps-0">
+                  <ListGroup.Item className="ps-0" key={uuidv4()}>
                     {equipment_item}
                   </ListGroup.Item>
                 ))}
@@ -146,7 +147,7 @@ const ProductTemplate = ({ data }) => {
               <ListGroup variant="flush" className="product-table ps-4">
                 {product?.frontmatter?.extra_equipment.map(
                   ({ extra_equipment_item }) => (
-                    <ListGroup.Item className="ps-0">
+                    <ListGroup.Item className="ps-0" key={uuidv4()}>
                       {extra_equipment_item}
                     </ListGroup.Item>
                   )

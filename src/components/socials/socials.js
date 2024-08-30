@@ -32,39 +32,48 @@ const Socials = () => {
       : `https://${url}`
   }
 
-  const socialsVisible = socialsData?.frontmatter?.facebook_url?.length > 0 || socialsData?.frontmatter?.instagram_url?.length > 0 || socialsData?.frontmatter?.youtube_url?.length > 0
+  const fbUrl = socialsData?.frontmatter?.facebook_url
+  const instagramUrl = socialsData?.frontmatter?.instagram_url
+  const ytUrl = socialsData?.frontmatter?.youtube_url
 
-  if (!socialsVisible) {
-    return null
-  }
+  const socialsVisible =
+    fbUrl?.length > 0 || instagramUrl?.length > 0 || ytUrl?.length > 0
 
+  if (!socialsVisible) return null
+  
   return (
     <aside className="socials">
       <Container className="d-flex flex-column justify-content-center align-items-center gap-3 shadow p-3">
-        <a
-          href={formatUrl("facebook_url")}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="TgLine Facebook link"
-        >
-          <FontAwesomeIcon icon={faFacebookF} />
-        </a>
-        <a
-          href={formatUrl("instagram_url")}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="TgLine Instagram link"
-        >
-          <FontAwesomeIcon icon={faSquareInstagram} />
-        </a>
-        <a
-          href={formatUrl("youtube_url")}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="TgLine YouTube link"
-        >
-          <FontAwesomeIcon icon={faYoutube} />
-        </a>
+        {fbUrl.length > 0 && (
+          <a
+            href={formatUrl("facebook_url")}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="TgLine Facebook link"
+          >
+            <FontAwesomeIcon icon={faFacebookF} />
+          </a>
+        )}
+        {instagramUrl.length > 0 && (
+          <a
+            href={formatUrl("instagram_url")}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="TgLine Instagram link"
+          >
+            <FontAwesomeIcon icon={faSquareInstagram} />
+          </a>
+        )}
+        {ytUrl.length > 0 && (
+          <a
+            href={formatUrl("youtube_url")}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="TgLine YouTube link"
+          >
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+        )}
       </Container>
     </aside>
   )

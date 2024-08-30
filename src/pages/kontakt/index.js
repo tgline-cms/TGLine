@@ -38,7 +38,7 @@ const ContactPage = () => {
   : `https://${contactMapUrl}`;
 
   return (
-    <Container className="shadow contact min-vh-100 pb-5 mt-4 mb-4">
+    <Container className="shadow contact min-vh-100 pb-5 mt-4 mb-4 rounded">
       <Breadcrumbs activeSite="kontakt" />
       <Container className="p-3 p-lg-5">
         <motion.header
