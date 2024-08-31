@@ -54,7 +54,7 @@ const ProductTemplate = ({ data }) => {
       <div className="slider-wrapper">
         <Slider product={product?.frontmatter?.id} />
       </div>
-      <article className="specification p-5">
+      <article className="specification p-2 mt-3 mt-lg-2 p-lg-5">
         <h4 className="m-3 m-lg-0 mb-lg-2">Specyfikacja:</h4>
         <ListGroup variant="flush" className="specification-list ps-4">
           <ListGroup.Item className="ps-0 pb-2 pb-lg-3">
@@ -78,7 +78,7 @@ const ProductTemplate = ({ data }) => {
         </ListGroup>
       </article>
 
-      <article className="equipment grey-bg p-5 shadow-sm">
+      <article className="equipment grey-bg p-2 mt-3 mt-lg-2 p-lg-5 shadow-sm" rounded>
         <h4 className="m-3 m-lg-0 mb-lg-2">Wyposażenie:</h4>
 
         <ListGroup variant="flush" className="product-table ps-4">
@@ -121,7 +121,7 @@ const ProductTemplate = ({ data }) => {
           </p>
         </Container>
       </article>
-      <article className="additional-equipment grey-bg mt-5 p-5 shadow-sm">
+      <article className="additional-equipment grey-bg p-2 mt-3 mb-3 mt-lg-2 p-lg-5 shadow-sm rounded">
         <h4 className="m-3 m-lg-0 mb-lg-2">Dodatkowe opcje wyposażenia:</h4>
         <ListGroup variant="flush" className="product-table ps-4">
           {product?.frontmatter?.extra_equipment.map(
