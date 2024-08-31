@@ -80,7 +80,7 @@ const Slider = ({ product }) => {
         <Carousel
           fade
           pause={false}
-          className="mt-4 mt-lg-0 mb-4"
+          className="mt-4 mt-lg-0"
           key={carouselKey}
         >
           {images.map(image => {

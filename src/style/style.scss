@@ -47,8 +47,6 @@ body {
     min-height: clamp(90vh, 95vh, 97vh);
     overflow-x: hidden;
     background-color: $navy;
-    // background: linear-gradient(to right, $navy 90%, white 10%);
-
 
     h1 {
       font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
@@ -70,7 +68,9 @@ body {
 
     .grey-bg {
       margin: 0 -0.8rem 0 -0.8rem;
-      & .container {
+      background-color: $lightGrey;
+
+      & .list-group-item {
         background-color: $lightGrey;
       }
     }

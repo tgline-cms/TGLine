@@ -1,32 +1,45 @@
 @import "../../style/style.scss";
 
-.slider {
-  height: 25vh;
-  @media (min-width: 1200px) {
-    height: 50vh;
-  }
+.slider-wrapper {
+  // height: 30vh;
+
+  // @media (min-width: 920px) {
+  //   height: 40vh;
+  // }
+  // @media (min-width: 1200px) {
+  //   height: 50vh;
+  // }
 
   .carousel {
     cursor: pointer;
     &-inner {
-      width: clamp(80%, 90vw, 100%);
+      // width: clamp(80%, 90vw, 100%);
       border-radius: 1rem;
-
+      // height: clamp(40vh, 50vh, 60vh);
+      
       .carousel-item {
         .gatsby-image-wrapper {
           cursor: pointer;
           width: 100%;
-          height: 25vh; // Stała wysokość dla wszystkich slajdów
+          height: 27vh;
           border-radius: 1rem;
 
-          @media (min-width: 1200px) {
-            height: 50vh; // Dostosowanie wysokości na większych ekranach
+          @media (min-width: 768px) {
+            height: 85vh;
           }
 
-          & img {
-            object-fit: contain; // Zapewnia, że obraz wypełnia cały obszar slajdu, zachowując proporcje
-            object-position: center; // Centruje obraz w przypadku różnic w proporcjach
+          @media (min-width: 920px) {
+            height: 70vh;
           }
+
+          @media (min-width: 1200px) {
+            height: 50vh;
+          }
+
+          // & img {
+          //   object-fit: contain;
+          //   object-position: center;
+          // }
         }
       }
     }
@@ -56,7 +69,7 @@
 
   & img {
     width: 100%;
-    height: 100%; // Wypełnia kontener zarówno na szerokość, jak i wysokość
+    height: 100%;
     object-fit: contain;
     border-radius: 1rem;
   }
@@ -65,16 +78,17 @@
 .modal {
   &-content {
     border-radius: 1rem;
-    max-width: 100%;
+    max-width: 100%; 
   }
 
   &-body {
     --bs-modal-padding: 0 !important;
+    display: flex;
+    justify-content: center;
 
     .gatsby-image-wrapper {
-      //width: 100%;
-      //height: 50vh; // Dopasowanie wysokości obrazu w modal do ekranu
-      // object-fit: cover; // Obraz wypełnia cały modal, zachowując proporcje
+      width: 100%;
+      object-fit: cover;
       border-radius: 0 0 1rem 1rem;
     }
   }
