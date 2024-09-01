@@ -13,6 +13,7 @@ const Slider = ({ product }) => {
           node {
             id
             name
+            size
             relativeDirectory
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
@@ -51,6 +52,8 @@ const Slider = ({ product }) => {
     )
     .map(edge => getImage(edge?.node?.childImageSharp.gatsbyImageData))
 
+  const firstSlide = images.length ? images[0] : null
+
   const currentProduct = data?.pavilionsParameters?.edges?.find(
     ({ node }) => node.frontmatter.id === product
   )
@@ -77,12 +80,7 @@ const Slider = ({ product }) => {
   return (
     <article>
       {images.length >= 2 && (
-        <Carousel
-          fade
-          pause={false}
-          className="mt-4 mt-lg-0"
-          key={carouselKey}
-        >
+        <Carousel fade pause={false} className="mt-4 mt-lg-0" key={carouselKey}>
           {images.map(image => {
             return (
               <Carousel.Item
@@ -103,21 +101,34 @@ const Slider = ({ product }) => {
       {images.length === 1 && (
         <Container
           className="img-container"
-          onClick={() => handleShowModal(getImage(currentProductImage))}
+          onClick={() => handleShowModal(getImage(firstSlide))}
         >
           <GatsbyImage
-            image={images[0]}
+            image={getImage(firstSlide)}
             alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
           />
         </Container>
       )}
+
+      {!images.length && (
+        <Container
+          className="img-container"
+          onClick={() => handleShowModal(getImage(currentProductImage))}
+        >
+          <GatsbyImage
+            image={currentProduct}
+            alt={`Pawilon handlowy ${currentProduct?.node?.frontmatter?.size}`}
+          />
+        </Container>
+      )}
+
       <Modal show={showModal} onHide={handleCloseModal} centered size="lg">
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           {selectedImage && (
             <GatsbyImage
               image={selectedImage}
-              alt="Powiększone zdjęcie pawilonu handlowego"
+              alt={currentProduct?.node?.frontmatter?.size}
             />
           )}
         </Modal.Body>

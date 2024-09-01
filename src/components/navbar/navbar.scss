@@ -188,11 +188,13 @@
   }
 }
 
-.navbar .dropdown-item.active,
-.dropdown-item:focus {
+.dropdown-menu .dropdown-item:focus {
   background-color: $navy !important;
+  color: $lightGrey !important;
 }
-
+.dropdown-menu .dropdown-item:active {
+  background-color: $brandColor;
+}
 .active-navitem {
   background-color: $lightGrey !important;
 }
