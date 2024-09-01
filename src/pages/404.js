@@ -2,7 +2,7 @@ import * as React from "react"
 import { Container } from "react-bootstrap"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import { ReactComponent as RightArrow } from "../images/arrow_right_light.svg"
+import { ReactComponent as RightArrow } from "../../static/icons/arrow_right_light.svg"
 
 const NotFoundPage = () => (
   <Container className="d-flex flex-column justify-content-center align-items-center vh-100 shadow rounded">

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Container, Stack, Badge, ListGroup } from "react-bootstrap"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
+import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
 import { motion } from "framer-motion"
 import { v4 as uuidv4 } from "uuid"
 

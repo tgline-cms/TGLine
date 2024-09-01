@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Stack } from "react-bootstrap"
 import { motion } from "framer-motion"
-import { ReactComponent as RightArrow } from "../../images/arrow_right.svg"
+import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right.svg"
 import "./hero.scss"
 
 const Hero = () => {

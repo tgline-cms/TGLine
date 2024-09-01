@@ -12,7 +12,7 @@ import Seo from "../../components/seo"
 import MapImage from "../../components/mapImage/mapImage"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Socials from "../../components/socials/socials"
-import { ReactComponent as RightArrow } from "../../images/arrow_right_light.svg"
+import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
 import "./kontakt.scss"
 
 const ContactPage = () => {
