@@ -9,7 +9,7 @@ import {
 import { Container, Row, Col } from "react-bootstrap"
 import { motion } from "framer-motion"
 import Seo from "../../components/seo"
-import MapImage from "../../components/mapImage/mapImage"
+import MapImage from "../../components/mapImage"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Socials from "../../components/socials/socials"
 import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
@@ -90,7 +90,7 @@ const ContactPage = () => {
           <Row className="mb-1">
             <Col
               xs={{ offset: 1 }}
-              sm={{ offset: 2}}
+              sm={{ offset: 2 }}
               lg={{ offset: 4 }}
               className="d-flex align-items-center"
             >

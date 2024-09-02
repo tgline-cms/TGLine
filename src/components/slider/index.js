@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "./slider.scss"
 
-const Slider = ({ product }) => {
+const Slider = React.memo(({product}) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativeDirectory: { regex: "/^pawilon-/" } }) {
@@ -78,7 +78,7 @@ const Slider = ({ product }) => {
   }
 
   return (
-    <article>
+    <article className="slider-wrapper">
       {images.length >= 2 && (
         <Carousel fade pause={false} className="mt-4 mt-lg-0" key={carouselKey}>
           {images.map(image => {
@@ -135,6 +135,6 @@ const Slider = ({ product }) => {
       </Modal>
     </article>
   )
-}
+})
 
 export default Slider

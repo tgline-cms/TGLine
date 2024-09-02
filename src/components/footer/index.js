@@ -14,7 +14,7 @@ function Footer() {
         <div className="text-center text-lg-start">
           <span>Projekt i realizacja</span> {` `}
           <a
-            href="https://beatamaro.github.io/"
+            href="https://www.beatamaro.github.io/"
             target="_blank"
             rel="noreferrer"
             className="text-warning"
