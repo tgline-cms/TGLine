@@ -11,48 +11,5 @@ main {
       padding-left: 6rem;
       background: linear-gradient(to right, $navy 90%, white 10%);
     }
-
-    // h2 {
-    //   color: #9ea8b1;
-    //   width: 100%;
-    //   font-size: clamp(1.6rem, 2.5vw + 1rem, 2rem);
-
-    //   @media (min-width: 1200px) {
-    //     width: 80%;
-    //   }
-    // }
-
-    // .offer-link-container {
-    //   z-index: 500;
-
-    //   .offer-link {
-    //     font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
-    //     transition: 0.3s ease;
-    //     color: white;
-    //     cursor: pointer;
-
-    //     &:hover {
-    //       color: $brandColor;
-
-    //       .arrow-icon {
-    //         transform: scale(1.1);
-    //       }
-    //     }
-    //   }
-
-    //   .arrow-icon {
-    //     transition: 0.3s ease;
-    //     width: 4rem;
-    //     cursor: pointer;
-
-    //     @media (min-width: 1200px) {
-    //       width: 9rem;
-    //     }
-
-    //     &:hover {
-    //       transform: scale(1.1);
-    //     }
-    //   }
-    // }
   }
 }
