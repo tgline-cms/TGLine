@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { Col, Row, Card } from "react-bootstrap"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import "./pavilionOffer.scss"
 
 const PavilionsOffer = React.memo(({ sortedProducts }) => (
   <Row className="p-sm-2 p-lg-4">

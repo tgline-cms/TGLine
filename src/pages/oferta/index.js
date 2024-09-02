@@ -6,7 +6,6 @@ import Seo from "../../components/seo"
 import Breadcrumbs from "../../components/breadcrumbs"
 import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
 import PavilionsOffer from "../../components/pavilionsOffer"
-import "./oferta.scss"
 
 const OfferPage = () => {
   const data = useStaticQuery(graphql`
