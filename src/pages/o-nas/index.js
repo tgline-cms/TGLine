@@ -85,7 +85,7 @@ const AboutPage = () => {
       <Row className="second-row p-3 ps-lg-5 pt-0">
         <Col>
           <article className="d-xl-flex flex-xl-row-reverse justify-content-xl-end gap-3">
-            <p className="p-3 pe-4 mt-3 mb-3 mt-lg-0 mb-lg-0 about-text-2">
+            <p className="p-3 pe-4 mt-3 mb-3 mt-lg-4 ms-lg-3 about-text-2">
               {aboutData?.frontmatter?.about_text}
             </p> 
             <motion.div
