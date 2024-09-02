@@ -1,12 +1,11 @@
 import * as React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import { Card, Container } from "react-bootstrap"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { Row, Col } from "react-bootstrap"
+import { graphql, useStaticQuery } from "gatsby"
+import { Container } from "react-bootstrap"
 import { motion } from "framer-motion"
 import Seo from "../../components/seo"
-import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import Breadcrumbs from "../../components/breadcrumbs"
 import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
+import PavilionsOffer from "../../components/pavilionsOffer"
 import "./oferta.scss"
 
 const OfferPage = () => {
@@ -56,12 +55,12 @@ const OfferPage = () => {
     }
   `)
 
-    const sortedProducts = data.pavilionsParameters.edges.sort((a, b) => {
-      const numA = parseInt(a.node.frontmatter.id.replace(/\D/g, ''), 10)
-      const numB = parseInt(b.node.frontmatter.id.replace(/\D/g, ''), 10)
-  
-      return numA - numB
-    })
+  const sortedProducts = data.pavilionsParameters.edges.sort((a, b) => {
+    const numA = parseInt(a.node.frontmatter.id.replace(/\D/g, ""), 10)
+    const numB = parseInt(b.node.frontmatter.id.replace(/\D/g, ""), 10)
+
+    return numA - numB
+  })
 
   return (
     <Container className="shadow mt-4 mb-4 rounded">
@@ -75,35 +74,7 @@ const OfferPage = () => {
         <RightArrow className="arrow-icon me-3" />
         <h2>Produkty</h2>
       </motion.header>
-      <Row className="p-sm-2 p-lg-4">
-        {sortedProducts.map(({ node }) => (
-
-          <Col key={node.id} md={6} lg={4}>
-            <motion.div
-              initial={{ x: 200 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.55 }}
-            >
-              <Card
-                as={Link}
-                to={`/pawilon-${node.frontmatter.id}`}
-                className="shadow rounded mb-4"
-              >
-                <Card.Body className="p-5 ps-3 rounded">
-                  <Card.Title>Pawilon {node.frontmatter.size}</Card.Title>
-                  <Card.Text>{node.frontmatter.id}</Card.Text>
-                </Card.Body>
-                <Card.Img
-                  variant="bottom"
-                  as={GatsbyImage}
-                  image={getImage(node.frontmatter.product_image)}
-                  alt={`Pawilon ${node.frontmatter.exterior_color} ${node.frontmatter.size} ${node.frontmatter.decoration}`}
-                />
-              </Card>
-            </motion.div>
-          </Col>
-        ))}
-      </Row>
+      <PavilionsOffer sortedProducts={sortedProducts} />
     </Container>
   )
 }

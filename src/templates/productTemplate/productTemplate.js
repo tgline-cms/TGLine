@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Container } from "react-bootstrap"
-import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import Breadcrumbs from "../../components/breadcrumbs"
 import Slider from "../../components/slider"
 import Specification from "../../components/specification"
 import Equipment from "../../components/equipment"

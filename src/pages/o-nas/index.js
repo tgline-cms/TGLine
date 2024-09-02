@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap"
 import { motion } from "framer-motion"
 import Seo from "../../components/seo"
-import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
+import Breadcrumbs from "../../components/breadcrumbs"
 import { ReactComponent as RightArrow } from "../../../static/icons/arrow_right_light.svg"
 import "./o_nas.scss"
 
