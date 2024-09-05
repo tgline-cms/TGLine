@@ -6,10 +6,10 @@
 
 This project was built using the following technologies:
 
-- **Gatsby.js** – a fast React-based framework for building static websites.
-- **DecapCMS** – integrated CMS allowing easy content management by administrators.
-- **React-Bootstrap** – used for styling components and ensuring responsive design.
-- **SCSS** – a CSS preprocessor enabling modular and complex styling.
+-  ![Gatsby](https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=gatsby&logoColor=white) **Gatsby.js** – a fast React-based framework for building static websites.
+- ![DecapCMS](https://img.shields.io/badge/DecapCMS-3D3834?style=for-the-badge&logo=netlifycms&logoColor=white) **DecapCMS** – integrated CMS allowing easy content management by administrators.
+- ![React-Bootstrap](https://img.shields.io/badge/React--Bootstrap-61DAFB?style=for-the-badge&logo=react&logoColor=black) **React-Bootstrap** – used for styling components and ensuring responsive design.
+- ![SCSS](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=sass&logoColor=white) **SCSS** – a CSS preprocessor enabling modular and complex styling.
 
 ## Features
 
