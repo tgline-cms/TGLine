@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "tgline",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "TGLine - firma z wieloletnim doświadczeniem. Nowoczesne, całoroczne pawilony z płyt warstwowych.",
   "version": "0.1.0",
   "author": "Beata Maro <maro.beata@gmail.com>",
   "dependencies": {
