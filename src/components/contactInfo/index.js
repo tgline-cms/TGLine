@@ -94,7 +94,7 @@ const ContactInfo = React.memo(({ contactData }) => {
                   <FontAwesomeIcon icon={faHouse} className="contact-icon" />
                 </a>
               </div>
-              <p className="mb-0">
+              <p className="mb-0 w-50">
                 {contactData?.frontmatter?.contact_address}
               </p>
             </motion.div>
