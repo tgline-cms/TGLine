@@ -198,7 +198,7 @@ collections:
       - label: Zdjęcie mapy
         name: contact_map
         widget: image
-        default: ../../src/images/map.webp
+        default: null
         pattern:
           - .*\.(webp|jpg|jpeg|png)$
           - "Dozwolone są tylko zdjęcia z rozszerzeniem: .webp, .jpg, .jpeg lub .png"

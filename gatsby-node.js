@@ -40,3 +40,12 @@ exports.onCreatePage = async ({ page, actions }) => {
     createPage(page)
   }
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type MarkdownRemarkFrontmatter {
+      contact_map: File @fileByRelativePath
+    }
+  `)
+}
