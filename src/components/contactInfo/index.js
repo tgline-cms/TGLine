@@ -25,14 +25,13 @@ const ContactInfo = React.memo(({ contactData }) => {
         transition={{ duration: 0.55 }}
         className="mt-5"
       >
-        <Row className="mb-1">
+        <Row className="d-flex">
           <Col
-            xs={{ offset: 1 }}
-            sm={{ offset: 2 }}
-            lg={{ offset: 4 }}
-            className="d-flex align-items-center"
+            className="d-flex flex-column align-items-end gap-1 gap-md-3"
+            xs={3}
+            lg={5}
           >
-            <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
+            <div className="d-inline-flex justify-content-center align-items-center rounded-circle icon-background">
               <a
                 href={contactData?.frontmatter?.contact_email}
                 aria-label="E-mail us"
@@ -40,64 +39,41 @@ const ContactInfo = React.memo(({ contactData }) => {
                 <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
               </a>
             </div>
+            <div className="d-inline-flex justify-content-center align-items-center rounded-circle icon-background">
+              <a
+                href={contactData?.frontmatter?.contact_phone}
+                aria-label={contactData?.frontmatter?.contact_phone}
+              >
+                <FontAwesomeIcon icon={faMobile} className="contact-icon" />
+              </a>
+            </div>
+            <div className="d-inline-flex justify-content-center align-items-center rounded-circle icon-background">
+              <a
+                href={contactData?.frontmatter?.contact_phone}
+                aria-label={contactData?.frontmatter?.contact_phone}
+              >
+                <FontAwesomeIcon icon={faHouse} className="contact-icon" />
+              </a>
+            </div>
+          </Col>
+          <Col
+            className="d-flex flex-column justify-content-around"
+            xs={9}
+            lg={7}
+          >
             <a
               href={contactData?.frontmatter?.contact_email}
               aria-label="E-mail us"
             >
               {contactData?.frontmatter?.contact_email}
             </a>
-          </Col>
-        </Row>
-        <Row className="mb-1">
-          <Col
-            xs={{ offset: 1 }}
-            sm={{ offset: 2 }}
-            lg={{ offset: 4 }}
-            className="d-flex align-items-center"
-          >
-            <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
-              <a
-                href={contactData?.frontmatter?.contact_phone}
-                aria-label="Call us"
-              >
-                <FontAwesomeIcon icon={faMobile} className="contact-icon" />
-              </a>
-            </div>
             <a
               href={contactData?.frontmatter?.contact_phone}
               aria-label="call us"
             >
               {contactData?.frontmatter?.contact_phone}
             </a>
-          </Col>
-        </Row>
-      </motion.article>
-      <article>
-        <Row>
-          <Col
-            xs={{ offset: 1 }}
-            sm={{ offset: 2 }}
-            lg={{ offset: 4 }}
-            className="d-flex align-items-center"
-          >
-            <motion.div
-              initial={{ x: -200 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.55 }}
-              className="d-flex align-items-center"
-            >
-              <div className="d-inline-flex justify-content-center align-items-center rounded-circle me-3 icon-background">
-                <a
-                  href={contactData?.frontmatter?.contact_phone}
-                  aria-label={contactData?.frontmatter?.contact_phone}
-                >
-                  <FontAwesomeIcon icon={faHouse} className="contact-icon" />
-                </a>
-              </div>
-              <p className="mb-0 w-50">
-                {contactData?.frontmatter?.contact_address}
-              </p>
-            </motion.div>
+            <p className="mb-0">{contactData?.frontmatter?.contact_address}</p>
           </Col>
         </Row>
         {contactMapUrl && (
@@ -118,7 +94,7 @@ const ContactInfo = React.memo(({ contactData }) => {
             </Col>
           </Row>
         )}
-      </article>
+      </motion.article>
     </>
   )
 })
